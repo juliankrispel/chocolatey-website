@@ -2097,6 +2097,15 @@ main{
   max-width: 1200px;
 }
 
+.tag{
+  color: #666;
+  font-weight: bold;
+}
+
+.tag:before{
+  content: '#';
+}
+
 .container--small{
   max-width: 36em;
   margin: auto;
