@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="static ">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Chocolatey Gallery 
+    </title>
+    <link href="/Content/site.css" rel="stylesheet" />
+    <link href="/Content/chocolatey.css" rel="stylesheet" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="nuget" type="application/atom+xml" title="Chocolatey" href="http://www.chocolatey.org/api/v2" />
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Chocolatey Search">
+  
+    
+  
+    <script type="text/javascript" src="/Scripts/modernizr-2.0.6-development-only.js"></script>
+
+    <script type="text/javascript" src="/Scripts/jquery-1.6.2.min.js"></script>
+
+    
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try{
+            var pageTracker = _gat._getTracker("UA-2743882-12");
+            pageTracker._trackPageview();
+        } catch(err) {}
+    </script>
+
+    
+</head>
+<body>
+    <div id="content-wrapper">
+        <header class="main">
+            <div id="logo">
+                <a href="/">Chocolatey Gallery</a>
+            </div>
+            <div id="header-right">
+                <div class="notices"></div>
+                <div class="user-display">
+        <span class="welcome"><a href="/users/account/LogOn">Log On</a></span> 
+        <a href="/account/Register" class="register">Register</a>
+</div>
+            </div>
+        </header>
+        <nav class="main">
+            <ul id="menu">
+                <li class="current"><a href="/">Home</a></li>
+                <li class=""><a href="/about">About</a></li>
+                <li class=""><a href="/packages">Packages</a></li>
+                <li class=""><a href="/packages/upload" class="upload">Upload</a></li>
+                <li><a href="https://github.com/chocolatey/choco/wiki">Docs*</a></li>
+                <li><a href="https://github.com/chocolatey/choco">Project*</a></li>
+                <li><a href="http://groups.google.com/group/chocolatey">Forum*</a></li>
+                <li><a href="http://cafepress.com/chocolatey">Shop*</a></li>
+            </ul>
+            <div id="searchBox" role="search">
+                <form action="/packages" method="get">
+                <input name="q" id="searchBoxInput" title="Search by id only with 'id:searchValue'. Search by tags with 'tag:searchValue'." placeholder="Search Packages" value="" autofocus />
+                <input id="searchBoxSubmit" title="Search by id only with 'id:searchValue'. Search by tags with 'tag:searchValue'." type="submit" value=" " />
+                </form>
+            </div>
+        </nav>
+        <div id="body" role="main">
+            <section class="featured">
+    <div>
+        <h1>Let's get Chocolatey!</h1>
+        <p>Chocolatey NuGet is a Machine Package Manager, somewhat like apt-get, but built with Windows in mind.</p>
+        <h2>Easy Install!</h2>
+        <p style="vertical-align:bottom;font-size:18px">
+            To install chocolatey now, open an <strong><em>administrative</em></strong> cmd.exe command prompt and paste the text from the box below and press enter (or click <input type="button" id="copyButton" class="copy-button" title="Copy To Clipboard" />).
+            For <strong><em>administrative</em></strong> PowerShell copy the second box (<input type="button" id="copyButtonPS" class="copy-button" title="Copy To Clipboard" />) (Ensure Get-ExecutionPolicy is at least Bypass).
+            If you need to install as a non-administrator or want more advanced options, see <span><a href="https://github.com/chocolatey/choco/wiki/Installation">Advanced</a></span>.
+        </p>
+    </div>
+    <img src="/content/images/hero.png" alt="Chocolatey install of Git (cinst git). Chocolatey benefits: 1. Sort of like yum or apt-get but for Windows; 2. Global silent installer; 3. Supports multiple package feeds, including private!; 4. Feeds can be local file/folder shares!; 5. NuGet Infrastructure + PowerShell Delivery" />
+</section>
+<div class="nuget-badge">
+    <p>
+        <code><span>C:\&gt;</span> @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin</code>
+    </p>
+    <p>
+        <code><span>PS:\&gt;</span>iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))</code>
+    </p>
+</div>
+
+<section class="aggstats">
+  <span class="stat">
+    <span id="UniquePackages" class="num" title="This includes packages that may only have prereleases"></span>unique packages
+  </span>
+  <span class="stat">
+    <span id="Downloads" class="num"></span>total downloads
+  </span>
+  <span class="stat">
+    <span id="TotalPackages" class="num" title="This is the total number of package versions - one for every version of a package"></span>total packages
+  </span>
+</section>
+<section class="aggstats">
+    <span class="stat">
+      <span id="PackagesPassingVerification" class="num" title="These are the latest version of a package and whether it is passing the verifier - run once a month against the latest version of all packages"></span><a href="https://github.com/chocolatey/choco/wiki/ChocolateyFAQs#what-is-the-verifier">known good packages</a>
+    </span>
+    <span class="stat">
+        <span id="UpToDatePackages" class="num" title="This is a start towards understanding up to date packages"></span>packages updated in last 4 months
+    </span>
+    <span class="stat">
+        <span id="OlderThanOneYearPackages" class="num" title="Packages that have not had an update in over a year"></span>packages older than a year
+    </span>
+</section>
+<section class="aggstats">
+    <span class="stat" title="This is approval time from last submission time of a good version that has no findings to approval time over the last 30 days.">
+        <span id="AverageModerationWaitTimeHours" class="num"></span>average moderation approval wait time (hours)
+    </span>
+    <span class="stat" title="Packages ready for a moderator to review">
+        <span id="PackagesReadyForReviewModeration" class="num"></span><a href="/packages?moderatorQueue=True">packages ready for moderation review</a>
+    </span>
+    <span class="stat" title="All packages under moderation, includes packages that are waiting for a mainter to fix something">
+        <span id="TotalPackagesInModeration" class="num"></span><a href="/packages?moderatorQueue=True">total packages under moderation</a>
+    </span>
+</section>
+
+<section class="release">
+     <h2>Chocolatey v0.9.9 Released!</h2>
+     <p>
+         The latest version of Chocolatey uses the new choco.exe C# client. <strong>There are a few breaking changes you need to be aware of.</strong>
+        If you are upgrading from an older version, take a moment to familiarize yourself with the <a href="https://github.com/chocolatey/choco/wiki/ReleaseNotes">release notes</a>.
+        <em>chocolatey upgrade (cup)</em> to get the latest version of chocolatey&nbsp;– <a href="https://github.com/chocolatey/choco/wiki/ReleaseNotes">More information?</a>
+     </p>
+</section>
+<section class="info">
+    <h3>About</h3>
+    <p>When you use chocolatey to install applications/tools, nearly all you need to do is type one line and let it finish the rest! <a href="/about">Learn more</a>.
+    Where did Chocolatey get it's name? What exactly is chocolatey anyway? Learn more on the <a href="https://github.com/chocolatey/choco/wiki">Wiki</a>!</p>
+
+    <h3>Videos</h3>
+    <p>Watch <a href="http://bit.ly/chocolateyVideo">Chocolatey in action.</a></p>
+
+    <h3>Packages Missing? Want to contribute?</h3>
+    <p>You can develop your own packages and share them via the Chocolatey Gallery. Read the documentation for more details on
+    <a title="Creating and submitting a package" href="https://github.com/chocolatey/choco/wiki/CreatePackages">how to
+    create and publish a package</a>.</p>
+
+    <h3>Package Issues?</h3>
+    <p>If you find something wrong with a package or the package is out of date and you would like it updated, please use the contact maintainers link on the package page. For follow up procedures, please see the <a title="Package Triage Process" href="https://github.com/chocolatey/choco/wiki/PackageTriageProcess">Package Triage Process</a>.</p>
+</section>
+
+
+
+        </div>
+    </div>
+    <div id="layout-footer" class="group">
+        <footer id="footer">
+            <ul class="recommended">
+                <li><a name="newsletter" id="newsletter">Sign up for the Newsletter!</a>
+                    <p>Be the first to know about upcoming features, security releases, and news about Chocolatey.</p>
+                </li>
+                <li> <!-- Begin MailChimp Signup Form -->
+                    <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet"
+                        type="text/css">
+                    <style type="text/css">
+                        #mc_embed_signup
+                        {
+                            font: 12px Helvetica,Arial,sans-serif;
+                            width: 160px;
+                        }
+                        #mc_embed_signup input.email { min-width: 150px;}
+                        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                    </style>
+                    <div id="mc_embed_signup">
+                        <form action="//chocolatey.us8.list-manage.com/subscribe/post?u=86a6d80146a0da7f2223712e4&amp;id=73b018498d"
+                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                        target="_blank" novalidate>
+                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your e-mail address"
+                            required />
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;">
+                            <input type="text" name="b_86a6d80146a0da7f2223712e4_73b018498d" tabindex="-1" value="">
+                        </div>
+                        <div class="clear">
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                                class="button" /></div>
+                        </form>
+                    </div>
+                    <!--End mc_embed_signup-->
+                </li>
+                <li><a href="http://groups.google.com/group/chocolatey">Discussion</a>
+                    <p>Find a possible bug? Got a feature request? Get involved in the discussion!</p>
+                </li>
+                <li><a href="https://github.com/chocolatey/choco/wiki/ChocolateyFAQs">FAQ</a>
+                    <p>Read the Frequently Asked Questions about Chocolatey.</p>
+                </li>
+            </ul>
+            <div class="donate">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="E8ZPVL5PNTABW">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                    border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+                    width="1" height="1">
+                </form>
+            </div>
+            <div class="newsletter">
+            </div>
+            <div class="license">
+                <p><a href="https://twitter.com/chocolateynuget" class="twitter-follow-button" data-show-count="true"
+                data-width="250px" data-lang="en">Follow @chocolateynuget</a> <a href="https://twitter.com/share"
+                class="twitter-share-button" data-hashtags="chocolatey" data-lang="en">Tweet</a>
+
+                    <script type="text/javascript">
+                        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");
+                    </script>
+
+                    <br />
+                    &copy; 2011 - 2016 RealDimensions Software, LLC. </p>
+                    <p id="releaseTag">
+                        Deployed from <a href="https://github.com/chocolatey/chocolatey.org/commit/929e2b16fddb2925708190b012c1826b45572ea3" title="View the commit.">929e2b16fd</a>. You are on web.3. UTC time is currently 05 Apr 2016 03:47:36 +00:00.
+                    </p>
+            </div>
+            <div class="supporters">
+                Site made possible by the following sponsors:
+                <ul class="supporters">
+                    <li></li>
+                    <li><a href="http://codingutopia.com">RealDimensions</a> <a id="realdimensions-logo"
+                    href="http://codingutopia.com"></a></li>
+                    <li><a href="https://appharbor.com">AppHarbor</a> <a id="appharbor-logo" href="https://appharbor.com">
+                    </a></li>
+                    <li><a href="https://turbo.net">Turbo.net</a> <a id="turbo-logo" href="https://turbo.net">
+                    </a></li>
+                    <li></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    
+    <script type="text/javascript" src="/Scripts/stats.js"></script>
+    <script type="text/javascript" >
+        $(getStats);
+    </script>
+
+    <script type="text/javascript" src="/Scripts/ZeroClipboard.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            ZeroClipboard.setMoviePath('/Scripts/ZeroClipboard.swf');
+            var clip = new ZeroClipboard.Client();
+            clip.setText('@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString(\'https://chocolatey.org/install.ps1\'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\\chocolatey\\bin');
+            clip.setHandCursor(true);
+            clip.glue('copyButton');
+
+            var clipPS = new ZeroClipboard.Client();
+            clipPS.setText('iex ((new-object net.webclient).DownloadString(\'https://chocolatey.org/install.ps1\'))');
+            clipPS.setHandCursor(true);
+            clipPS.glue('copyButtonPS');
+
+            $(window).resize(function () {
+                clip.reposition();
+                clipPS.reposition();
+            });
+        });
+    </script>
+
+
+
+    <script>
+        ((window.gitter = {}).chat = {}).options = {
+            room: 'chocolatey/chocolatey.org'
+        };
+    </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+</body>
+</html>
