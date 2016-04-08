@@ -8,23 +8,17 @@
 <body>
 
   <header class="bg-yellow p-b--l">
-    <a class="logo left" href="/">
+    <a class="logo" href="/">
       <img alt="Logo" src="logo2.svg">
     </a>
+
     <nav class="text-right">
       <div class="inline-block">
-        <div class="inline-block button-bar">
-          <div class="package-search m-r">
-            <label for="search"><i class="icon-search"></i></label>
-            <input id="search" type="search" placeholder="Search plugins"/>
-          </div>
-        </div>
-
-        <div class="button-bar m-t m-r--l inline-block">
+        <div class="button-bar m-t--l m-r--l inline-block">
           <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
         </div>
       </div>
-      <ul class="inline-list main-menu m-r m-t--s m-b--s">
+      <ul class="inline-list main-menu m-r--l m-t--s m-b--s">
         <li><a href="install.html">Install</a></li>
         <li><a href="packages.html">Packages</a></li>
         <li><a href="pricing.html">Pricing</a></li>
@@ -34,9 +28,17 @@
   </header>
   <main>
     <section>
-      <h1 class="huge slogan m-b p-t--l">The <strong>package manager</strong> for Windows</h1>
+      <h1 class="huge slogan p-t">The <strong>package manager</strong> for Windows</h1>
     </section>
-    <section class="clearfix p p-t--l ">
+    <section class="clearfix p-l p-r">
+      <div class="p">
+        <div class="button-bar block m-b full-width h2">
+          <div class="package-search m-b">
+            <input class="p full-width" id="search" type="search" placeholder="Search plugins"/>
+          </div>
+        </div>
+      </div>
+
       <div class="half p left">
         <h1>The sane way to manage packages on windows</h1>
         <ul class="feature-list m-t">
@@ -56,8 +58,8 @@
               <div class="terminal-chrome__maximise"></div>
               <div class="terminal-chrome__close">&times;</div>
             </div>
-            <div class="terminal-content">
-              C:\choco <span data-animate="install nodejs,uninstall flashplayer,search python">install nodejs</span><span class="terminal-cursor"></span>
+            <div class="terminal-content terminal-content--min-height">
+              choco <span data-animate="install nodejs,uninstall flashplayer,search python">install nodejs</span><span class="terminal-cursor"></span>
             </div>
           </div>
         </div>

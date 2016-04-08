@@ -12,18 +12,11 @@
     </a>
     <nav class="text-right">
       <div class="inline-block">
-        <div class="inline-block button-bar">
-          <div class="package-search m-r">
-            <label for="search"><i class="icon-search"></i></label>
-            <input id="search" type="search" placeholder="Search plugins"/>
-          </div>
-        </div>
-
-        <div class="button-bar m-t m-r--l inline-block">
+        <div class="button-bar m-t--l m-r--l inline-block">
           <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
         </div>
       </div>
-      <ul class="inline-list main-menu m-r m-t--s m-b--s">
+      <ul class="inline-list main-menu m-r--l m-t--s m-b--s">
         <li><a href="install.html">Install</a></li>
         <li><a href="packages.html">Packages</a></li>
         <li><a href="pricing.html">Pricing</a></li>
@@ -32,5 +25,22 @@
     </nav>
   </header>
   <main>
+    <section>
+      <h1 class="huge slogan p-t">Installing Chocolatey</h1>
+      <div class="terminal-container">
+        <div class="terminal-chrome">
+          <div class="terminal-chrome-top">
+            <div class="terminal-chrome__minimise"></div>
+            <div class="terminal-chrome__maximise"></div>
+            <div class="terminal-chrome__close">&times;</div>
+          </div>
+          <div class="terminal-content terminal-content--small">
+            @powershell -NoProfile -ExecutionPolicy Bypass ^<br/>
+            -Command "iex ((new-object net.webclient).^<br/>DownloadString('https://chocolatey.org/install.ps1'))" &&^<br/> SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin 
+          </div>
+        </div>
+      </div>
+
+    </section>
   </main>
 </body>
