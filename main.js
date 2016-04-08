@@ -30,4 +30,25 @@ function animateEl(el) {
   animate();
 }
 
+var els = document.querySelectorAll('[data-copy-to-clipboard]');
 
+Array.from(els).forEach(copyToClipboard);
+
+var tmpElement = document.createElement('input');
+tmpElement.className = 'invisible-input';
+document.body.appendChild(tmpElement);
+
+function copyToClipboard(el) {
+  el.addEventListener('click', function(event){
+    var parent = event.target.parentElement;
+    if (!parent.dataset['copy-to-clipboard']) {
+      parent = parent.parentElement;
+    }
+    var item = parent.querySelector('[data-clipboard-content]')
+    var text = item.innerText;
+
+    tmpElement.value = text;
+    tmpElement.select();
+    document.execCommand('copy');
+  });
+}

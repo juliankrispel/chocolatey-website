@@ -26,21 +26,39 @@
   </header>
   <main>
     <section>
-      <h1 class="huge slogan p-t">Installing Chocolatey</h1>
+      <div  class="container--small p-b--l">
+        <h1 class="huge slogan p-t"><strong>Installing</strong> Chocolatey</h1>
+        <h2>For the Windows command prompt</h2>
+        <p>To install chocolatey now, open an administrative cmd.exe command prompt and paste the text from the box below and press enter.</p>
+      </div>
       <div class="terminal-container">
         <div class="terminal-chrome">
           <div class="terminal-chrome-top">
-            <div class="terminal-chrome__minimise"></div>
-            <div class="terminal-chrome__maximise"></div>
-            <div class="terminal-chrome__close">&times;</div>
+            <button data-copy-to-clipboard title="copy install script to clipboard" class="button copy-to-clipboard"><span class="icon-clipboard"> Copy to clipboard</span></button>
           </div>
-          <div class="terminal-content terminal-content--small">
+          <div class="data-clipboard-content terminal-content terminal-content--small">
             @powershell -NoProfile -ExecutionPolicy Bypass ^<br/>
             -Command "iex ((new-object net.webclient).^<br/>DownloadString('https://chocolatey.org/install.ps1'))" &&^<br/> SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin 
           </div>
         </div>
       </div>
-
+      <div  class="container--small p-b--l">
+        <h2>For the PowerShell</h2>
+        <p>For administrative PowerShell copy the text below, paste it into your shell and hit enter</p>
+        <p>(Ensure Get-ExecutionPolicy is at least Bypass). If you need to install as a non-administrator or want more advanced options, read <a href="https://github.com/chocolatey/choco/wiki/Installation">our advanced installation instructions.</a>
+        </p>
+      </div>
+      <div class="terminal-container">
+        <div class="terminal-chrome">
+          <div class="terminal-chrome-top">
+            <button data-copy-to-clipboard title="copy install script to clipboard" class="button copy-to-clipboard"><span class="icon-clipboard"> Copy to clipboard</span></button>
+          </div>
+          <div class="data-clipboard-content terminal-content terminal-content--small">
+            @powershell -NoProfile -ExecutionPolicy Bypass ^<br/>
+            -Command "iex ((new-object net.webclient).^<br/>DownloadString('https://chocolatey.org/install.ps1'))" &&^<br/> SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin 
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </body>
