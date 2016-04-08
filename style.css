@@ -565,7 +565,7 @@ a:hover {
 }
 
 .button{
-  padding: .3em .8em;
+  padding: .65em .8em;
   background: #eee;
   vertical-align: center;
   color: #777;
@@ -626,18 +626,16 @@ a:hover {
 }
 
 .package-list__item{
-  padding: 1em;
-  border: 1px solid #ddd;
+  margin-bottom: 2em;
 }
-
 
 @media(min-width: 801px) {
   .package-list > li:nth-child(odd) {
-    padding-right: .5em;
+    padding-right: 1em;
   }
 
   .package-list > li:nth-child(even) {
-    padding-left: .5em;
+    padding-left: 1em;
   }
 }
 

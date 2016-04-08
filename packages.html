@@ -12,7 +12,14 @@
     </a>
     <nav class="text-right">
       <div class="inline-block">
-        <div class="button-bar m-t m-r--l line-height-small">
+        <div class="inline-block button-bar">
+          <div class="package-search m-r">
+            <label for="search"><i class="icon-search"></i></label>
+            <input id="search" type="search" placeholder="Search plugins"/>
+          </div>
+        </div>
+
+        <div class="button-bar m-t m-r--l inline-block">
           <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
         </div>
       </div>
@@ -24,10 +31,10 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <div class="button-bar m-t m-b full-width h2">
-      <div class="package-search full-width">
-        <input id="search" type="search" placeholder="Search plugins"/>
+  <main class="p--l">
+    <div class="button-bar block m-b full-width h2">
+      <div class="package-search m-b">
+        <input class="p full-width" id="search" type="search" placeholder="Search plugins"/>
       </div>
     </div>
     <ul class="package-list">
