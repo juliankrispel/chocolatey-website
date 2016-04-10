@@ -8,42 +8,43 @@
 <body>
 
   <header class="bg-yellow p-b--l">
-    <a class="logo" href="index.html">
-      <img alt="Logo" src="logo2.svg">
+    <a class="logo m-t m-l left" href="index.html">
+      <img class="hide-on-small" height="150px" alt="Logo" src="logo_3.svg">
+      <img class="hide-on-large" height="100px" alt="Logo" src="logo_small.svg">
     </a>
 
     <nav class="text-right">
       <div class="inline-block">
-        <div class="button-bar m-t--l m-r--l inline-block">
+        <div class="small button-bar m-t--l m-r--l inline-block line-height-small">
           <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
         </div>
       </div>
-      <ul class="inline-list main-menu m-r--l m-t--s m-b--s">
-        <li><a href="install.html">Install</a></li>
-        <li><a href="packages.html">Packages</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="docs.html">Docs</a></li>
+      <ul class="inline-list main-menu m-r--l m-t--l m-b--s">
+        <li><a class="button button--primary p-r p-l" href="install.html">Install</a></li>
+        <li><a class="bold h3 m-l" href="packages.html">Packages</a></li>
+        <li><a class="bold h3 m-l" href="pricing.html">Pricing</a></li>
+        <li><a class="bold h3 m-l" href="docs.html">Docs</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <section>
-      <h1 class="huge slogan p-t">The <strong>package manager</strong> for Windows</h1>
+      <h1 class="huge slogan p-t m-t">The <strong>package manager</strong> for Windows</h1>
     </section>
     <section class="clearfix p-l p-r">
       <div class="p">
         <div class="button-bar block m-b full-width h2">
           <div class="package-search m-b">
-            <input class="p full-width" id="search" type="search" placeholder="Search plugins"/>
+            <input class="p full-width" id="search" type="search" placeholder="Search package registry..."/>
           </div>
         </div>
       </div>
 
       <div class="half p left">
         <h1>The sane way to manage packages on windows</h1>
-        <ul class="feature-list m-t">
-          <li>Use the chocolatey cli client to install, upgrade, uninstall, publish and search for packages (and much more)</li>
-          <li>Chocolatey has the largest online registry of windows packages. <span class="number">3865</span> unique packages, <span class="number"> 40 million</span> total downloads</li>
+        <ul class="check-list m-t">
+          <li>Use the chocolatey cli client to install, upgrade, uninstall, publish and search for packages <a class="bold" href="https://github.com/chocolatey/choco/wiki/CommandsReference#commands-intermediate-to-advanced">and much more</a>.</li>
+          <li>Chocolatey has the largest online registry of windows packages. <strong>3865</strong> unique packages, <strong> 40 million</strong> total downloads</li>
           <li>Package submissions go through a rigorous review process</li>
           <li>Uploads are automatically scanned for viruses</li>
           <li>Chocolatey has a strict policy to keep out malicious and pirated</li>
@@ -71,7 +72,7 @@
       </div>
       <div class="half p--l left">
         <h1>Choose from thousands of secure online packages</h1>
-        <ul class="feature-list m-t--l">
+        <ul class="check-list m-t--l">
           <li>Chocolatey has the largest online registry of windows packages. <span class="number">3865</span> unique packages, <span class="number"> 40 million</span> total downloads</li>
           <li>Package submissions go through a rigorous review process</li>
           <li>Uploads are automatically scanned for viruses</li>
