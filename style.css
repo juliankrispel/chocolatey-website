@@ -6,6 +6,13 @@
   font-style: normal;
 }
 
+button{
+  background: none;
+  border: none;
+  font-size: inherit;
+  color: inherit;
+}
+
 .icon {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -2261,7 +2268,7 @@ small, .small{ font-size: .9em !important; }
 
 .overflow-hidden{ overflow: hidden !important; }
 
-.one-third{ width: calc(100% / 3); }
+.one-third, .third{ width: calc(100% / 3); }
 .two-thirds{ width: calc((100% / 3) * 2);  }
 .half{ width: 50%; }
 .quarter{ width: 25%; }
@@ -2387,6 +2394,8 @@ a {
   margin-top: 2em !important;
 }
 
+img{ max-width: 100%; }
+
 .logo img{
   height: 150px;
 }
@@ -2446,6 +2455,10 @@ a {
 
 .terminal-chrome-top > *:hover{
   color: #000;
+}
+
+.border-radius{
+  border-radius: 3px;
 }
 
 .terminal-chrome__maximise, .terminal-chrome__minimise{
@@ -2707,8 +2720,18 @@ a {
 .message{
   color: #fff;
   background: #5C9FD8;
-  border-radius: 5px;
-  padding: .5em 1em;
+  max-height: 900px;
+  position: relative;
+  transition: max-height 400ms;
+  overflow: hidden;
+}
+
+.message--collapsed{
+  max-height: 0px;
+}
+
+.message__close{
+  color: #fff;
 }
 
 .success-message{
@@ -2751,4 +2774,11 @@ a:hover {
   opacity: .5 !important;
 }
 
+footer{
+ background: #5C9FD8;
+ color: #fff;
+}
 
+footer a{
+ color: #fff;
+}

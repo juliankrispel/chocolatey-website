@@ -52,3 +52,18 @@ function copyToClipboard(el) {
     document.execCommand('copy');
   });
 }
+
+
+var closeButtons = Array.from(document.querySelectorAll('[data-close-message]'));
+
+closeButtons.forEach(function(item){
+  item.addEventListener('click', function(e){
+    var el = e.target;
+    if(el.dataset.closeMessage === undefined) {
+      el = el.parentElement;
+    }
+    el.parentElement.parentElement.className += ' message--collapsed';
+  });
+});
+
+

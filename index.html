@@ -7,6 +7,16 @@
 </head>
 <body>
 
+  <div class="message">
+    <div class="p-l p-r p--s">
+      <span>
+        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
+      </span>
+      <button class="right pointer" data-close-message>
+        <i class="icon-close"></i>
+      </button>
+    </div>
+  </div>
   <header class="bg-yellow p-b--l">
     <a class="logo m-t m-l left" href="index.html">
       <img class="hide-on-small" height="150px" alt="Logo" src="logo_3.svg">
@@ -20,26 +30,60 @@
         </div>
       </div>
       <ul class="inline-list main-menu m-r--l m-t--l m-b--s">
-        <li><a class="button button--primary p-r p-l" href="install.html">Install</a></li>
-        <li><a class="bold h3 m-l" href="packages.html">Packages</a></li>
+        <li><a class="bold h3 m-l" href="install.html">Install</a></li>
+        <li><a class="bold h3 m-l" href="packages.html">Community Packages</a></li>
+        <li><a class="bold h3 m-l" href="business.html">Business</a></li>
         <li><a class="bold h3 m-l" href="pricing.html">Pricing</a></li>
         <li><a class="bold h3 m-l" href="docs.html">Docs</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
     <section>
       <h1 class="huge slogan p-t m-t">The <strong>package manager</strong> for Windows</h1>
     </section>
-    <section class="clearfix p-l p-r">
-      <div class="p">
-        <div class="button-bar block m-b full-width h2">
-          <div class="package-search m-b">
-            <input class="p full-width" id="search" type="search" placeholder="Search package registry..."/>
-          </div>
-        </div>
-      </div>
 
+    <section>
+      <div class="container--small">
+        <h2>Builds on technologies you know</h2>
+        <ul class="check-list m-b m-t">
+          <li>Chocolatey uses PowerShell automation scripts when working with installer architectures.</li>
+          <li>Because it is PowerShell, you can do almost anything.</li>
+        </ul>
+        <h2>Integrates with Windows install architectures</h2>
+        <ul class="check-list m-b m-t">
+          <li>The Chocolatey PowerShell module provides great functions for working with all aspects of software.</li>
+          <li>Chocolatey can package or download software binaries, but it also works with just software embedded in the packages. Chocolatey works best when everything is embedded in the package.</li>
+        </ul>
+        <h2>Independent Deployment Artifacts</h2>
+        <ul class="check-list m-b m-t">
+          <li>Chocolatey packages are not just fancy zip files, they understand versioning and dependencies, allowing you to encapsulate everything related to managing installation and configuration for a piece of software.</li>
+          <li>As an independent deployment artifact, Chocolatey packages are not tied to another technology, allowing developers to install packages with Chocolatey and System Administrators to deploy Chocolatey packages using their favorite Configuration Manager like SCCM, Puppet, or Chef.</li>
+        </ul>
+        <h2>Integrates with Configuration Managers (Plays well with others)</h2>
+        <ul class="check-list m-b m-t">
+          <li>Chocolatey integrates with SCCM, Puppet, Chef, DSC and other configuration managers. This allows you to separate software installation concerns from those automation tools and just use the Chocolatey framework, which is fantastic at software management.</li>
+        </ul>
+        <h2>Trusted by Business</h2>
+        <ul class="check-list m-b m-t">
+          <li>Chocolatey integrates with SCCM, Puppet, Chef, DSC and other configuration managers. This allows you to separate software installation concerns from those automation tools and just use the Chocolatey framework, which is fantastic at software management.</li>
+          <li>Businesses are building and hosting their own packages so they can fully trust and control the process. Packages found on Chocolatey.org’s community package repository require distribution rights (as they are publicly distributed), a limitation that businesses would not have when using packages internally.</li>
+          <li>When businesses need more features than they can find in the Open Source version of Chocolatey, they turn to Chocolatey for Business.</li>
+        </ul>
+        <h2>Choose from thousands of community packages</h2>
+        <ul class="check-list m-b m-t">
+          <li>Chocolatey has the largest online registry of windows packages</li>
+          <li><strong>3865</strong> unique packages, <strong>40 million</strong> total downloads, etc</li>
+          <li>Package submissions are manually reviewed</li>
+          <li>Chocolatey allows you to embed software and/or download official binaries from their distribution points.</li>
+          <li>Packages are automatically scanned for viruses.</li>
+          <li>Chocolatey has a strict policy on malicious and pirated software</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="clearfix p-l p-r">
       <div class="half p left">
         <h1>The sane way to manage packages on windows</h1>
         <ul class="check-list m-t">
@@ -49,7 +93,7 @@
           <li>Uploads are automatically scanned for viruses</li>
           <li>Chocolatey has a strict policy to keep out malicious and pirated</li>
         </ul>
-        <a href="#install">Install</a>
+        <a class="button button--primary" href="#install">Install Chocolatey now</a>
       </div>
       <div class="half left p">
         <div class="terminal-container">
@@ -66,12 +110,12 @@
         </div>
       </div>
     </section>
-    <section class="clearfix p-t--l">
-      <div class="half left">
-        <div class="image-placeholder"></div>
+    <section class="clearfix p-l p-r p-t--l p-b--l">
+      <div class="half left p-r p-l">
+        <img class="border-radius" src="gui.png">
       </div>
-      <div class="half p--l left">
-        <h1>Choose from thousands of secure online packages</h1>
+      <div class="half p-l p-r left">
+        <h1>The chocolatey GUI</h1>
         <ul class="check-list m-t--l">
           <li>Chocolatey has the largest online registry of windows packages. <span class="number">3865</span> unique packages, <span class="number"> 40 million</span> total downloads</li>
           <li>Package submissions go through a rigorous review process</li>
@@ -82,7 +126,35 @@
     </section>
 
   </main>
-  <footer>
+  <footer class="p-l--l p-r--l clearfix full-width">
+    <ul class="small third left p">
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">For Professionals</a></li>
+      <li><a href="#">For Businesses </a></li>
+      <li><a href="#">For Enterprise</a></li>
+      <li><a href="#">Kickstarter</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <ul class="small third left p">
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Mailing List</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Site map</a></li>
+      <li><a href="#">Media Kit</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+    <ul class="small third left p">
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Report a Bug</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Partner</a></li>
+    </ul>
   </footer>
   <script src="main.js"></script>
 </body>
