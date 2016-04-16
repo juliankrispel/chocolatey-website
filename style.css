@@ -2268,6 +2268,7 @@ small, .small{ font-size: .9em !important; }
 
 .overflow-hidden{ overflow: hidden !important; }
 
+.onr-fourth, .fourth{ width: calc(100% / 4); }
 .one-third, .third{ width: calc(100% / 3); }
 .two-thirds{ width: calc((100% / 3) * 2);  }
 .half{ width: 50%; }
@@ -2687,6 +2688,9 @@ img{ max-width: 100%; }
   }
   .half, .third{
     width: 100%;
+  }
+  .fourth{
+    width: 50%;
   }
   .package-list > li{
     width: 100%;
