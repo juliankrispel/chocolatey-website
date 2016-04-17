@@ -42,12 +42,9 @@
   </header>
 
   <main>
-
 <div class="clearfix p">
-  <aside class="quarter left p">
-    <ul>
-
-  <li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+  <aside class="quarter left p article-sidebar">
+    <ol>
 
   <li><a href="#can't-find-your-answer-here-">Can't find your answer here?</a></li>
 
@@ -113,10 +110,6 @@
 
   <li><a href="#what-distinction-does-chocolatey-make-between-an-installable-and-a-portable-application-">What distinction does Chocolatey make between an installable and a portable application?</a></li>
 
-  <li><a href="#installable-application">Installable application</a></li>
-
-  <li><a href="#portable-application-–-something-that-doesn't-require-a-system-install-to-use">Portable application – something that doesn't require a system install to use</a></li>
-
   <li><a href="#why-doesn't-a-package-install-software-to-program-files-">Why doesn't a package install software to Program Files?</a></li>
 
   <li><a href="#what-is-the-difference-between-packages-named-*.install-(i.&nbsp;e.-[autohotkey.install](https://chocolatey.org/packages/autohotkey.install)),-*.portable-(i.&nbsp;e.-[autohotkey.portable](https://chocolatey.org/packages/autohotkey.portable))-and-*-(i.&nbsp;e.-[autohotkey](https://chocolatey.org/packages/autohotkey))-">What is the difference between packages named *.install (i.&nbsp;e. [autohotkey.install](https://chocolatey.org/packages/autohotkey.install)), *.portable (i.&nbsp;e. [autohotkey.portable](https://chocolatey.org/packages/autohotkey.portable)) and * (i.&nbsp;e. [autohotkey](https://chocolatey.org/packages/autohotkey))?</a></li>
@@ -129,10 +122,10 @@
 
   <li><a href="#why-do-i-have-to-confirm-packages-now--is-there-a-way-to-remove-this-">Why do I have to confirm packages now? Is there a way to remove this?</a></li>
 
-</ul>
+</ol>
 
   </aside>
-  <div class="three-quarters left p">
+  <article class="three-quarters left p">
     <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
 <h2 id="can-t-find-your-answer-here-">Can&#39;t find your answer here?</h2>
 <p>Feel free to reach out to us on <a href="https://gitter.im/chocolatey/choco">Gitter</a> or by the <a href="https://groups.google.com/group/chocolatey">email distribution list / forum</a>.</p>
@@ -298,8 +291,9 @@ Installable applications end up where the native installer wants them to end up 
 <p>Some folks may find the change quite annoying. The perspective of some folks isn&#39;t the perspective of everyone and we have some very security-conscious folks that want a verification of what they requested is what they end up with. So this prompt is extremely important for them. We are moving to a more secure by default approach so this change was important to get us there. Security related changes are some of the only things you will see that affect Chocolatey in such a way.</p>
 <p>We spent many months stressing over this change because of the breaking part and decided it wasn&#39;t going to get easier to change later. We&#39;ve added the ability for you to set Chocolatey back to the way it was before with <code>allowGlobalConfirmation</code> and if the prompts annoy you, you should probably look at making this change.</p>
 
-  </div>
+  </article>
 </div>
+
 
   </main>
 
