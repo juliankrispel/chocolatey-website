@@ -17,6 +17,7 @@
       </button>
     </div>
   </div>
+
   <header class="bg-yellow p-b--l">
     <a class="logo m-t m-l left" href="index.html">
       <img class="hide-on-small" height="150px" alt="Logo" src="logo_3.svg">
@@ -45,54 +46,14 @@
       <h1 class="huge slogan p-t m-t">The <strong>package manager</strong> for Windows</h1>
     </section>
 
-    <section>
-      <div class="container--small">
-        <h2>Builds on technologies you know</h2>
-        <ul class="check-list m-b m-t">
-          <li>Chocolatey uses PowerShell automation scripts when working with installer architectures.</li>
-          <li>Because it is PowerShell, you can do almost anything.</li>
-        </ul>
-        <h2>Integrates with Windows install architectures</h2>
-        <ul class="check-list m-b m-t">
-          <li>The Chocolatey PowerShell module provides great functions for working with all aspects of software.</li>
-          <li>Chocolatey can package or download software binaries, but it also works with just software embedded in the packages. Chocolatey works best when everything is embedded in the package.</li>
-        </ul>
-        <h2>Independent Deployment Artifacts</h2>
-        <ul class="check-list m-b m-t">
-          <li>Chocolatey packages are not just fancy zip files, they understand versioning and dependencies, allowing you to encapsulate everything related to managing installation and configuration for a piece of software.</li>
-          <li>As an independent deployment artifact, Chocolatey packages are not tied to another technology, allowing developers to install packages with Chocolatey and System Administrators to deploy Chocolatey packages using their favorite Configuration Manager like SCCM, Puppet, or Chef.</li>
-        </ul>
-        <h2>Integrates with Configuration Managers (Plays well with others)</h2>
-        <ul class="check-list m-b m-t">
-          <li>Chocolatey integrates with SCCM, Puppet, Chef, DSC and other configuration managers. This allows you to separate software installation concerns from those automation tools and just use the Chocolatey framework, which is fantastic at software management.</li>
-        </ul>
-        <h2>Trusted by Business</h2>
-        <ul class="check-list m-b m-t">
-          <li>Chocolatey integrates with SCCM, Puppet, Chef, DSC and other configuration managers. This allows you to separate software installation concerns from those automation tools and just use the Chocolatey framework, which is fantastic at software management.</li>
-          <li>Businesses are building and hosting their own packages so they can fully trust and control the process. Packages found on Chocolatey.org’s community package repository require distribution rights (as they are publicly distributed), a limitation that businesses would not have when using packages internally.</li>
-          <li>When businesses need more features than they can find in the Open Source version of Chocolatey, they turn to Chocolatey for Business.</li>
-        </ul>
-        <h2>Choose from thousands of community packages</h2>
-        <ul class="check-list m-b m-t">
-          <li>Chocolatey has the largest online registry of windows packages</li>
-          <li><strong>3865</strong> unique packages, <strong>40 million</strong> total downloads, etc</li>
-          <li>Package submissions are manually reviewed</li>
-          <li>Chocolatey allows you to embed software and/or download official binaries from their distribution points.</li>
-          <li>Packages are automatically scanned for viruses.</li>
-          <li>Chocolatey has a strict policy on malicious and pirated software</li>
-        </ul>
-      </div>
-    </section>
-
     <section class="clearfix p-l p-r">
       <div class="half p left">
-        <h1>The sane way to manage packages on windows</h1>
+        <h1>The sane way to manage software on Windows</h1>
         <ul class="check-list m-t">
-          <li>Use the chocolatey cli client to install, upgrade, uninstall, publish and search for packages <a class="bold" href="https://github.com/chocolatey/choco/wiki/CommandsReference#commands-intermediate-to-advanced">and much more</a>.</li>
-          <li>Chocolatey has the largest online registry of windows packages. <strong>3865</strong> unique packages, <strong> 40 million</strong> total downloads</li>
-          <li>Package submissions go through a rigorous review process</li>
-          <li>Uploads are automatically scanned for viruses</li>
-          <li>Chocolatey has a strict policy to keep out malicious and pirated</li>
+          <li>Chocolatey can easily manage all aspects of Windows software whether installation, configuration, upgrade, or uninstallation.</li>
+          <li>Works with binaries and existing installer technologies like MSI, NSIS, InnoSetup, etc.</li>
+          <li>Chocolatey can download resources from file shares, http, and ftp locations, but it works best when the software a package represents is embedded in the package files.</li>
+          <li>Optionally use PowerShell to provide automated software management instructions and Chocolatey’s module with awesome functions that really speed up the packaging process!</li>
         </ul>
         <a class="button button--primary" href="#install">Install Chocolatey now</a>
       </div>
@@ -111,23 +72,67 @@
         </div>
       </div>
     </section>
+
     <section class="clearfix p-l p-r p-t--l p-b--l">
       <div class="half left p-r p-l">
-        <img class="border-radius" src="gui.png">
+        <div class="border-radius image-placeholder"></div>
       </div>
       <div class="half p-l p-r left">
-        <h1>The chocolatey GUI</h1>
-        <ul class="check-list m-t--l">
-          <li>Chocolatey has the largest online registry of windows packages. <span class="number">3865</span> unique packages, <span class="number"> 40 million</span> total downloads</li>
-          <li>Package submissions go through a rigorous review process</li>
-          <li>Uploads are automatically scanned for viruses</li>
-          <li>Chocolatey has a strict policy to keep out malicious and pirated</li>
+        <h1>Trusted by Business</h1>
+        <ul class="check-list m-t">
+          <li>Businesses are building and hosting their own packages that are reliable and repeatable so they can fully trust and control the process.</li>
+          <li>Businesses trusting Chocolatey for production purposes do not use the packages found on this site (the community package repository). [Find out why](links to disclaimer or something).</li>
+          <li>When businesses need more features than they can find in the Open Source version of Chocolatey, they turn to [Chocolatey for Business](link to Business page).</li>
         </ul>
       </div>
     </section>
 
+    <section class="clearfix p-l p-r p-t--l p-b--l">
+      <div class="half p-l p-r left">
+        <h1>Official Chocolatey tools</h1>
+        <ul class="check-list m-t">
+          <li>The CLI client, choco.exe, was designed with security in mind. Know you are using Chocolatey from a trusted source when you are using the official Chocolatey clients.</li>
+          <li>Use choco.exe to install, upgrade, uninstall, publish and search for packages (and much more).</li>
+          <li>choco.exe has tab completion and excellent inline help.</li>
+          <li>Use [Chocolatey GUI](link to GUI package) when you need a visual representation of packages.</li>
+        </ul>
+      </div>
+      <div class="half left p-r p-l">
+        <div class="border-radius image-placeholder"></div>
+      </div>
+    </section>
+
+    <section class="clearfix p-l p-r p-t--l p-b--l">
+      <div class="half left p-r p-l">
+        <div class="border-radius image-placeholder"></div>
+      </div>
+      <div class="half p-l p-r left">
+        <h1>Packages are independent deployment artifacts</h1>
+        <ul class="check-list m-t">
+          <li>Chocolatey packages are not just fancy zip files, they understand versioning and dependencies, allowing you to encapsulate everything related to managing installation and configuration for a piece of software.</li>
+          <li>As an independent deployment artifact, Chocolatey packages are not tied to another technology, allowing developers to install packages with Chocolatey and System Administrators to deploy Chocolatey packages using Chocolatey’s integration with their favorite configuration manager like SCCM, Puppet, or Chef.</li>
+          <li>Chocolatey packages allow you to separate software installation concerns from automation tools / configuration managers and use the best tool for software management, which is the Chocolatey framework.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="clearfix p-l p-r p-t--l p-b--l">
+      <div class="half p-l p-r left">
+        <h1>Choose from thousands of community packages</h1>
+        <ul class="check-list m-t">
+          <li>Chocolatey.org has the largest online registry of Windows packages.</li>
+          <li>Package submissions go through a rigorous moderation review process.</li>
+          <li>The packages in the community repository are automatically scanned for viruses.</li>
+          <li>The community repository has a strict policy on malicious and pirated software.</li>
+        </ul>
+      </div>
+      <div class="half left p-r p-l">
+        <div class="border-radius image-placeholder"></div>
+      </div>
+    </section>
   </main>
-  <footer class="p-l--l p-r--l clearfix full-width">
+
+  <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
     <ul class="small fourth left p">
       <li><strong>Chocolatey</strong></li>
       <li><a href="#">About</a></li>
@@ -159,21 +164,31 @@
       <li><a href="#">Press</a></li>
       <li><a href="#">Partner</a></li>
     </ul>
-    <ul class="small fourth left p">
+    <ul class="small fourth left p line-height-normal">
       <li class="h2">
         <div>
           <a href="#" class="icon-twitter"></a> | <a href="#" class="icon-facebook"></a> | <a href="#" class="icon-github"></a>
         </div>
       </li>
       <li class="m-t small">
-        &copy; 2011 - 2016 RealDimensions Software, LLC<br/>
-        Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
+        <p>
+          <strong>&copy; 2011 - 2016</strong> RealDimensions Software, LLC
+        </p>
+        <p>
+          Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
+        </p>
       </li>
       <li class="m-t">
         Site made possible by the following sponsors<br/>
-        <img width="70px" class="vertical-middle m-t--s inline-block m-r--s" src="rd_logo.png"/>
-        <img width="40px" class="vertical-middle m-t--s inline-block m-r--s" src="turbo_logo.png"/>
-        <img width="50px" class="vertical-middle m-t--s inline-block" src="appharbor_logo.png"/>
+        <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
+          <img width="70px" src="rd_logo.png"/>
+        </a>
+        <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
+          <img width="40px" src="turbo_logo.png"/>
+        </a>
+        <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
+          <img width="50px" src="appharbor_logo.png"/>
+        </a>
       </li>
     </ul>
   </footer>

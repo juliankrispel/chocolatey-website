@@ -2279,6 +2279,7 @@ small, .small{ font-size: .9em !important; }
 }
 
 .flex{ display: flex; flex-direction: row; }
+.flex-wrap{ display: flex; flex-wrap: wrap; }
 
 .inline-list{
   list-style: none;
@@ -2360,6 +2361,10 @@ a {
   line-height: 1.3em;
 }
 
+.line-height-normal{
+  line-height: 1.5em;
+}
+
 .install-snippet__code{
   background: #000;
   color: #fff;
@@ -2430,6 +2435,10 @@ img{ max-width: 100%; }
   padding-top: 2em;
   overflow: hidden;
   position: relative;
+}
+
+.box-shadow{
+  box-shadow: 5px 7px 50px rgba(0,0,0,.2);
 }
 
 .terminal-chrome__close{
@@ -2506,9 +2515,11 @@ img{ max-width: 100%; }
 }
 
 .image-placeholder{
-  background: #000;
+  background: #5C9FD8;
   width: 100%;
-  min-height: 430px;
+  box-shadow: 5px 7px 50px rgba(0,0,0,.2);
+  border: 1px solid #2F6492;
+  min-height: 330px;
 }
 
 @keyframes blink {
