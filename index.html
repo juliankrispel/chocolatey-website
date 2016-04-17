@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="message">
+    <div class="p-l p-r p--s">
+      <span>
+        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
+      </span>
+      <button class="right pointer" data-close-message>
+        <i class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+
+  <header class="bg-yellow p-b--l clearfix">
+    <a class="logo m-t m-l left" href="index.html">
+      <img class="hide-on-small" height="150px" alt="Logo" src="assets/logo_3.svg">
+      <img class="hide-on-large" height="100px" alt="Logo" src="assets/logo_small.svg">
+    </a>
+
+    <nav class="text-right">
+      <div class="inline-block">
+        <div class="small button-bar m-t--l m-r--l inline-block line-height-small">
+          <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
+        </div>
+      </div>
+      <ul class="inline-list main-menu m-r--l m-t--l m-b--s">
+        <li><a class="bold h4 m-l--s" href="install.html">Install</a></li>
+        <li><a class="bold h4 m-l--s" href="packages.html">Community Packages</a></li>
+        <li><a class="bold h4 m-l--s" href="business.html">Business</a></li>
+        <li><a class="bold h4 m-l--s" href="pricing.html">Pricing</a></li>
+        <li><a class="bold h4 m-l--s" href="faq.html">FAQ</a></li>
+        <li><a class="bold h4 m-l--s" href="docs.html">Docs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<section>
+  <h1 class="huge slogan p-t m-t p-b m-b">The <strong>package manager</strong> for Windows</h1>
+</section>
+
+<section class="clearfix p-l p-r">
+  <div class="half p left">
+    <h1>The sane way to manage software on Windows</h1>
+    <ul class="check-list m-t">
+      <li>Chocolatey can easily manage all aspects of Windows software whether installation, configuration, upgrade, or uninstallation.</li>
+      <li>Works with binaries and existing installer technologies like MSI, NSIS, InnoSetup, etc.</li>
+      <li>Chocolatey can download resources from file shares, http, and ftp locations, but it works best when the software a package represents is embedded in the package files.</li>
+      <li>Optionally use PowerShell to provide automated software management instructions and Chocolatey’s module with awesome functions that really speed up the packaging process!</li>
+    </ul>
+  </div>
+  <div class="half left p">
+    <div class="terminal-container">
+      <div class="terminal-chrome">
+        <div class="terminal-chrome-top">
+          <div class="terminal-chrome__minimise"></div>
+          <div class="terminal-chrome__maximise"></div>
+          <div class="terminal-chrome__close">&times;</div>
+        </div>
+        <div class="terminal-content terminal-content--min-height">
+          choco <span data-animate="install nodejs,uninstall flashplayer,search python">install nodejs</span><span class="terminal-cursor"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="clearfix p-l p-r p-t--l p-b--l">
+  <div class="half left p-r p-l">
+    <div class="border-radius image-placeholder"></div>
+  </div>
+  <div class="half p-l p-r left">
+    <h1>Trusted by Business</h1>
+    <ul class="check-list m-t">
+      <li>Businesses are building and hosting their own packages that are reliable and repeatable so they can fully trust and control the process.</li>
+      <li>Businesses trusting Chocolatey for production purposes do not use the packages found on this site (the community package repository). <a href="#">Find out why</a>.</li>
+      <li>When businesses need more features than they can find in the Open Source version of Chocolatey, they turn to [Chocolatey for Business](link to Business page).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="clearfix p-l p-r p-t--l p-b--l">
+  <div class="half p-l p-r left">
+    <h1>Official Chocolatey tools</h1>
+    <ul class="check-list m-t">
+      <li>The CLI client, choco.exe, was designed with security in mind. Know you are using Chocolatey from a trusted source when you are using the official Chocolatey clients.</li>
+      <li>Use choco.exe to install, upgrade, uninstall, publish and search for packages (and much more).</li>
+      <li>choco.exe has tab completion and excellent inline help.</li>
+      <li>Use [Chocolatey GUI](link to GUI package) when you need a visual representation of packages.</li>
+    </ul>
+  </div>
+  <div class="half left p-r p-l">
+    <div class="border-radius image-placeholder"></div>
+  </div>
+</section>
+
+<section class="clearfix p-l p-r p-t--l p-b--l">
+  <div class="half left p-r p-l">
+    <div class="border-radius image-placeholder"></div>
+  </div>
+  <div class="half p-l p-r left">
+    <h1>Packages are independent deployment artifacts</h1>
+    <ul class="check-list m-t">
+      <li>Chocolatey packages are not just fancy zip files, they understand versioning and dependencies, allowing you to encapsulate everything related to managing installation and configuration for a piece of software.</li>
+      <li>As an independent deployment artifact, Chocolatey packages are not tied to another technology, allowing developers to install packages with Chocolatey and System Administrators to deploy Chocolatey packages using Chocolatey’s integration with their favorite configuration manager like SCCM, Puppet, or Chef.</li>
+      <li>Chocolatey packages allow you to separate software installation concerns from automation tools / configuration managers and use the best tool for software management, which is the Chocolatey framework.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="clearfix p-l p-r p-t--l p-b--l">
+  <div class="half p-l p-r left">
+    <h1>Choose from thousands of community packages</h1>
+    <ul class="check-list m-t">
+      <li>Chocolatey.org has the largest online registry of Windows packages.</li>
+      <li>Package submissions go through a rigorous moderation review process.</li>
+      <li>The packages in the community repository are automatically scanned for viruses.</li>
+      <li>The community repository has a strict policy on malicious and pirated software.</li>
+    </ul>
+  </div>
+  <div class="half left p-r p-l">
+    <div class="border-radius image-placeholder"></div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
+    <ul class="small fourth left p">
+      <li><strong>Chocolatey</strong></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">For Professionals</a></li>
+      <li><a href="#">For Businesses </a></li>
+      <li><a href="#">For Enterprise</a></li>
+      <li><a href="#">Kickstarter</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><strong>Resources</strong></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Mailing List</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Site map</a></li>
+      <li><a href="#">Media Kit</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><strong>Connect</strong></li>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Report a Bug</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Partner</a></li>
+    </ul>
+    <ul class="small fourth left p line-height-normal">
+      <li class="h2">
+        <div>
+          <a href="#" class="icon-twitter"></a> | <a href="#" class="icon-facebook"></a> | <a href="#" class="icon-github"></a>
+        </div>
+      </li>
+      <li class="m-t small">
+        <p>
+          <strong>&copy; 2011 - 2016</strong> RealDimensions Software, LLC
+        </p>
+        <p>
+          Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
+        </p>
+      </li>
+      <li class="m-t">
+        Site made possible by the following sponsors<br/>
+        <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
+          <img width="70px" src="assets/rd_logo.png"/>
+        </a>
+        <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
+          <img width="40px" src="assets/turbo_logo.png"/>
+        </a>
+        <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
+          <img width="50px" src="assets/appharbor_logo.png"/>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>
