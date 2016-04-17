@@ -2108,6 +2108,11 @@ main{
   content: '#';
 }
 
+.container{
+  max-width: 42em;
+  margin: auto;
+}
+
 .container--small{
   max-width: 36em;
   margin: auto;
@@ -2126,6 +2131,7 @@ h3, .h3{ font-size: 1.4em;}
 h4, .h4{ font-size: 1.2em;}
 
 .huge, h1, .h1{
+  line-height: 1.3em;
   font-size: 2.8em;
   font-weight: bold;
 }
@@ -2136,6 +2142,17 @@ article h1, .h1{
 
 ol{
   padding-left: 1em;
+}
+
+article > *{
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article > h1{
+  max-width: 100%;
+  text-align: center;
 }
 
 .article-sidebar li{
