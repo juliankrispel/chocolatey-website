@@ -3,13 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <link href="style.css" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
 </head>
 <body>
-  <header class="bg-yellow p-b--l">
+
+  <div class="message">
+    <div class="p-l p-r p--s">
+      <span>
+        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
+      </span>
+      <button class="right pointer" data-close-message>
+        <i class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+
+  <header class="bg-yellow p-b--l clearfix">
     <a class="logo m-t m-l left" href="index.html">
-      <img class="hide-on-small" height="150px" alt="Logo" src="logo_3.svg">
-      <img class="hide-on-large" height="100px" alt="Logo" src="logo_small.svg">
+      <img class="hide-on-small" height="150px" alt="Logo" src="assets/logo_3.svg">
+      <img class="hide-on-large" height="100px" alt="Logo" src="assets/logo_small.svg">
     </a>
 
     <nav class="text-right">
@@ -29,15 +41,16 @@
     </nav>
   </header>
 
-
   <main>
-    <section>
-      <div  class="container--small p-b--l">
-        <h1 class="huge slogan p-t"><strong>Pricing</strong></h1>
-        <p>To install chocolatey now, open an administrative cmd.exe command prompt and paste the text from the box below and press enter.</p>
-      </div>
-    </section>
+<section>
+  <div  class="container--small p-b--l">
+    <h1 class="huge slogan p-t"><strong>Pricing</strong></h1>
+    <p>To install chocolatey now, open an administrative cmd.exe command prompt and paste the text from the box below and press enter.</p>
+  </div>
+</section>
+
   </main>
+
   <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
     <ul class="small fourth left p">
       <li><strong>Chocolatey</strong></li>
@@ -87,16 +100,17 @@
       <li class="m-t">
         Site made possible by the following sponsors<br/>
         <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
-          <img width="70px" src="rd_logo.png"/>
+          <img width="70px" src="assets/rd_logo.png"/>
         </a>
         <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
-          <img width="40px" src="turbo_logo.png"/>
+          <img width="40px" src="assets/turbo_logo.png"/>
         </a>
         <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
-          <img width="50px" src="appharbor_logo.png"/>
+          <img width="50px" src="assets/appharbor_logo.png"/>
         </a>
       </li>
     </ul>
   </footer>
-  
+  <script src="assets/main.js"></script>
 </body>
+</html>

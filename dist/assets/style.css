@@ -2268,7 +2268,8 @@ small, .small{ font-size: .9em !important; }
 
 .overflow-hidden{ overflow: hidden !important; }
 
-.onr-fourth, .fourth{ width: calc(100% / 4); }
+.one-fourth, .fourth, .quarter{ width: 25%; }
+.three-quarters, .three-fourths{ width: 75%; }
 .one-third, .third{ width: calc(100% / 3); }
 .two-thirds{ width: calc((100% / 3) * 2);  }
 .half{ width: 50%; }
@@ -2761,7 +2762,9 @@ img{ max-width: 100%; }
 .text-orange{ color: #FF6F00; }
 .text-blue{ color: #5C9FD8; }
 
-a{ color: #5C9FD8; }
+a{
+  color: #5C9FD8; 
+}
 nav a{ color: black;}
 
 table td{
@@ -2797,4 +2800,33 @@ footer{
 
 footer a{
  color: #fff;
+}
+
+code{
+  background: #f0f0f0;
+  font-size: .95em;
+  border-radius: 5px;
+  vertical-align: middle;
+  padding: .2em .4em;
+  font-family: monospace;
+  overflow: auto;
+
+}
+
+pre{
+  font-size: .95em;
+  background: #f0f0f0;
+  margin: .6em 0;
+  border-radius: 5px;
+  vertical-align: middle;
+  padding: .5em .7em;
+  font-family: monospace;
+  overflow: auto;
+}
+
+
+pre code{
+  background: none;
+  margin: 0;
+  padding: 0;
 }

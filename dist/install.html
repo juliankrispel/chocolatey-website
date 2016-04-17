@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="message">
+    <div class="p-l p-r p--s">
+      <span>
+        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
+      </span>
+      <button class="right pointer" data-close-message>
+        <i class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+
+  <header class="bg-yellow p-b--l clearfix">
+    <a class="logo m-t m-l left" href="index.html">
+      <img class="hide-on-small" height="150px" alt="Logo" src="assets/logo_3.svg">
+      <img class="hide-on-large" height="100px" alt="Logo" src="assets/logo_small.svg">
+    </a>
+
+    <nav class="text-right">
+      <div class="inline-block">
+        <div class="small button-bar m-t--l m-r--l inline-block line-height-small">
+          <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
+        </div>
+      </div>
+      <ul class="inline-list main-menu m-r--l m-t--l m-b--s">
+        <li><a class="bold h4 m-l--s" href="install.html">Install</a></li>
+        <li><a class="bold h4 m-l--s" href="packages.html">Community Packages</a></li>
+        <li><a class="bold h4 m-l--s" href="business.html">Business</a></li>
+        <li><a class="bold h4 m-l--s" href="pricing.html">Pricing</a></li>
+        <li><a class="bold h4 m-l--s" href="faq.html">FAQ</a></li>
+        <li><a class="bold h4 m-l--s" href="docs.html">Docs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+<div class="clearfix p">
+  <aside class="quarter left p">
+    <ul>
+
+  <li><a href="#installing-chocolatey">Installing Chocolatey</a></li>
+
+  <li><a href="#why-does-chocolatey-install-where-it-does-by-default-">Why does Chocolatey install where it does by default?</a></li>
+
+  <li><a href="#before-you-install">Before You Install</a></li>
+
+  <li><a href="#non-administrative-install">Non-Administrative Install</a></li>
+
+  <li><a href="#command-line">Command Line</a></li>
+
+  <li><a href="#powershell">PowerShell</a></li>
+
+  <li><a href="#cmd/powershell-w/proxy-server">Cmd/PowerShell w/Proxy Server</a></li>
+
+  <li><a href="#powershell-through-batch-method">PowerShell Through Batch Method</a></li>
+
+  <li><a href="#nuget-package-manager-method">NuGet Package Manager Method</a></li>
+
+  <li><a href="#nuget.exe-+-powershell-method">NuGet.exe + PowerShell Method</a></li>
+
+  <li><a href="#download-+-powershell-method">Download + PowerShell Method</a></li>
+
+</ul>
+
+  </aside>
+  <div class="three-quarters left p">
+    <h2 id="installing-chocolatey">Installing Chocolatey</h2>
+<p>Chocolatey installs in seconds...</p>
+<p>There are a few ways to install Chocolatey. Chocolatey exists as a <a href="http://nuget.org/list/packages/chocolatey">nuget package</a> so virtually any way you can get a nuget package, you have the opportunity to then install it.</p>
+<p>If you have Visual Studio 2010 and the NuGet extension installed, perhaps the quickest method is to use NuGet Package Manager. Three commands in succession and you are done. See below.</p>
+<h2 id="why-does-chocolatey-install-where-it-does-by-default-">Why does Chocolatey install where it does by default?</h2>
+<p>Great question - [[Why does Chocolatey install where it does|DefaultChocolateyInstallReasoning]]</p>
+<h2 id="before-you-install">Before You Install</h2>
+<p><strong>Can I install Chocolatey to another location?</strong> Yes</p>
+<ol>
+<li>Create a <strong>machine</strong> level (<strong>user</strong> level will also work) environment variable named <code>ChocolateyInstall</code> and set it to the folder you want Chocolatey to install to prior to installation (this environment variable must be set globally or available to PowerShell- it is not enough to simply make it available to your current command prompt session).  Keep in mind the [[restrictions|DefaultChocolateyInstallReasoning]] though!</li>
+<li>Create the folder manually.</li>
+<li>If you have already installed (and want to change the location after the fact):<ul>
+<li>Follow the above steps.</li>
+<li>Install Chocolatey again.</li>
+<li>Copy/Move over the items from the old lib/bin directory.</li>
+<li>Delete your old install directory.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Can I install with a proxy?</strong> Yes</p>
+<p>Chocolatey will detect and use a system set proxy. However some proxies will need to be set explicitly. To do so, you would do similar to [[Proxy-Settings-for-Chocolatey]]</p>
+<p>Set the following environment variable(s) prior to install:</p>
+<ul>
+<li><code>chocolateyProxyLocation</code> - explicit proxy location. This includes the port.</li>
+<li><code>chocolateyProxyUser</code> / <code>chocolateyProxyPassword</code> - optional credentials
+for explicit proxy</li>
+</ul>
+<p><strong>NOTE:</strong> This will only work with the methods below that call <a href="https://chocolatey.org/install.ps1">https://chocolatey.org/install.ps1</a> as part of the install.</p>
+<p><strong>Can I install a particular version of Chocolatey?</strong> Yes</p>
+<p>Set the following environment variable prior to install:</p>
+<ul>
+<li><code>chocolateyVersion</code> - controls what version of Chocolatey is installed</li>
+</ul>
+<p><strong>NOTE:</strong> This will only work with the methods below that call <a href="https://chocolatey.org/install.ps1">https://chocolatey.org/install.ps1</a> as part of the install.</p>
+<p><strong>Can I use Windows built-in compression instead of downloading 7zip?</strong> Yes</p>
+<p>Set the following environment variable prior to install:</p>
+<ul>
+<li><code>chocolateyUseWindowsCompression</code> - this will bypass the download and use of 7zip</li>
+</ul>
+<p><strong>NOTE:</strong> This will only work with the methods below that call <a href="https://chocolatey.org/install.ps1">https://chocolatey.org/install.ps1</a> as part of the install.</p>
+<h2 id="non-administrative-install">Non-Administrative Install</h2>
+<ol>
+<li>You must choose a different location than the default. The default is a more secure location that only administrators can update.</li>
+<li>Follow that with the command line / PowerShell methods of installation.</li>
+</ol>
+<h2 id="command-line">Command Line</h2>
+<p>This really is the easiest method because it requires no configuration of PowerShell prior to executing it. Open a command line, paste the following and press &lt;Enter&gt;:</p>
+<pre><code class="lang-cmd">@powershell -NoProfile -ExecutionPolicy unrestricted -Command &quot;(iex ((new-object net.webclient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))) &gt;$null 2&gt;&amp;1&quot; &amp;&amp; SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+</code></pre>
+<h2 id="powershell">PowerShell</h2>
+<p>This is the second-most easy method. Open a PowerShell command line and paste in the following and press &lt;Enter&gt;:</p>
+<pre><code class="lang-powershell">(iex ((new-object net.webclient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;)))&gt;$null 2&gt;&amp;1
+</code></pre>
+<p><strong><font color="red">Note: You must have your execution policy set to unrestricted (or at least in bypass) for this to work (<code>Set-ExecutionPolicy Unrestricted</code>). There have been <a href="https://github.com/chocolatey/chocolatey/issues/70">reports</a> that RemoteSigned is enough for the install to work.</font></strong>
+It downloads and runs (<a href="https://chocolatey.org/install.ps1">https://chocolatey.org/install.ps1</a>).</p>
+<h2 id="cmd-powershell-w-proxy-server">Cmd/PowerShell w/Proxy Server</h2>
+<p>See [[Installing Chocolatey Behind a Proxy Server|Proxy-Settings-for-Chocolatey#installing-chocolatey-behind-a-proxy-server]]</p>
+<h2 id="powershell-through-batch-method">PowerShell Through Batch Method</h2>
+<p>This is the best method if you want to repeat it or include it in source control. It requires no change to your existing PowerShell to allow for remote unsigned scripts.</p>
+<p>Create a file named <code>installChocolatey.cmd</code> with the following:</p>
+<pre><code>@echo off
+
+SET DIR=%~dp0%
+
+::download install.ps1
+%systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command &quot;((new-object net.webclient).DownloadFile(&#39;https://chocolatey.org/install.ps1&#39;,&#39;install.ps1&#39;))&quot;
+::run installer
+%systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command &quot;&amp; &#39;%DIR%install.ps1&#39; %*&quot;
+</code></pre><p>If you prefer to have the install.ps1 file already, comment out the download line in the batch file and download the <a href="https://chocolatey.org/install.ps1"><code>install.ps1</code></a> from <a href="https://chocolatey.org/install.ps1">chocolatey.org</a> and save it as <code>install.ps1</code> next to the <code>installChocolatey.cmd</code> file.</p>
+<p>Run <code>installChocolatey.cmd</code> and it will install the latest version of Chocolatey.</p>
+<h2 id="nuget-package-manager-method">NuGet Package Manager Method</h2>
+<p>When you have Visual Studio 2010+ and the NuGet extension installed (pre-installed on any newer versions of Visual Studio), you can simply type the following three commands and you will have Chocolatey installed on your machine.</p>
+<p> <code>Install-Package chocolatey</code>
+ <code>Initialize-Chocolatey</code>
+ <code>Uninstall-Package chocolatey</code></p>
+<h2 id="nuget-exe-powershell-method">NuGet.exe + PowerShell Method</h2>
+<p>You can also use NuGet command line to download Chocolatey:</p>
+<p> <code>nuget install chocolatey</code> or <code>nuget install chocolatey -pre</code></p>
+<p>Once you download it, open PowerShell (remote unsigned), navigate to the tools folder and run:</p>
+<p><code>&amp; .\chocolateyInstall.ps1</code></p>
+<h2 id="download-powershell-method">Download + PowerShell Method</h2>
+<p>You can also just download and unzip the Chocolatey package (<code>.nupkg</code> is a fancy zip file):</p>
+<ol>
+<li>Download the <a href="https://chocolatey.org/api/v2/package/chocolatey/">Chocolatey package</a>.</li>
+<li>Unzip it using any application that supports <code>zip</code> format.</li>
+<li>Open a PowerShell command shell and navigate into the unzipped package&#39;s tools folder.</li>
+<li><strong>NOTE</strong>: Ensure PowerShell execution policy is set to at least bypass or remote signed (if you have issues, you may need to set it to Unrestricted).</li>
+<li>Call <code>&amp; .\chocolateyInstall.ps1</code> to allow Chocolatey to install.</li>
+</ol>
+
+  </div>
+</div>
+
+  </main>
+
+  <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
+    <ul class="small fourth left p">
+      <li><strong>Chocolatey</strong></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">For Professionals</a></li>
+      <li><a href="#">For Businesses </a></li>
+      <li><a href="#">For Enterprise</a></li>
+      <li><a href="#">Kickstarter</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><strong>Resources</strong></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Mailing List</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Site map</a></li>
+      <li><a href="#">Media Kit</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><strong>Connect</strong></li>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Report a Bug</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Partner</a></li>
+    </ul>
+    <ul class="small fourth left p line-height-normal">
+      <li class="h2">
+        <div>
+          <a href="#" class="icon-twitter"></a> | <a href="#" class="icon-facebook"></a> | <a href="#" class="icon-github"></a>
+        </div>
+      </li>
+      <li class="m-t small">
+        <p>
+          <strong>&copy; 2011 - 2016</strong> RealDimensions Software, LLC
+        </p>
+        <p>
+          Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
+        </p>
+      </li>
+      <li class="m-t">
+        Site made possible by the following sponsors<br/>
+        <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
+          <img width="70px" src="assets/rd_logo.png"/>
+        </a>
+        <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
+          <img width="40px" src="assets/turbo_logo.png"/>
+        </a>
+        <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
+          <img width="50px" src="assets/appharbor_logo.png"/>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>

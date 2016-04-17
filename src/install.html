@@ -1,0 +1,9 @@
+<% md = markdown('installation') %>
+<div class="clearfix p">
+  <aside class="quarter left p">
+    <%= include('content-sidebar.html', {headings: md.headings}) %>
+  </aside>
+  <div class="three-quarters left p">
+    <%= md.html %>
+  </div>
+</div>
