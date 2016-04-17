@@ -13,9 +13,9 @@ const config = {
   markdown: 'content',
 };
 
-const include = (filePath, options) => {
+const include = (fileName, options) => {
   const temp = fs.readFileSync(
-    path.join('./src/shared', filePath)
+    path.join('./src/shared', fileName + '.html')
   ).toString();
 
   return _.template(temp)(_.merge(templateOptions, options));
