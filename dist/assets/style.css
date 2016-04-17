@@ -2155,6 +2155,10 @@ article > h1{
   text-align: center;
 }
 
+.three-quarters > *{
+  max-width: 100%;
+}
+
 .article-sidebar li{
   margin-bottom: .2em;
 }
