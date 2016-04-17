@@ -2117,19 +2117,44 @@ h1,h2,h3,h4,h5,h6{
   font-weight: 600;
 }
 
-h1, .h1{
-  font-size: 1.8em;
-  line-height: 1.3em;
-}
 h2, .h2{
-  font-size: 1.6em;
+  font-size: 1.8em;
   line-height: 1.35em;
+  font-weight: bold
 }
 h3, .h3{ font-size: 1.4em;}
 h4, .h4{ font-size: 1.2em;}
 
-.huge{
+.huge, h1, .h1{
   font-size: 2.8em;
+  font-weight: bold;
+}
+
+article h1, .h1{
+  margin-bottom: 1em;
+}
+
+ol{
+  padding-left: 1em;
+}
+
+.article-sidebar li{
+  margin-bottom: .2em;
+}
+
+.article-sidebar ol{
+  margin: 0;
+}
+
+.article-sidebar{
+  font-size: .8em;
+}
+
+.article-sidebar a{
+  display: block;
+  font-weight: normal;
+  line-height: 1.3em;
+  color: #000;
 }
 
 /* OOCSS Helpers */

@@ -42,10 +42,9 @@
   </header>
 
   <main>
-
 <div class="clearfix p">
-  <aside class="quarter left p">
-    <ul>
+  <aside class="quarter left p article-sidebar">
+    <ol>
 
   <li><a href="#installing-chocolatey">Installing Chocolatey</a></li>
 
@@ -68,8 +67,6 @@
   <li><a href="#nuget.exe-+-powershell-method">NuGet.exe + PowerShell Method</a></li>
 
   <li><a href="#download-+-powershell-method">Download + PowerShell Method</a></li>
-
-  <li><a href="#how-is-chocolatey-different-than-ninite-">How is Chocolatey different than Ninite?</a></li>
 
   <li><a href="#how-is-chocolatey-different-than-nuget-and/or-openwrap-">How is Chocolatey different than NuGet and/or OpenWrap?</a></li>
 
@@ -113,10 +110,6 @@
 
   <li><a href="#what-distinction-does-chocolatey-make-between-an-installable-and-a-portable-application-">What distinction does Chocolatey make between an installable and a portable application?</a></li>
 
-  <li><a href="#installable-application">Installable application</a></li>
-
-  <li><a href="#portable-application-–-something-that-doesn't-require-a-system-install-to-use">Portable application – something that doesn't require a system install to use</a></li>
-
   <li><a href="#why-doesn't-a-package-install-software-to-program-files-">Why doesn't a package install software to Program Files?</a></li>
 
   <li><a href="#what-is-the-difference-between-packages-named-*.install-(i.&nbsp;e.-[autohotkey.install](https://chocolatey.org/packages/autohotkey.install)),-*.portable-(i.&nbsp;e.-[autohotkey.portable](https://chocolatey.org/packages/autohotkey.portable))-and-*-(i.&nbsp;e.-[autohotkey](https://chocolatey.org/packages/autohotkey))-">What is the difference between packages named *.install (i.&nbsp;e. [autohotkey.install](https://chocolatey.org/packages/autohotkey.install)), *.portable (i.&nbsp;e. [autohotkey.portable](https://chocolatey.org/packages/autohotkey.portable)) and * (i.&nbsp;e. [autohotkey](https://chocolatey.org/packages/autohotkey))?</a></li>
@@ -129,10 +122,10 @@
 
   <li><a href="#why-do-i-have-to-confirm-packages-now--is-there-a-way-to-remove-this-">Why do I have to confirm packages now? Is there a way to remove this?</a></li>
 
-</ul>
+</ol>
 
   </aside>
-  <div class="three-quarters left p">
+  <article class="three-quarters left p">
     <h2 id="installing-chocolatey">Installing Chocolatey</h2>
 <p>Chocolatey installs in seconds...</p>
 <p>There are a few ways to install Chocolatey. Chocolatey exists as a <a href="http://nuget.org/list/packages/chocolatey">nuget package</a> so virtually any way you can get a nuget package, you have the opportunity to then install it.</p>
@@ -223,8 +216,9 @@ SET DIR=%~dp0%
 <li>Call <code>&amp; .\chocolateyInstall.ps1</code> to allow Chocolatey to install.</li>
 </ol>
 
-  </div>
+  </article>
 </div>
+
 
   </main>
 

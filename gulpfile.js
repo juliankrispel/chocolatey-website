@@ -29,7 +29,10 @@ const markdown = (fileName) => {
   ).toString();
 
   const ast = marked.lexer(content);
-  const headings = ast.filter((node) => node.type === 'heading')
+  const headings = ast.filter((node) => (
+    node.type === 'heading' &&
+    node.depth === 2
+  ))
   .map((heading) => {
     return _.merge(
       heading,
