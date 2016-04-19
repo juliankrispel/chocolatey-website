@@ -2745,6 +2745,8 @@ img{ max-width: 100%; }
   }
 
   header nav {
+    background: #DFF0FF;
+    border-bottom: 2px solid #C1DAF1;
     box-shadow: inset 0 19px 70px -20px rgba(0, 52, 132, 0.3);
   }
 
