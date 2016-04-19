@@ -20,7 +20,9 @@
   "devDependencies": {
     "gulp": "3.9.1",
     "gulp-cli": "1.2.1",
+    "gulp-connect": "3.2.2",
     "gulp-template": "4.0.0",
+    "gulp-watch": "4.3.5",
     "lodash": "4.11.1",
     "map-stream": "0.0.6",
     "marked": "0.3.5",

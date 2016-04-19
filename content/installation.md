@@ -1,4 +1,4 @@
-## Installing Chocolatey
+# Installing Chocolatey
 Chocolatey installs in seconds...
 
 There are a few ways to install Chocolatey. Chocolatey exists as a [nuget package](http://nuget.org/list/packages/chocolatey) so virtually any way you can get a nuget package, you have the opportunity to then install it.

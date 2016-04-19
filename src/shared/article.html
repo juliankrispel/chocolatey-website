@@ -1,8 +1,9 @@
 <div class="clearfix p">
-  <aside class="quarter left p article-sidebar">
+  <h1 class="text-center m-b--l"><%= md.title %></h1>
+  <aside class="quarter left p-l p-r article-sidebar">
     <%= include('content-sidebar', {headings: md.headings}) %>
   </aside>
-  <article class="three-quarters left p">
+  <article class="three-quarters left p-l p-r">
     <%= md.html %>
   </article>
 </div>
