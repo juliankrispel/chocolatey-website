@@ -1,23 +1,12 @@
-﻿# Pin Command (choco pin)
+﻿# [DEPRECATED] Version Command (choco version)
 
-Pin a package to suppress upgrades. 
+**NOTE:** Version has been deprecated and will be removed in version 1.0.0. 
 
-This is especially helpful when running [[`choco upgrade`|Commandsupgrade]] for all 
- packages, as it will automatically skip those packages. Another 
- alternative is `choco upgrade --except="pkg1,pk2"`.
+ If you are attempting to get local installed items, use 
+ `choco list -lo`. 
 
-## Usage
-
-    choco pin [list]|add|remove [<options/switches>]
-
-## Examples
-
-    choco pin   
-    choco pin list  
-    choco pin add -n=git
-    choco pin add -n=git --version 1.2.3
-    choco pin remove --name git
-
+ If you want to know what has available upgrades, use 
+ `choco upgrade <pkg|all> -whatif` or [[`choco outdated`|Commandsoutdated]].
 
 ## Options and Switches
 
@@ -77,18 +66,21 @@ Includes [[default options/switches|CommandsReference#default-options-and-switch
      UseSystemPowerShell - Execute PowerShell using an external process 
        instead of the built-in PowerShell host. Available in 0.9.10+.
 
- -n, --name=VALUE
-     Name - the name of the package. Required with some actions. Defaults to 
-       empty.
+ -s, --source=VALUE
+     Source - The source to find the package(s) to install. Special sources 
+       include: ruby, webpi, cygwin, windowsfeatures, and python. Defaults to 
+       default feeds.
 
-     --version=VALUE
-     Version - Used when multiple versions of a package are installed.  
-       Defaults to empty.
+     --lo, --localonly
+     LocalOnly - Only search against local machine items.
+
+     --pre, --prerelease
+     Prerelease - Include Prereleases? Defaults to false.
 
 ~~~
 
 [[Command Reference|CommandsReference]]
 
 
-***NOTE:*** This documentation has been automatically generated from `choco pin -h`. 
+***NOTE:*** This documentation has been automatically generated from `choco version -h`. 
 

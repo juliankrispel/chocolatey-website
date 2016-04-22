@@ -1,23 +1,27 @@
-﻿# Pin Command (choco pin)
+﻿# Source Command (choco source)
 
-Pin a package to suppress upgrades. 
+Chocolatey will allow you to interact with sources.
 
-This is especially helpful when running [[`choco upgrade`|Commandsupgrade]] for all 
- packages, as it will automatically skip those packages. Another 
- alternative is `choco upgrade --except="pkg1,pk2"`.
+**NOTE:** Mostly compatible with older chocolatey client (0.9.8.x and 
+ below) with options and switches. When enabling, disabling or removing 
+ a source, use `-name` in front of the option now. In most cases you 
+ can still pass options and switches with one dash (`-`). For more 
+ details, see [[how to pass arguments|CommandsReference#how-to-pass-options--switches]] (`choco -?`).
 
 ## Usage
 
-    choco pin [list]|add|remove [<options/switches>]
+    choco source [list]|add|remove|disable|enable [<options/switches>]
+    choco sources [list]|add|remove|disable|enable [<options/switches>]
 
 ## Examples
 
-    choco pin   
-    choco pin list  
-    choco pin add -n=git
-    choco pin add -n=git --version 1.2.3
-    choco pin remove --name git
-
+    choco source
+    choco source list
+    choco source add -n=bob -s https://somewhere/out/there/api/v2/
+    choco source add -n=bob -s "'https://somewhere/out/there/api/v2/'" -u=bob -p=12345
+    choco source disable -n=bob
+    choco source enable -n=bob
+    choco source remove -n=bob
 
 ## Options and Switches
 
@@ -78,17 +82,29 @@ Includes [[default options/switches|CommandsReference#default-options-and-switch
        instead of the built-in PowerShell host. Available in 0.9.10+.
 
  -n, --name=VALUE
-     Name - the name of the package. Required with some actions. Defaults to 
+     Name - the name of the source. Required with some actions. Defaults to 
        empty.
 
-     --version=VALUE
-     Version - Used when multiple versions of a package are installed.  
-       Defaults to empty.
+ -s, --source=VALUE
+     Source - The source. Defaults to empty.
+
+ -u, --user=VALUE
+     User - used with authenticated feeds. Defaults to empty.
+
+ -p, --password=VALUE
+     Password - the user's password to the source. Encrypted in chocolate-
+       y.config file.
+
+     --priority=VALUE
+     Priority - The priority order of this source as compared to other 
+       sources, lower is better. Defaults to 0 (no priority). All priorities 
+       above 0 will be evaluated first, then zero-based values will be 
+       evaluated in config file order. Available in 0.9.9.9+.
 
 ~~~
 
 [[Command Reference|CommandsReference]]
 
 
-***NOTE:*** This documentation has been automatically generated from `choco pin -h`. 
+***NOTE:*** This documentation has been automatically generated from `choco source -h`. 
 

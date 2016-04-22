@@ -1,33 +1,65 @@
-# [DEPRECATED] Write-ChocolateyFailure
+﻿# Write-ChocolateyFailure
 
-Notes an unsuccessful Chocolatey install.
+DEPRECATED - DO NOT USE.
 
-**NOTE:** This has been deprecated and is no longer useful as of 0.9.9. Instead please just use `throw $_.Exception` when catching errors. Although try/catch is no longer necessary unless you want to do some error handling.
+## Syntax
 
-## Usage
+~~~powershell
+Write-ChocolateyFailure [-packageName <String>] [-failureMessage <String>]
+~~~
 
-```powershell
-Write-ChocolateyFailure $packageName $failureMessage
-```
+## Description
 
-## Examples
+Throws the error message as an error.
 
-```powershell
-Write-ChocolateyFailure 'StExBar' "$($_.Exception.Message)"
-```
+## Notes
+
+This has been deprecated and is no longer useful as of 0.9.9. Instead please just use `throw $_.Exception` when catching errors. Although try/catch is no longer necessary unless you want to do some error handling.
+
+## Aliases
+
+None
+
+## Inputs
+
+None
+
+## Outputs
+
+None
 
 ## Parameters
 
-* `-packageName`
+###  -PackageName [\<String\>]
+The name of the package, used for messaging
 
-    This is an arbitrary name.
+Property               | Value
+---------------------- | -----
+Aliases                | 
+Required?              | false
+Position?              | 1
+Default Value          | 
+Accept Pipeline Input? | false
+ 
+###  -FailureMessage [\<String\>]
+The message to throw an error with.
 
-    Example: `'7zip'`
+Property               | Value
+---------------------- | -----
+Aliases                | 
+Required?              | false
+Position?              | 2
+Default Value          | 
+Accept Pipeline Input? | false
+ 
 
-* `-failureMessage`
 
-    This is the message logged back to the main Chocolatey window.
 
-    Example: `"$($_.Exception.Message)"`
+## Links
+
+ * [[Write-ChocolateySuccess|HelpersWriteChocolateySuccess]]
+
 
 [[Function Reference|HelpersReference]]
+
+***NOTE:*** This documentation has been automatically generated from `Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1" -Force; Get-Help Write-ChocolateyFailure -Full`.

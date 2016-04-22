@@ -1,23 +1,17 @@
-﻿# Pin Command (choco pin)
+﻿# Feature Command (choco features)
 
-Pin a package to suppress upgrades. 
-
-This is especially helpful when running [[`choco upgrade`|Commandsupgrade]] for all 
- packages, as it will automatically skip those packages. Another 
- alternative is `choco upgrade --except="pkg1,pk2"`.
+Chocolatey will allow you to interact with features.
 
 ## Usage
 
-    choco pin [list]|add|remove [<options/switches>]
+    choco feature [list]|disable|enable [<options/switches>]
 
 ## Examples
 
-    choco pin   
-    choco pin list  
-    choco pin add -n=git
-    choco pin add -n=git --version 1.2.3
-    choco pin remove --name git
-
+    choco feature
+    choco feature list
+    choco feature disable -n=bob
+    choco feature enable -n=bob
 
 ## Options and Switches
 
@@ -78,17 +72,13 @@ Includes [[default options/switches|CommandsReference#default-options-and-switch
        instead of the built-in PowerShell host. Available in 0.9.10+.
 
  -n, --name=VALUE
-     Name - the name of the package. Required with some actions. Defaults to 
+     Name - the name of the source. Required with some actions. Defaults to 
        empty.
-
-     --version=VALUE
-     Version - Used when multiple versions of a package are installed.  
-       Defaults to empty.
 
 ~~~
 
 [[Command Reference|CommandsReference]]
 
 
-***NOTE:*** This documentation has been automatically generated from `choco pin -h`. 
+***NOTE:*** This documentation has been automatically generated from `choco features -h`. 
 

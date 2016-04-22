@@ -111,25 +111,27 @@ const streamCompile = (stream) => (
     )))
     .pipe(gulp.dest('./dist')));
 
+function markdownStream(stream) {
+  return stream.pipe(transform((filename) => (
+    map((chunk, next) => {
+      const md = parseMarkdown(chunk.toString());
+      const cont = _.template(content())(_.merge(templateOptions(), {md }));
+      next(null, _.template(layout())(_.merge(templateOptions(), {content: cont})));
+    })
+  )))
+  .pipe(rename({extname: '.html'}))
+  .pipe(gulp.dest('./dist'))
+}
+
 gulp.task(
   'buildMarkdown',
   () => (
-    //gulp.src(['./content/How-To-Install-Upgrade-Package-Without-Scripts.*'])
-    gulp.src(['./content/*.md', '!./content/_*'])
-    .pipe(transform((filename) => (
-      map((chunk, next) => {
-        const md = parseMarkdown(chunk.toString());
-        const cont = _.template(content())(_.merge(templateOptions(), {md }));
-        next(null, _.template(layout())(_.merge(templateOptions(), {content: cont})));
-      })
-    )))
-    .pipe(rename({extname: '.html'}))
-    .pipe(gulp.dest('./dist'))
+    markdownStream(gulp.src(['./content/*.md', '!./content/_*']))
   )
 );
 
 gulp.task(
-  'build',
+  'buildHtml',
   () => (gulp.src('./src/*.html').pipe(template(templateOptions()))
   .pipe(transform((filename) => (
     map((chunk, next) => (
@@ -140,10 +142,20 @@ gulp.task(
 );
 
 gulp.task(
-  'watch',
-  () => gulp.watch(['./src/**/*', './content/**/*'], ['build'])
+  'watchHtml',
+  () => gulp.watch('./src/**/*', ['buildHtml'])
 );
 
-gulp.task('serve', () => connect.server({ root: 'dist', port: '8080' }));
+gulp.task(
+  'watchMarkdown',
+  () => gulp.watch('./content/**/*', ['buildMarkdown'])
+);
 
-gulp.task('default', ['serve', 'watch']);
+const connectOpts = {
+  root: 'dist',
+  port: '8080',
+};
+
+gulp.task('serve', () => connect.server(connectOpts));
+
+gulp.task('default', ['serve', 'watchHtml', 'watchMarkdown']);

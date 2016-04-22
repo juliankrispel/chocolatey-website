@@ -5,7 +5,7 @@
   <title></title>
   <link href="assets/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-one">
 
   <div class="message">
     <div class="p-l p-r p--s">
@@ -49,7 +49,7 @@
 </section>
 
 <div class="feature-sections">
-  <section class="clearfix p-l p-r">
+  <section class="clearfix p-l p-r container-wide p-b--l">
     <div class="feature-sections__column">
       <h2>The sane way to manage software on Windows</h2>
       <ul class="check-list m-t">
@@ -75,63 +75,71 @@
     </div>
   </section>
 
-  <section class="clearfix p-l p-r p-t--l p-b--l">
-    <div class="feature-sections__column right">
-      <h2>Trusted by Business</h2>
-      <ul class="check-list m-t">
-        <li>Businesses are building and hosting their own packages that are reliable and repeatable so they can fully trust and control the process.</li>
-        <li>Businesses trusting Chocolatey for production purposes do not use the packages found on this site (the community package repository). <a href="#">Find out why</a>.</li>
-        <li>When businesses need more features than they can find in the Open Source version of Chocolatey, they turn to [Chocolatey for Business](link to Business page).</li>
-      </ul>
-    </div>
-    <div class="feature-sections__column">
-      <div class="border-radius image-placeholder"></div>
-    </div>
-  </section>
+  <div class="bg-two p-t--l p-b--l">
+    <section class="clearfix p-l p-r p-t--l p-b--l container-wide">
+      <div class="feature-sections__column right">
+        <h2>Trusted by Business</h2>
+        <ul class="check-list m-t">
+          <li>Businesses are building and hosting their own packages that are reliable and repeatable so they can fully trust and control the process.</li>
+          <li>Businesses trusting Chocolatey for production purposes do not use the packages found on this site (the community package repository). <a href="#">Find out why</a>.</li>
+          <li>When businesses need more features than they can find in the Open Source version of Chocolatey, they turn to [Chocolatey for Business](link to Business page).</li>
+        </ul>
+      </div>
+      <div class="feature-sections__column">
+        <div class="border-radius image-placeholder"></div>
+      </div>
+    </section>
+  </div>
 
-  <section class="clearfix p-l p-r p-t--l p-b--l">
-    <div class="feature-sections__column">
-      <h2>Official Chocolatey tools</h2>
-      <ul class="check-list m-t">
-        <li>The CLI client, choco.exe, was designed with security in mind. Know you are using Chocolatey from a trusted source when you are using the official Chocolatey clients.</li>
-        <li>Use choco.exe to install, upgrade, uninstall, publish and search for packages (and much more).</li>
-        <li>choco.exe has tab completion and excellent inline help.</li>
-        <li>Use [Chocolatey GUI](link to GUI package) when you need a visual representation of packages.</li>
-      </ul>
-    </div>
-    <div class="feature-sections__column">
-      <div class="border-radius image-placeholder"></div>
-    </div>
-  </section>
+  <div class="bg-three p-t--l p-b--l">
+    <section class="clearfix p-l p-r p-t--l p-b--l container-wide">
+      <div class="feature-sections__column">
+        <h2>Official Chocolatey tools</h2>
+        <ul class="check-list m-t">
+          <li>The CLI client, choco.exe, was designed with security in mind. Know you are using Chocolatey from a trusted source when you are using the official Chocolatey clients.</li>
+          <li>Use choco.exe to install, upgrade, uninstall, publish and search for packages (and much more).</li>
+          <li>choco.exe has tab completion and excellent inline help.</li>
+          <li>Use [Chocolatey GUI](link to GUI package) when you need a visual representation of packages.</li>
+        </ul>
+      </div>
+      <div class="feature-sections__column">
+        <div class="border-radius image-placeholder"></div>
+      </div>
+    </section>
+  </div>
 
-  <section class="clearfix p-l p-r p-t--l p-b--l">
-    <div class="feature-sections__column right">
-      <h2>Packages are independent deployment artifacts</h2>
-      <ul class="check-list m-t">
-        <li>Chocolatey packages are not just fancy zip files, they understand versioning and dependencies, allowing you to encapsulate everything related to managing installation and configuration for a piece of software.</li>
-        <li>As an independent deployment artifact, Chocolatey packages are not tied to another technology, allowing developers to install packages with Chocolatey and System Administrators to deploy Chocolatey packages using Chocolatey’s integration with their favorite configuration manager like SCCM, Puppet, or Chef.</li>
-        <li>Chocolatey packages allow you to separate software installation concerns from automation tools / configuration managers and use the best tool for software management, which is the Chocolatey framework.</li>
-      </ul>
-    </div>
-    <div class="feature-sections__column">
-      <div class="border-radius image-placeholder"></div>
-    </div>
-  </section>
+  <div class="bg-four">
+    <section class="clearfix p-l p-r p-t--l p-b--l container-wide">
+      <div class="feature-sections__column right">
+        <h2>Packages are independent deployment artifacts</h2>
+        <ul class="check-list m-t">
+          <li>Chocolatey packages are not just fancy zip files, they understand versioning and dependencies, allowing you to encapsulate everything related to managing installation and configuration for a piece of software.</li>
+          <li>As an independent deployment artifact, Chocolatey packages are not tied to another technology, allowing developers to install packages with Chocolatey and System Administrators to deploy Chocolatey packages using Chocolatey’s integration with their favorite configuration manager like SCCM, Puppet, or Chef.</li>
+          <li>Chocolatey packages allow you to separate software installation concerns from automation tools / configuration managers and use the best tool for software management, which is the Chocolatey framework.</li>
+        </ul>
+      </div>
+      <div class="feature-sections__column">
+        <div class="border-radius image-placeholder"></div>
+      </div>
+    </section>
+  </div>
 
-  <section class="clearfix p-l p-r p-t--l p-b--l">
-    <div class="feature-sections__column">
-      <h2>Choose from thousands of community packages</h2>
-      <ul class="check-list m-t">
-        <li>Chocolatey.org has the largest online registry of Windows packages.</li>
-        <li>Package submissions go through a rigorous moderation review process.</li>
-        <li>The packages in the community repository are automatically scanned for viruses.</li>
-        <li>The community repository has a strict policy on malicious and pirated software.</li>
-      </ul>
-    </div>
-    <div class="feature-sections__column">
-      <div class="border-radius image-placeholder"></div>
-    </div>
-  </section>
+  <div class="bg-five">
+    <section class="clearfix p-l p-r p-t--l p-b--l container-wide">
+      <div class="feature-sections__column">
+        <h2>Choose from thousands of community packages</h2>
+        <ul class="check-list m-t">
+          <li>Chocolatey.org has the largest online registry of Windows packages.</li>
+          <li>Package submissions go through a rigorous moderation review process.</li>
+          <li>The packages in the community repository are automatically scanned for viruses.</li>
+          <li>The community repository has a strict policy on malicious and pirated software.</li>
+        </ul>
+      </div>
+      <div class="feature-sections__column">
+        <div class="border-radius image-placeholder"></div>
+      </div>
+    </section>
+  </div>
 </div>
 
   </main>

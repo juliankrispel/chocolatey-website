@@ -1,22 +1,30 @@
-﻿# Pin Command (choco pin)
+﻿# ApiKey Command (choco setapiKey)
 
-Pin a package to suppress upgrades. 
+This lists api keys that are set or sets an api key for a particular   
+ source so it doesn't need to be specified every time.
 
-This is especially helpful when running [[`choco upgrade`|Commandsupgrade]] for all 
- packages, as it will automatically skip those packages. Another 
- alternative is `choco upgrade --except="pkg1,pk2"`.
+Anything that doesn't contain source and key will list api keys.
 
 ## Usage
 
-    choco pin [list]|add|remove [<options/switches>]
+    choco apikey [<options/switches>]
+    choco setapikey [<options/switches>]
 
 ## Examples
 
-    choco pin   
-    choco pin list  
-    choco pin add -n=git
-    choco pin add -n=git --version 1.2.3
-    choco pin remove --name git
+    choco apikey
+    choco apikey -s"https://somewhere/out/there"
+    choco apikey -s"https://somewhere/out/there/" -k="value"
+    choco apikey -s"https://chocolatey.org/" -k="123-123123-123"
+
+## Connecting to Chocolatey.org
+
+In order to save your API key for https://chocolatey.org/, 
+ log in (or register, confirm and then log in) to
+ https://chocolatey.org/, go to https://chocolatey.org/account, 
+ copy the API Key, and then use it in the following command:
+
+    choco apikey -k <your key here> -s https://chocolatey.org/
 
 
 ## Options and Switches
@@ -77,18 +85,16 @@ Includes [[default options/switches|CommandsReference#default-options-and-switch
      UseSystemPowerShell - Execute PowerShell using an external process 
        instead of the built-in PowerShell host. Available in 0.9.10+.
 
- -n, --name=VALUE
-     Name - the name of the package. Required with some actions. Defaults to 
-       empty.
+ -s, --source=VALUE
+     Source [REQUIRED] - The source location for the key
 
-     --version=VALUE
-     Version - Used when multiple versions of a package are installed.  
-       Defaults to empty.
+ -k, --key, --apikey, --api-key=VALUE
+     ApiKey - The api key for the source.
 
 ~~~
 
 [[Command Reference|CommandsReference]]
 
 
-***NOTE:*** This documentation has been automatically generated from `choco pin -h`. 
+***NOTE:*** This documentation has been automatically generated from `choco setapiKey -h`. 
 

@@ -1,19 +1,19 @@
-# Automatic Packages
+## Automatic Packages
 Automatic packages are what set chocolatey apart from other package managers.
 http://chocolatey.org/packages/ChocolateyPackageUpdater
 
 ## Chocolatey Package Updater aka chocopkgup
 The tool that accomplishes this process is known as [chocopkgup](http://chocolatey.org/packages/ChocolateyPackageUpdater) (Chocolatey Package Updater). It is a free tool (unless you want to use it for uploads to somewhere other than chocolatey.org).
 
-## Licensing
+### Licensing
 Check the license at http://realdimensions.net/licenses/chocolateypackageupdater/license.txt to be sure that it applies to you.
 
 Basically it boils down to this: if you want to use chocopkgup privately, you will need to pay for it. As long as you are publishing to chocolatey.org, the tool is completely free! The license does expire every once in awhile, but if you are keeping up on your chocolatey updates locally, you won't even notice (`cup all`, remember?).
 
-## Credits
+### Credits
 This tool makes use of [Ketarin](http://chocolatey.org/packages/ketarin). Ketarin is an awesome tool that helps chocopkgup accomplish its tasks.
 
-## Setup
+### Setup
 More of this will become automated over time.
 
 1. **Optional** (strongly recommended) - Ensure you are using a source control repository and file system for keeping packages. A good example is [chocolatey-coreteampackages](https://github.com/chocolatey/chocolatey-coreteampackages) repo.
