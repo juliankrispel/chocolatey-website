@@ -2100,6 +2100,9 @@ ul, header, main, h1, h2, h3, h4, h5{
 }
 
 main{
+}
+
+.container-wide{
   margin: auto;
   max-width: 1200px;
 }
@@ -2404,7 +2407,7 @@ body{
   font-family: Open Sans;
   font-size: 18px;
   line-height: 1.6em;
-  color: #000;
+  color: #202F3C;
 }
 
 a {
@@ -2560,7 +2563,6 @@ img{ max-width: 100%; }
 }
 
 .terminal-container{
-  border-bottom: 8em solid #fff;
   position: relative;
 }
 
@@ -2745,8 +2747,9 @@ img{ max-width: 100%; }
   }
 
   header nav {
-    background: #DFF0FF;
-    border-bottom: 2px solid #C1DAF1;
+    color: #fff;
+    background: #2f6492;
+    border-bottom: 4px solid #CECCC1;
     box-shadow: inset 0 19px 70px -20px rgba(0, 52, 132, 0.3);
   }
 
@@ -2851,7 +2854,7 @@ a{
   color: #5C9FD8; 
 }
 
-nav a{ color: black;}
+nav a{ color: inherit;}
 
 table td{
   padding: .2em 0;
@@ -2914,4 +2917,20 @@ pre code{
   background: none;
   margin: 0;
   padding: 0;
+}
+
+.bg-one{
+  background: #F1EFE1;
+}
+
+.bg-two{
+  background: #202F3C;
+  color: #fff;
+  border-top: 5px solid #BDBAA0;
+}
+
+.bg-three{
+  background: #1A375A;
+  color: #fff;
+  border-top: 4px solid #21446D;
 }
