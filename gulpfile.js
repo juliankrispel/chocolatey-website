@@ -23,7 +23,7 @@ const include = (fileName, options) => {
     path.join('./src/shared', fileName + '.html')
   ).toString();
 
-  return _.template(temp)(_.merge(templateOptions, options));
+  return _.template(temp)(_.merge(templateOptions(), options));
 };
 
 const assetPath = (filePath) => path.join(config.assetPath, filePath);
@@ -82,8 +82,6 @@ const parseMarkdown = (content) => {
     );
   });
 
-  console.log(title, headings.map(h => h.text));
-
   return {
     title,
     headings,
@@ -98,17 +96,17 @@ const markdown = (fileName) => {
   return parseMarkdown(content);
 };
 
-const templateOptions = {
+const templateOptions = () => ({
   assetPath,
   markdown,
   include,
-};
+});
 
 const streamCompile = (stream) => (
-  stream.pipe(template(templateOptions))
+  stream.pipe(template(templateOptions()))
     .pipe(transform((filename) => (
       map((chunk, next) => (
-        next(null, _.template(layout())(_.merge(templateOptions, {content: chunk.toString()})))
+        next(null, _.template(layout())(_.merge(templateOptions(), {content: chunk.toString()})))
       ))
     )))
     .pipe(gulp.dest('./dist')));
@@ -121,8 +119,8 @@ gulp.task(
     .pipe(transform((filename) => (
       map((chunk, next) => {
         const md = parseMarkdown(chunk.toString());
-        const cont = _.template(content())(_.merge(templateOptions, { md }));
-        next(null, _.template(layout())(_.merge(templateOptions, {content: cont})));
+        const cont = _.template(content())(_.merge(templateOptions(), {md }));
+        next(null, _.template(layout())(_.merge(templateOptions(), {content: cont})));
       })
     )))
     .pipe(rename({extname: '.html'}))
@@ -132,10 +130,10 @@ gulp.task(
 
 gulp.task(
   'build',
-  () => (gulp.src('./src/*.html').pipe(template(templateOptions))
+  () => (gulp.src('./src/*.html').pipe(template(templateOptions()))
   .pipe(transform((filename) => (
     map((chunk, next) => (
-      next(null, _.template(layout())(_.merge(templateOptions, {content: chunk.toString()})))
+      next(null, _.template(layout())(_.merge(templateOptions(), {content: chunk.toString()})))
     ))
   )))
   .pipe(gulp.dest('./dist')))

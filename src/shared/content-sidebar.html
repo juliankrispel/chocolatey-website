@@ -1,5 +1,5 @@
 <ol>
-<% headings.map((heading) => { %>
+<% headings.forEach((heading) => { %>
   <li><a href="#<%= heading.id %>"><%= heading.text %></a></li>
 <% }) %>
 </ol>
