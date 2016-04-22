@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="bg-one">
+
+  <div class="message hide">
+    <div class="p-l p-r p--s">
+      <span>
+        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
+      </span>
+      <button class="right pointer" data-close-message>
+        <i class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+
+  <header class="bg-yellow p-b--l clearfix">
+    <a class="logo left" href="index.html">
+      <img class="hide-on-small" height="250px" alt="Logo" src="assets/logo_square.svg">
+      <img class="hide-on-large" height="100px" alt="Logo" src="assets/logo_small.svg">
+    </a>
+
+    <nav class="text-right p">
+      <ul class="inline-list main-menu m-r m-b--s m-t--s">
+        <li><a class="bold h4 m-l--s" href="install.html">Install</a></li>
+        <li><a class="bold h4 m-l--s" href="packages.html">Community Packages</a></li>
+        <li><a class="bold h4 m-l--s" href="business.html">Business</a></li>
+        <li><a class="bold h4 m-l--s" href="pricing.html">Pricing</a></li>
+        <li><a class="bold h4 m-l--s" href="faq.html">FAQ</a></li>
+        <li><a class="bold h4 m-l--s" href="docs.html">Docs</a></li>
+        <li>
+          <div class="m-l inline-block">
+            <div class="small button-bar inline-block line-height-small">
+              <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<div class="clearfix p">
+  <h1 class="text-center m-b--l"></h1>
+  <aside class="quarter left p-l p-r article-sidebar">
+    <div>
+      <ol>
+
+  <li><a href="#chocolatey---kind-of-like-apt-get-but-for-windows">Chocolatey - kind of like apt-get, but for Windows</a></li>
+
+  <li><a href="#build-status">Build Status</a></li>
+
+  <li><a href="#chocolatey-">Chocolatey?</a></li>
+
+  <li><a href="#see-it-in-action">See It In Action</a></li>
+
+  <li><a href="#information">Information</a></li>
+
+  <li><a href="#using-chocolatey">Using Chocolatey</a></li>
+
+  <li><a href="#packages">Packages</a></li>
+
+  <li><a href="#how-to's">How-To's</a></li>
+
+  <li><a href="#roadmap">RoadMap</a></li>
+
+  <li><a href="#google-group">Google Group</a></li>
+
+  <li><a href="#chat-room">Chat Room</a></li>
+
+  <li><a href="#the-chocolatey-team">The Chocolatey Team</a></li>
+
+</ol>
+
+    </div>
+
+    <div>
+      
+      <h2></h2>
+      <ul>
+<li><a href="Home">Home</a></li>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="https://github.com/chocolatey/chocolatey/wiki">Choco 0.9.8.x &amp; below</a></li>
+</ul>
+<p><strong>General</strong></p>
+<ul>
+<li><a href="ReleaseNotes">Release Notes</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/README.md#submitting-issues">Submitting Issues</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/CONTRIBUTING.md">Contributing</a></li>
+<li><a href="ChocolateyFAQs">FAQs</a></li>
+<li><a href="Security">Security</a></li>
+<li><a href="Moderation">Chocolatey.org Moderation</a></li>
+<li><a href="PackageTriageProcess#are-you-a-software-vendor">Software Vendor?</a></li>
+</ul>
+<p><strong>Usage</strong></p>
+<p><a href="GettingStarted#how-does-chocolatey-work">How does choco work?</a></p>
+<ul>
+<li><a href="installation">How to install</a></li>
+<li><a href="Uninstallation">How to uninstall</a></li>
+<li><a href="GettingStarted">Getting Started</a></li>
+<li><a href="Proxy-Settings-for-Chocolatey">Proxy Settings</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsReference#how-to-pass-options--switches">Passing args to choco</a></li>
+<li><a href="CommandsReference">Complete Reference</a></li>
+<li><a href="CommandsList">List / Search </a></li>
+<li><a href="CommandsInstall">Install</a></li>
+<li><a href="CommandsPin">Pin</a></li>
+<li><a href="CommandsOutdated">Outdated</a></li>
+<li><a href="CommandsUpgrade">Upgrade</a></li>
+<li><a href="CommandsUninstall">Uninstall</a></li>
+<li><a href="CommandsConfig">Config</a></li>
+<li><a href="CommandsSources">Source / Sources</a></li>
+<li><a href="CommandsFeature">Feature</a></li>
+<li>See other commands related to creating packages below</li>
+</ul>
+</li>
+</ul>
+<p><strong>Creating Packages</strong></p>
+<ul>
+<li><a href="CreatePackages">Create Packages</a></li>
+<li><a href="CreatePackagesQuickStart">Quick Start</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsNew">New</a></li>
+<li><a href="CommandsPack">Pack</a></li>
+<li><a href="CommandsApiKey">Apikey</a></li>
+<li><a href="CommandsPush">Push</a></li>
+</ul>
+</li>
+<li><a href="HelpersReference">Function and Variable Reference</a></li>
+<li><a href="AutomaticPackages">Automatic Packages</a></li>
+</ul>
+<p><strong>How To&#39;s</strong></p>
+<ul>
+<li><a href="Proxy-Settings-for-Chocolatey">Use Chocolatey w/Proxy Server</a></li>
+<li><a href="How-To-Change-Cache">Change Download Cache Location aka Don&#39;t use TEMP for downloads</a></li>
+<li><a href="How-To-Install-Upgrade-Package-Without-Scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+<li><a href="How-To-Create-Custom-Package-Templates">Create Custom Package Templates</a></li>
+<li><a href="PackageTriageProcess">Request Package Fixes/Updates</a></li>
+<li><a href="PackageTriageProcess">Request Package</a></li>
+<li><a href="PackageTriageProcess#i-want-to-take-overhelp-with-package-maintenance-for-my-software">Maintain Packages for My Software</a></li>
+<li><a href="PackageTriageProcess">Become a Maintainer</a></li>
+<li><a href="PackageMantainerHandover">Take Over Package Maintenance Exclusively</a></li>
+<li><a href="How-To-Parse-PackageParameters-Argument">Parse Package Parameters</a></li>
+<li><a href="How-To-Mount-An-Iso-In-Chocolatey-Package">Mount Iso</a></li>
+<li><a href="How-To-Deprecate-A-Chocolatey-Package">Deprecate a Package</a></li>
+<li><a href="How-To-Host-Feed">Host Your Own Server</a></li>
+</ul>
+<p><strong>Use Cases</strong></p>
+<ul>
+<li><a href="DevelopmentEnvironmentSetup">Development Environment</a></li>
+<li><a href="Hosting-Chocolatey-Packages-on-MyGet">Host on MyGet</a></li>
+</ul>
+<p><strong>Learning Resources</strong></p>
+<ul>
+<li><a href="Resources">Resources</a></li>
+<li><a href="Videos">Videos</a></li>
+<li><a href="Presentations">Presentations</a></li>
+</ul>
+<p><strong>Other</strong></p>
+<ul>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="Legal">Legal</a></li>
+<li><a href="History">History</a></li>
+</ul>
+
+    </div>
+  </aside>
+  <article class="three-quarters left p-l p-r">
+    <h2 id="chocolatey-kind-of-like-apt-get-but-for-windows">Chocolatey - kind of like apt-get, but for Windows</h2>
+<p><a href="https://chocolatey.org/packages/chocolatey"><img src="http://img.shields.io/chocolatey/dt/chocolatey.svg" alt=""></a> <a href="https://chocolatey.org/packages/chocolatey"><img src="http://img.shields.io/chocolatey/v/chocolatey.svg" alt=""></a> <a href="https://www.gittip.com/Chocolatey/"><img src="http://img.shields.io/gittip/Chocolatey.svg" alt=""></a> <a href="https://www.openhub.net/p/chocolatey"><img src="https://www.openhub.net/p/chocolatey/widgets/project_thin_badge.gif" alt="Project Stats"></a></p>
+<h5 id="notes-">Notes:</h5>
+<ul>
+<li>Edit me at <a href="https://github.com/chocolatey/choco-wiki">https://github.com/chocolatey/choco-wiki</a></li>
+<li><del>If you are on Chocolatey 0.9.8.x and below, you want to go to <a href="https://github.com/chocolatey/chocolatey/wiki">https://github.com/chocolatey/chocolatey/wiki</a></del> (this is no longer available)</li>
+</ul>
+<h2 id="build-status">Build Status</h2>
+<table>
+<thead>
+<tr>
+<th>TeamCity</th>
+<th>AppVeyor</th>
+<th>Travis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://teamcity.codebetter.com/viewType.html?buildTypeId=bt429"><img src="http://img.shields.io/teamcity/codebetter/bt429.svg" alt="TeamCity Build Status"></a></td>
+<td><a href="https://ci.appveyor.com/project/ferventcoder/choco/branch/master"><img src="https://ci.appveyor.com/api/projects/status/jfxywa3xuwowt20w/branch/master?svg=true" alt="AppVeyor Build Status"></a></td>
+<td><a href="https://travis-ci.org/chocolatey/choco"><img src="https://travis-ci.org/chocolatey/choco.svg?branch=master" alt="Travis Build Status"></a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="you-can-just-call-me-chocolatey-">You can just call me Chocolatey.</h3>
+<p><img src="https://github.com/chocolatey/choco/wiki/images/chocolateyicon.gif" alt="Chocolatey Logo" title="Chocolatey"></p>
+<h3 id="let-s-get-chocolatey-">Let&#39;s get Chocolatey!</h3>
+<p>&quot;I&#39;m a tools enabler, I&#39;m a global silent application installer. I configure stuff. Some people want to call me apt-get for Windows, I just want to get #chocolatey!&quot;</p>
+<p>Home: <a href="https://chocolatey.org">https://chocolatey.org</a> (Backup: <a href="http://chocolatey.apphb.com">http://chocolatey.apphb.com</a>)
+Forum: <a href="http://groups.google.com/group/chocolatey">http://groups.google.com/group/chocolatey</a>
+Twitter: <a href="https://twitter.com/chocolateynuget">https://twitter.com/chocolateynuget</a></p>
+<h2 id="chocolatey-">Chocolatey?</h2>
+<p>Chocolatey is a global PowerShell execution engine using the NuGet packaging infrastructure. Think of it as the ultimate automation tool for Windows.</p>
+<p>Managing internal and external software is a breeze with Chocolatey! Chocolatey is a single, unified interface designed to work with all aspects of managing Windows software using a packaging framework that understands both versioning and dependency requirements. Chocolatey packages encapsulate everything required to manage a particular piece of software into one deployment artifact by wrapping installers, executables, zips, and scripts into a compiled package file. Chocolatey packages can be used independently, but also integrate with configuration managers like SCCM, Puppet, and Chef. Chocolatey is trusted by businesses all over the world to manage their software deployments on Windows. You’ve never had so much fun managing software!</p>
+<p>Chocolatey is beneficial for some of the following reasons:</p>
+<ul>
+<li>You have a single, unified interface for installing, upgrading and uninstalling software on Windows.</li>
+<li>Packages are independent deployment artifacts that can easily be used across technologies like SCCM, Puppet, Chef, etc, but are not tied to those technologies. Developers could still use the same packages locally that are used with SCCM.</li>
+<li>You define dependencies between software so installation order is not a manual process.</li>
+<li>Chocolatey has some really great smarts built-in to be able to handle things like uninstalling software automatically.</li>
+<li>You can easily package your own internal software using technologies you are familiar with (PowerShell).</li>
+<li>Chocolatey has great PowerShell helper functions for many software scenarios, so many times a one line function call is all you need to handle complex installation software.</li>
+<li>You can define any additional functionality a native installer file may have missed setting up for you, such as putting some directory in the PATH variable.</li>
+<li>You control how installs, upgrades and uninstalls are handled.</li>
+<li>Package maintenance is quite simple.</li>
+<li>It makes Windows software easily scriptable.</li>
+<li>FOSS version is completely free with a business friendly license.</li>
+<li>Able to use completely internally building your own packages.</li>
+<li>Hosting your own internal packages is as simple as a file/folder share to as advanced as a custom package gallery - see <a href="How-To-Host-Feed">Hosting your own server</a>.</li>
+<li>Can integrate with SCCM to deliver packages and software out to distribution points.</li>
+<li>Integrates with Puppet, Chef, Ansible, Saltstack and DSC.</li>
+<li>Auditing what is installed (and not just what&#39;s in Programs and Features).</li>
+<li>You can build your own internal packages that wrap native installers, but you can build more true package types that have the software in the package. See <a href="GettingStarted#what-are-chocolatey-packages">What are Chocolatey Packages?</a></li>
+</ul>
+<p>Chocolatey is like apt-get, but built with Windows in mind (there are differences and limitations). For those unfamiliar with APT/Debian, think about Chocolatey as a global silent installer for applications and tools. It can also do configuration tasks and anything that you can do with PowerShell. The power you hold with a tool like Chocolatey is only limited by your imagination!</p>
+<p>What&#39;s the difference between NuGet and Chocolatey? Developers can use NuGet to get 3rd party libraries that they use to build the .NET tools and applications that they release with Chocolatey! But Chocolatey is not just for .NET tools. It&#39;s for nearly any Windows application/tool!</p>
+<p>Want to <a href="ChocolateyFAQs">learn more?</a></p>
+<h2 id="see-it-in-action">See It In Action</h2>
+<p><img src="https://raw.githubusercontent.com/wiki/chocolatey/choco/images/gifs/choco_install.gif" alt="Chocolatey Install"></p>
+<h2 id="information">Information</h2>
+<ul>
+<li><a href="ChocolateyFAQs">Frequently Asked Questions</a></li>
+<li><a href="Why">Why Chocolatey</a></li>
+<li><a href="Legal#package-license-acceptance-terms">License Acceptance Terms</a></li>
+<li><a href="Legal#waiver-of-responsibility">Waiver of Responsibility</a></li>
+<li><a href="ReleaseNotes">Release Notes</a></li>
+</ul>
+<h2 id="using-chocolatey">Using Chocolatey</h2>
+<ul>
+<li><a href="Installation">Installing Chocolatey</a></li>
+<li><a href="Uninstallation">Uninstalling Chocolatey</a></li>
+<li><a href="GettingStarted">Getting Started</a></li>
+<li><a href="CommandsReference">Command Reference</a></li>
+<li>Use Chocolatey to set up <a href="DevelopmentEnvironmentSetup">source code development environments</a>!</li>
+<li>What distinction does Chocolatey make between an <a href="ChocolateyFAQs#what-distinction-does-chocolatey-make-between-an-installable-and-a-portable-application">installable and a portable application</a>?</li>
+</ul>
+<h2 id="packages">Packages</h2>
+<ul>
+<li><a href="CreatePackages">Creating packages</a></li>
+<li>Keep in Mind <a href="Legal#distributions-aka-chocolatey-packages">Distribution Rights</a></li>
+<li><a href="HelpersReference">Package Function and Variable Reference</a></li>
+<li><a href="PackageTriageProcess">Outdated packages? Triage process</a></li>
+</ul>
+<h2 id="how-to-s">How-To&#39;s</h2>
+<ul>
+<li><a href="How-To-Parse-PackageParameters-Argument">Parse PackageParameters Argument</a></li>
+<li><a href="How-To-Mount-An-Iso-In-Chocolatey-Package">Mount an Iso in Chocolatey Package</a></li>
+<li><a href="How-To-Deprecate-A-Chocolatey-Package">Deprecate a Chocolatey Package</a></li>
+<li><a href="How-To-Host-Feed">Host Your Own Feed</a></li>
+</ul>
+<h2 id="roadmap">RoadMap</h2>
+<p>Where are <a href="RoadMap">we</a>? Where are we <a href="RoadMap">going</a>?</p>
+<h2 id="google-group">Google Group</h2>
+<p>Chocolatey has a <a href="http://groups.google.com/group/chocolatey">Google Groups group</a>. Please join and ask questions and send feedback.</p>
+<p>If you have issues with a package (or it is out of date), please use the contact maintainers link on the package page itself. If the maintainer doesn’t respond within a given time frame (say a day or two), please refer to the <a href="PackageTriageProcess">Package Triage Process</a>.</p>
+<h2 id="chat-room">Chat Room</h2>
+<p>Come join in the conversation about Chocolatey in our Gitter Chat Room</p>
+<p><a href="https://gitter.im/chocolatey/choco?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter"></a></p>
+<p>Or, you can find us in IRC on Freenode at #chocolatey.</p>
+<h2 id="the-chocolatey-team">The Chocolatey Team</h2>
+<p>You can find all of the members of the Chocolatey Team <a href="https://github.com/orgs/chocolatey/people">here</a>.</p>
+<p>##Requirements</p>
+<ul>
+<li>Windows 7+/Windows 2003+</li>
+<li>.NET Framework 4.0</li>
+<li>PowerShell 2.0</li>
+</ul>
+
+  </article>
+</div>
+
+  </main>
+
+  <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Chocolatey</h3></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">For Professionals</a></li>
+      <li><a href="#">For Businesses </a></li>
+      <li><a href="#">For Enterprise</a></li>
+      <li><a href="#">Kickstarter</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Resources</h3></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Mailing List</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Site map</a></li>
+      <li><a href="#">Media Kit</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Connect</h3></li>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Report a Bug</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Partner</a></li>
+    </ul>
+    <ul class="small fourth left p line-height-normal">
+      <li class="h2">
+        <div>
+          <a href="#" class="icon-twitter"></a> | <a href="#" class="icon-facebook"></a> | <a href="#" class="icon-github"></a>
+        </div>
+      </li>
+      <li class="m-t small">
+        <p>
+          <strong>&copy; 2011 - 2016</strong> RealDimensions Software, LLC
+        </p>
+        <p>
+          Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
+        </p>
+      </li>
+      <li class="m-t">
+        Site made possible by the following sponsors<br/>
+        <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
+          <img width="70px" src="assets/rd_logo.png"/>
+        </a>
+        <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
+          <img width="40px" src="assets/turbo_logo.png"/>
+        </a>
+        <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
+          <img width="50px" src="assets/appharbor_logo.png"/>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>

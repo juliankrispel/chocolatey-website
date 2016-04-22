@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="bg-one">
+
+  <div class="message hide">
+    <div class="p-l p-r p--s">
+      <span>
+        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
+      </span>
+      <button class="right pointer" data-close-message>
+        <i class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+
+  <header class="bg-yellow p-b--l clearfix">
+    <a class="logo left" href="index.html">
+      <img class="hide-on-small" height="250px" alt="Logo" src="assets/logo_square.svg">
+      <img class="hide-on-large" height="100px" alt="Logo" src="assets/logo_small.svg">
+    </a>
+
+    <nav class="text-right p">
+      <ul class="inline-list main-menu m-r m-b--s m-t--s">
+        <li><a class="bold h4 m-l--s" href="install.html">Install</a></li>
+        <li><a class="bold h4 m-l--s" href="packages.html">Community Packages</a></li>
+        <li><a class="bold h4 m-l--s" href="business.html">Business</a></li>
+        <li><a class="bold h4 m-l--s" href="pricing.html">Pricing</a></li>
+        <li><a class="bold h4 m-l--s" href="faq.html">FAQ</a></li>
+        <li><a class="bold h4 m-l--s" href="docs.html">Docs</a></li>
+        <li>
+          <div class="m-l inline-block">
+            <div class="small button-bar inline-block line-height-small">
+              <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<div class="clearfix p">
+  <h1 class="text-center m-b--l"></h1>
+  <aside class="quarter left p-l p-r article-sidebar">
+    <div>
+      <ol>
+
+  <li><a href="#creating-chocolatey-packages---tl;dr-version">Creating Chocolatey Packages - TL;DR version</a></li>
+
+  <li><a href="#prerequisites">Prerequisites</a></li>
+
+  <li><a href="#quick-start-guide">Quick start guide</a></li>
+
+  <li><a href="#common-mistakes">Common Mistakes</a></li>
+
+  <li><a href="#environmental-variables">Environmental Variables</a></li>
+
+  <li><a href="#examples">Examples</a></li>
+
+  <li><a href="#tips">Tips</a></li>
+
+</ol>
+
+    </div>
+
+    <div>
+      
+      <h2></h2>
+      <ul>
+<li><a href="Home">Home</a></li>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="https://github.com/chocolatey/chocolatey/wiki">Choco 0.9.8.x &amp; below</a></li>
+</ul>
+<p><strong>General</strong></p>
+<ul>
+<li><a href="ReleaseNotes">Release Notes</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/README.md#submitting-issues">Submitting Issues</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/CONTRIBUTING.md">Contributing</a></li>
+<li><a href="ChocolateyFAQs">FAQs</a></li>
+<li><a href="Security">Security</a></li>
+<li><a href="Moderation">Chocolatey.org Moderation</a></li>
+<li><a href="PackageTriageProcess#are-you-a-software-vendor">Software Vendor?</a></li>
+</ul>
+<p><strong>Usage</strong></p>
+<p><a href="GettingStarted#how-does-chocolatey-work">How does choco work?</a></p>
+<ul>
+<li><a href="installation">How to install</a></li>
+<li><a href="Uninstallation">How to uninstall</a></li>
+<li><a href="GettingStarted">Getting Started</a></li>
+<li><a href="Proxy-Settings-for-Chocolatey">Proxy Settings</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsReference#how-to-pass-options--switches">Passing args to choco</a></li>
+<li><a href="CommandsReference">Complete Reference</a></li>
+<li><a href="CommandsList">List / Search </a></li>
+<li><a href="CommandsInstall">Install</a></li>
+<li><a href="CommandsPin">Pin</a></li>
+<li><a href="CommandsOutdated">Outdated</a></li>
+<li><a href="CommandsUpgrade">Upgrade</a></li>
+<li><a href="CommandsUninstall">Uninstall</a></li>
+<li><a href="CommandsConfig">Config</a></li>
+<li><a href="CommandsSources">Source / Sources</a></li>
+<li><a href="CommandsFeature">Feature</a></li>
+<li>See other commands related to creating packages below</li>
+</ul>
+</li>
+</ul>
+<p><strong>Creating Packages</strong></p>
+<ul>
+<li><a href="CreatePackages">Create Packages</a></li>
+<li><a href="CreatePackagesQuickStart">Quick Start</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsNew">New</a></li>
+<li><a href="CommandsPack">Pack</a></li>
+<li><a href="CommandsApiKey">Apikey</a></li>
+<li><a href="CommandsPush">Push</a></li>
+</ul>
+</li>
+<li><a href="HelpersReference">Function and Variable Reference</a></li>
+<li><a href="AutomaticPackages">Automatic Packages</a></li>
+</ul>
+<p><strong>How To&#39;s</strong></p>
+<ul>
+<li><a href="Proxy-Settings-for-Chocolatey">Use Chocolatey w/Proxy Server</a></li>
+<li><a href="How-To-Change-Cache">Change Download Cache Location aka Don&#39;t use TEMP for downloads</a></li>
+<li><a href="How-To-Install-Upgrade-Package-Without-Scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+<li><a href="How-To-Create-Custom-Package-Templates">Create Custom Package Templates</a></li>
+<li><a href="PackageTriageProcess">Request Package Fixes/Updates</a></li>
+<li><a href="PackageTriageProcess">Request Package</a></li>
+<li><a href="PackageTriageProcess#i-want-to-take-overhelp-with-package-maintenance-for-my-software">Maintain Packages for My Software</a></li>
+<li><a href="PackageTriageProcess">Become a Maintainer</a></li>
+<li><a href="PackageMantainerHandover">Take Over Package Maintenance Exclusively</a></li>
+<li><a href="How-To-Parse-PackageParameters-Argument">Parse Package Parameters</a></li>
+<li><a href="How-To-Mount-An-Iso-In-Chocolatey-Package">Mount Iso</a></li>
+<li><a href="How-To-Deprecate-A-Chocolatey-Package">Deprecate a Package</a></li>
+<li><a href="How-To-Host-Feed">Host Your Own Server</a></li>
+</ul>
+<p><strong>Use Cases</strong></p>
+<ul>
+<li><a href="DevelopmentEnvironmentSetup">Development Environment</a></li>
+<li><a href="Hosting-Chocolatey-Packages-on-MyGet">Host on MyGet</a></li>
+</ul>
+<p><strong>Learning Resources</strong></p>
+<ul>
+<li><a href="Resources">Resources</a></li>
+<li><a href="Videos">Videos</a></li>
+<li><a href="Presentations">Presentations</a></li>
+</ul>
+<p><strong>Other</strong></p>
+<ul>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="Legal">Legal</a></li>
+<li><a href="History">History</a></li>
+</ul>
+
+    </div>
+  </aside>
+  <article class="three-quarters left p-l p-r">
+    <h2 id="creating-chocolatey-packages-tl-dr-version">Creating Chocolatey Packages - TL;DR version</h2>
+<p>Here&#39;s a TL;DR quick start version of the package creating tutorial. Follow these steps to create a simple package.</p>
+<p><strong>Problem?</strong> Read the detailed version: <a href="CreatePackages">Creating Chocolatey Packages</a></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>You have Chocolatey installed.</li>
+<li>You&#39;ve read <a href="GettingStarted#what-are-chocolatey-packages">What are Chocolatey Packages?</a> first.</li>
+<li>You know how a package works<ul>
+<li>A package contains a <code>nuspec</code> file. This defines the package. (<a href="http://docs.nuget.org/docs/reference/nuspec-reference">Docs</a>) (<a href="https://github.com/chocolatey/chocolateytemplates/blob/master/_templates/chocolatey/__NAME__.nuspec">Example</a>)</li>
+<li>A package may contain embedded software.</li>
+<li>A package may contain an installation script. This can be <a href="CreatePackagesQuickStart#examples">very simple</a>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="quick-start-guide">Quick start guide</h2>
+<ul>
+<li><strong>Generate new package</strong>:<ul>
+<li><code>choco new -h</code> will get you started seeing options available to you.</li>
+<li>Once you figured out all of your options, you should move forward with generating your template.</li>
+</ul>
+</li>
+<li><strong>Edit template</strong> using common sense<ul>
+<li><code>cd package-name</code></li>
+<li>Edit the <code>package-name.nuspec</code> configuration file.</li>
+<li>Edit the <code>./tools/chocolateyInstall.ps1</code> install script.<ul>
+<li>Make sure you figure out the installer&#39;s silent mode. Use <a href="http://unattended.sourceforge.net/installers.php">Universal Silent Switch Finder</a>, which is available as a Choco package: <code>choco install ussf</code></li>
+</ul>
+</li>
+<li>You <strong>must</strong> save your files with <em>UTF-8</em> character encoding without BOM. (<a href="https://github.com/chocolatey/choco/wiki/CreatePackages#character-encoding">Details</a>)</li>
+</ul>
+</li>
+<li><strong>Build the package</strong><ul>
+<li>Still in package directory</li>
+<li><code>choco pack</code><ul>
+<li>&quot;Successfully created package-name.1.1.0.nupkg&quot;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Test the package</strong><ul>
+<li><strong>Testing should probably be done on a Virtual Machine</strong></li>
+<li>In your package directory, use:<ul>
+<li><code>choco install package-name -s &quot;$pwd&quot; -f</code> - powershell</li>
+<li><code>choco install package-name -s &#39;%cd%&#39; -f</code> - everywhere else</li>
+</ul>
+</li>
+<li>Otherwise, use the full path:<ul>
+<li><code>choco install package-name -source &#39;c:\path\to\Package\&#39; -f</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Push the package</strong> to the Chocolatey community feed repository:<ul>
+<li>Get a Chocolatey account:<ul>
+<li><a href="https://chocolatey.org/account/Register">https://chocolatey.org/account/Register</a></li>
+</ul>
+</li>
+<li>Copy the API key <a href="https://chocolatey.org/account">from your Chocolatey account</a>.</li>
+<li><code>choco apikey -k [API_KEY_HERE] -source https://chocolatey.org/</code></li>
+<li><code>choco push package-name.1.1.0.nupkg -s https://chocolatey.org/</code> - packagename can be omitted</li>
+</ul>
+</li>
+</ul>
+<h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>NuSpec</strong><ul>
+<li><strong>id</strong> is the package name and should meet the following criteria:<ul>
+<li>should contain no spaces and weird characters.</li>
+<li>should be lowercase.</li>
+<li>should separate spaces in the software name with <code>-</code> e.g. <code>classic-shell</code>. Yes, we realize there are a lot of older packages not following this convention.</li>
+</ul>
+</li>
+<li><strong>version</strong> is a dot-separated identifier containing a maximum of 4 numbers. e.g. <em>1.0</em> or <em>2.4.0.16</em> - except for prerelease packages</li>
+</ul>
+</li>
+</ul>
+<h2 id="environmental-variables">Environmental Variables</h2>
+<ul>
+<li><code>%ChocolateyInstall%</code> - Chocolatey installation directory</li>
+<li><code>%ChocolateyInstall%\lib\package-name</code> - Package directory</li>
+<li><code>%cd%</code> or <code>$pwd</code> - current directory</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<p>Here are some simple examples.</p>
+<h3 id="chocolateyinstall-ps1-for-exe-installer">chocolateyInstall.ps1 for .exe installer</h3>
+<pre><code class="lang-powershell">$name = &#39;Package Name&#39;
+$installerType = &#39;exe&#39;
+$url  = &#39;http://path/to/download/installer.exe&#39;
+$silentArgs = &#39;/VERYSILENT&#39;
+
+Install-ChocolateyPackage $name $installerType $silentArgs $url
+</code></pre>
+<p><strong>NOTE:</strong> You have to figure out the command line switch to make the installer silent, e.g. <strong>/VERYSILENT</strong>. This changes from installer to installer.</p>
+<h3 id="chocolateyinstall-ps1-for-msi-installer">chocolateyInstall.ps1 for .msi installer</h3>
+<p><strong>NOTE:</strong> Please maintain compatibility with Posh v2. Not every OS we support is on Posh v2 (nor comes OOB with Posh v3+). It&#39;s best to work with the widest compatibility of systems out there.</p>
+<pre><code class="lang-powershell">$packageName = &#39;Package Name&#39;
+$installerType = &#39;msi&#39;
+$url = &#39;http://path/to/download/installer_x86.msi&#39;
+$url64 = &#39;http://path/to/download/installer_x64.msi&#39;
+$silentArgs = &#39;/quiet&#39;
+$validExitCodes = @(0,3010)
+
+Install-ChocolateyPackage $packageName $installerType $silentArgs $url $url64  -validExitCodes $validExitCodes
+</code></pre>
+<h3 id="parsing-package-parameters">Parsing Package Parameters</h3>
+<p>For a complete example of how you can use the PackageParameters argument of the <code>choco install</code> command, see this <a href="How-To-Parse-PackageParameters-Argument">How-To</a>.</p>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>If you cannot find the installer silent mode, you can try an old tool called <a href="http://www.softpedia.com/progDownload/Universal-Silent-Switch-Finder-Download-180984.html">Universal Silent Switch Finder 1.5.0.0</a> - <code>choco install ussf</code>.</li>
+</ul>
+
+  </article>
+</div>
+
+  </main>
+
+  <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Chocolatey</h3></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">For Professionals</a></li>
+      <li><a href="#">For Businesses </a></li>
+      <li><a href="#">For Enterprise</a></li>
+      <li><a href="#">Kickstarter</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Resources</h3></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Mailing List</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Site map</a></li>
+      <li><a href="#">Media Kit</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Connect</h3></li>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Report a Bug</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Partner</a></li>
+    </ul>
+    <ul class="small fourth left p line-height-normal">
+      <li class="h2">
+        <div>
+          <a href="#" class="icon-twitter"></a> | <a href="#" class="icon-facebook"></a> | <a href="#" class="icon-github"></a>
+        </div>
+      </li>
+      <li class="m-t small">
+        <p>
+          <strong>&copy; 2011 - 2016</strong> RealDimensions Software, LLC
+        </p>
+        <p>
+          Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
+        </p>
+      </li>
+      <li class="m-t">
+        Site made possible by the following sponsors<br/>
+        <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
+          <img width="70px" src="assets/rd_logo.png"/>
+        </a>
+        <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
+          <img width="40px" src="assets/turbo_logo.png"/>
+        </a>
+        <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
+          <img width="50px" src="assets/appharbor_logo.png"/>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>

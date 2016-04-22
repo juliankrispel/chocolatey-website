@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="bg-one">
+
+  <div class="message hide">
+    <div class="p-l p-r p--s">
+      <span>
+        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
+      </span>
+      <button class="right pointer" data-close-message>
+        <i class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+
+  <header class="bg-yellow p-b--l clearfix">
+    <a class="logo left" href="index.html">
+      <img class="hide-on-small" height="250px" alt="Logo" src="assets/logo_square.svg">
+      <img class="hide-on-large" height="100px" alt="Logo" src="assets/logo_small.svg">
+    </a>
+
+    <nav class="text-right p">
+      <ul class="inline-list main-menu m-r m-b--s m-t--s">
+        <li><a class="bold h4 m-l--s" href="install.html">Install</a></li>
+        <li><a class="bold h4 m-l--s" href="packages.html">Community Packages</a></li>
+        <li><a class="bold h4 m-l--s" href="business.html">Business</a></li>
+        <li><a class="bold h4 m-l--s" href="pricing.html">Pricing</a></li>
+        <li><a class="bold h4 m-l--s" href="faq.html">FAQ</a></li>
+        <li><a class="bold h4 m-l--s" href="docs.html">Docs</a></li>
+        <li>
+          <div class="m-l inline-block">
+            <div class="small button-bar inline-block line-height-small">
+              <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<div class="clearfix p">
+  <h1 class="text-center m-b--l"></h1>
+  <aside class="quarter left p-l p-r article-sidebar">
+    <div>
+      <ol>
+
+  <li><a href="#set-up-from-the-source">Set up From the Source</a></li>
+
+  <li><a href="#getting-the-source">Getting the Source</a></li>
+
+  <li><a href="#setup-a-full-environment-including-visual-studio-express-iis-express-and-sql-server-express-with-management-studio-">Setup A Full Environment Including Visual Studio Express, IIS Express and SQL Server Express (with Management Studio)</a></li>
+
+</ol>
+
+    </div>
+
+    <div>
+      
+      <h2></h2>
+      <ul>
+<li><a href="Home">Home</a></li>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="https://github.com/chocolatey/chocolatey/wiki">Choco 0.9.8.x &amp; below</a></li>
+</ul>
+<p><strong>General</strong></p>
+<ul>
+<li><a href="ReleaseNotes">Release Notes</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/README.md#submitting-issues">Submitting Issues</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/CONTRIBUTING.md">Contributing</a></li>
+<li><a href="ChocolateyFAQs">FAQs</a></li>
+<li><a href="Security">Security</a></li>
+<li><a href="Moderation">Chocolatey.org Moderation</a></li>
+<li><a href="PackageTriageProcess#are-you-a-software-vendor">Software Vendor?</a></li>
+</ul>
+<p><strong>Usage</strong></p>
+<p><a href="GettingStarted#how-does-chocolatey-work">How does choco work?</a></p>
+<ul>
+<li><a href="installation">How to install</a></li>
+<li><a href="Uninstallation">How to uninstall</a></li>
+<li><a href="GettingStarted">Getting Started</a></li>
+<li><a href="Proxy-Settings-for-Chocolatey">Proxy Settings</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsReference#how-to-pass-options--switches">Passing args to choco</a></li>
+<li><a href="CommandsReference">Complete Reference</a></li>
+<li><a href="CommandsList">List / Search </a></li>
+<li><a href="CommandsInstall">Install</a></li>
+<li><a href="CommandsPin">Pin</a></li>
+<li><a href="CommandsOutdated">Outdated</a></li>
+<li><a href="CommandsUpgrade">Upgrade</a></li>
+<li><a href="CommandsUninstall">Uninstall</a></li>
+<li><a href="CommandsConfig">Config</a></li>
+<li><a href="CommandsSources">Source / Sources</a></li>
+<li><a href="CommandsFeature">Feature</a></li>
+<li>See other commands related to creating packages below</li>
+</ul>
+</li>
+</ul>
+<p><strong>Creating Packages</strong></p>
+<ul>
+<li><a href="CreatePackages">Create Packages</a></li>
+<li><a href="CreatePackagesQuickStart">Quick Start</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsNew">New</a></li>
+<li><a href="CommandsPack">Pack</a></li>
+<li><a href="CommandsApiKey">Apikey</a></li>
+<li><a href="CommandsPush">Push</a></li>
+</ul>
+</li>
+<li><a href="HelpersReference">Function and Variable Reference</a></li>
+<li><a href="AutomaticPackages">Automatic Packages</a></li>
+</ul>
+<p><strong>How To&#39;s</strong></p>
+<ul>
+<li><a href="Proxy-Settings-for-Chocolatey">Use Chocolatey w/Proxy Server</a></li>
+<li><a href="How-To-Change-Cache">Change Download Cache Location aka Don&#39;t use TEMP for downloads</a></li>
+<li><a href="How-To-Install-Upgrade-Package-Without-Scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+<li><a href="How-To-Create-Custom-Package-Templates">Create Custom Package Templates</a></li>
+<li><a href="PackageTriageProcess">Request Package Fixes/Updates</a></li>
+<li><a href="PackageTriageProcess">Request Package</a></li>
+<li><a href="PackageTriageProcess#i-want-to-take-overhelp-with-package-maintenance-for-my-software">Maintain Packages for My Software</a></li>
+<li><a href="PackageTriageProcess">Become a Maintainer</a></li>
+<li><a href="PackageMantainerHandover">Take Over Package Maintenance Exclusively</a></li>
+<li><a href="How-To-Parse-PackageParameters-Argument">Parse Package Parameters</a></li>
+<li><a href="How-To-Mount-An-Iso-In-Chocolatey-Package">Mount Iso</a></li>
+<li><a href="How-To-Deprecate-A-Chocolatey-Package">Deprecate a Package</a></li>
+<li><a href="How-To-Host-Feed">Host Your Own Server</a></li>
+</ul>
+<p><strong>Use Cases</strong></p>
+<ul>
+<li><a href="DevelopmentEnvironmentSetup">Development Environment</a></li>
+<li><a href="Hosting-Chocolatey-Packages-on-MyGet">Host on MyGet</a></li>
+</ul>
+<p><strong>Learning Resources</strong></p>
+<ul>
+<li><a href="Resources">Resources</a></li>
+<li><a href="Videos">Videos</a></li>
+<li><a href="Presentations">Presentations</a></li>
+</ul>
+<p><strong>Other</strong></p>
+<ul>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="Legal">Legal</a></li>
+<li><a href="History">History</a></li>
+</ul>
+
+    </div>
+  </aside>
+  <article class="three-quarters left p-l p-r">
+    <p>##Set Up A Development Environment Using Chocolatey</p>
+<p>How many of you out there are rake fans? Getting developers to look at your source code can sometimes be an issue. Wouldn&#39;t it be nice if it was simple for them to get all set up? What about Ruby DevKit? It would be nice, right?</p>
+<h2 id="set-up-from-the-source">Set up From the Source</h2>
+<p>This does the following:</p>
+<ul>
+<li>downloads and installs Chocolatey</li>
+<li>installs nuget.commandline if it is not installed</li>
+<li>installs ruby.devkit if it is not installed</li>
+<li>installs ruby if it is not installed</li>
+<li>updates gems and installs some required gems for rake</li>
+<li>restores nuget packages from the configs</li>
+<li>builds the source with rake</li>
+</ul>
+<h3 id="setup-ps1-">setup.ps1:</h3>
+<pre><code class="lang-powershell">function Install-NeededFor {
+param(
+   [string] $packageName = &#39;&#39;
+  ,[bool] $defaultAnswer = $true
+)
+  if ($packageName -eq &#39;&#39;) {return $false}
+
+  $yes = &#39;6&#39;
+  $no = &#39;7&#39;
+  $msgBoxTimeout=&#39;-1&#39;
+  $defaultAnswerDisplay = &#39;Yes&#39;
+  $buttonType = 0x4;
+  if (!$defaultAnswer) { $defaultAnswerDisplay = &#39;No&#39;; $buttonType= 0x104;}
+
+  $answer = $msgBoxTimeout
+  try {
+    $timeout = 10
+    $question = &quot;Do you need to install $($packageName)? Defaults to `&#39;$defaultAnswerDisplay`&#39; after $timeout seconds&quot;
+    $msgBox = New-Object -ComObject WScript.Shell
+    $answer = $msgBox.Popup($question, $timeout, &quot;Install $packageName&quot;, $buttonType)
+  }
+  catch {
+  }
+
+  if ($answer -eq $yes -or ($answer -eq $msgBoxTimeout -and $defaultAnswer -eq $true)) {
+    write-host &quot;Installing $packageName&quot;
+    return $true
+  }
+
+  write-host &quot;Not installing $packageName&quot;
+  return $false
+}
+
+
+# Install Chocolatey
+if (Install-NeededFor &#39;chocolatey&#39;) {
+  iex ((new-object net.webclient).DownloadString(&#39;http://chocolatey.org/install.ps1&#39;))
+}
+
+# install nuget, ruby.devkit, and ruby if they are missing
+cinst nuget.commandline
+
+if (Install-NeededFor &#39;ruby / ruby devkit&#39;) {
+  cinst ruby.devkit
+  cinst ruby -version 1.9.3.54500
+}
+
+# perform ruby updates and get gems
+gem update --system
+gem install rake
+gem install bundler
+
+# restore the nuget packages
+$nugetConfigs = Get-ChildItem &#39;.\\&#39; -Recurse | ?{$_.name -match &quot;packages\\.config&quot;} | select
+foreach ($nugetConfig in $nugetConfigs) {
+  Write-Host &quot;restoring packages from $($nugetConfig.FullName)&quot;
+  nuget install $($nugetConfig.FullName) /OutputDirectory packages
+}
+
+rake
+</code></pre>
+<h3 id="setup-cmd-">setup.cmd:</h3>
+<pre><code>@echo off
+SET DIR=%~dp0%
+@PowerShell -NoProfile -ExecutionPolicy unrestricted -Command &quot;&amp; &#39;%DIR%setup.ps1&#39; %*&quot;
+pause
+</code></pre><p>The original is <a href="https://gist.github.com/1107920">on github</a>.</p>
+<h2 id="getting-the-source">Getting the Source</h2>
+<p>Create a package for your project and call it projectname<em>.dev</em>.  It should take a nuspec dependency on whatever source control you use. So in the case of git, a dependency on msysgit.
+Now, in <a href="ChocolateyInstallPS1">chocolateyInstall.ps1</a>, you just need something like the following:</p>
+<pre><code class="lang-powershell">try {
+
+  $dirSelected = Read-Host &quot;Please tell me the directory where you want to clone dropkick. Press enter to use .\\dropkick&quot;
+
+  if ($dirSelected -eq &#39;&#39;) {$dirSelected = &#39;.\\dropkick&#39;}
+
+  git clone git://github.com/chucknorris/dropkick.git $dirSelected
+
+  Start-Sleep 6
+} catch {
+@&quot;
+Error Occurred: $($_.Exception.Message)
+&quot;@ | Write-Host -ForegroundColor White -BackgroundColor DarkRed
+    Start-Sleep 8
+    throw
+}
+</code></pre>
+<p>The above is from <a href="https://github.com/ferventcoder/nugetpackages/blob/master/dropkick.dev/tools/chocolateyInstall.ps1">DropkicK.Dev</a>  </p>
+<h2 id="setup-a-full-environment-including-visual-studio-express-iis-express-and-sql-server-express-with-management-studio-">Setup A Full Environment Including Visual Studio Express, IIS Express and SQL Server Express (with Management Studio)</h2>
+<p>The original <a href="https://gist.github.com/3825023">gist</a></p>
+<pre><code class="lang-powershell">$scriptDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+
+function Install-NeededFor {
+param(
+   [string] $packageName = &#39;&#39;
+  ,[bool] $defaultAnswer = $true
+)
+  if ($packageName -eq &#39;&#39;) {return $false}
+
+  $yes = &#39;6&#39;
+  $no = &#39;7&#39;
+  $msgBoxTimeout=&#39;-1&#39;
+  $defaultAnswerDisplay = &#39;Yes&#39;
+  $buttonType = 0x4;
+  if (!$defaultAnswer) { $defaultAnswerDisplay = &#39;No&#39;; $buttonType= 0x104;}
+
+  $answer = $msgBoxTimeout
+  try {
+    $timeout = 10
+    $question = &quot;Do you need to install $($packageName)? Defaults to `&#39;$defaultAnswerDisplay`&#39; after $timeout seconds&quot;
+    $msgBox = New-Object -ComObject WScript.Shell
+    $answer = $msgBox.Popup($question, $timeout, &quot;Install $packageName&quot;, $buttonType)
+  }
+  catch {
+  }
+
+  if ($answer -eq $yes -or ($answer -eq $msgBoxTimeout -and $defaultAnswer -eq $true)) {
+    write-host &quot;Installing $packageName&quot;
+    return $true
+  }
+
+  write-host &quot;Not installing $packageName&quot;
+  return $false
+}
+
+# Install Chocolatey
+if (Install-NeededFor &#39;chocolatey&#39;) {
+  iex ((new-object net.webclient).DownloadString(&quot;http://chocolatey.org/install.ps1&quot;)) 
+}
+
+if (Install-NeededFor &#39;autosave&#39;) {
+  cinstm nodejs.install
+  $nodePath = Join-Path $env:programfiles &#39;nodejs&#39;
+   $is64bit = (Get-WmiObject Win32_Processor).AddressWidth -eq 64
+  if ($is64bit) {$nodePath = Join-Path ${env:ProgramFiles(x86)} &#39;nodejs&#39;}
+  $env:Path = &quot;$($env:Path);$nodePath&quot;
+  npm install -g autosave
+
+  Write-Host &#39;You still need to enable experimental packages in Chrome and install the Chrome Extension&#39;
+  Write-Host &#39;Details at https://github.com/NV/chrome-devtools-autosave#readme&#39;
+}
+
+Write-Host &quot;Grabbing required frameworks&quot;
+cinst netframework2 -source webpi
+cinst NETFramework35 -source webpi
+cinst NETFramework4 -source webpi
+cinst NETFramework4Update402 -source webpi
+cinst NETFramework4Update402_KB2544514_Only -source webpi
+cinst WindowsInstaller31 -source webpi
+cinst WindowsInstaller45 -source webpi
+
+cinst roundhouse -pre
+
+Write-Host &quot;Checking for/installing SQLServer Express and Management Studio...&quot;
+cinst SQLManagementStudio -source webpi
+cinst SQLExpressTools -source webpi
+Write-Warning &quot;You will need to supply a password on the screen that is minimized&quot;
+cinst SQLExpress -source webpi
+Write-Host &quot;Finished checking for/install SQLServer Express and Management Studio&quot;
+
+Write-Host &quot;Checking for/installing Visual Studio Items...&quot;
+if (Install-NeededFor &#39;VS2010 Express &amp; SP1&#39; $false) {
+ cinst VWD_RTW -source webpi
+ cinst VWD2010SP1AzurePack -source webpi
+}
+
+if (Install-NeededFor &#39;VS2010 Full Edition SP1&#39;) {
+ cinst VS2010SP1Pack -source webpi
+}
+
+cinst MVC3 -source webpi
+cinst MVC3Loc -source webpi
+Write-Host &quot;Finished checking for/installing Visual Studio Items.&quot;
+
+if (Install-NeededFor &#39;database&#39; $false) {
+  &amp; .\build.bat
+  $sqlFiles = Join-Path $scriptDir &#39;code_drop\ProjectName.Database\ProjectName&#39;
+  $dbServer = Read-Host &quot;Please tell me the server\instance location of the database (i.e. &#39;(local)&#39;). Press enter to use .\SQLEXPRESS&quot;
+  if ($dbServer -eq &#39;&#39;) {$dbServer = &#39;.\SQLEXPRESS&#39;}
+  &amp; rh /d ProjectName /s $dbServer /f $sqlFiles /silent
+}
+
+if (Install-NeededFor &#39;IIS&#39; $false) {
+  cinst ASPNET -source webpi
+  cinst ASPNET_REGIIS -source webpi
+  cinst DefaultDocument -source webpi
+  cinst DynamicContentCompression -source webpi
+  cinst HTTPRedirection -source webpi
+  cinst IIS7_ExtensionLessURLs -source webpi
+  cinst IISExpress -source webpi
+  cinst IISExpress_7_5 -source webpi
+  cinst IISManagementConsole -source webpi
+  cinst ISAPIExtensions -source webpi
+  cinst ISAPIFilters -source webpi
+  cinst NETExtensibility -source webpi
+  cinst RequestFiltering -source webpi
+  cinst StaticContent -source webpi
+  cinst StaticContentCompression -source webpi
+  cinst UrlRewrite2 -source webpi
+  cinst WindowsAuthentication -source webpi
+}
+
+$projectName = &#39;ProjectName&#39;
+$srcDir = Join-Path $scriptDir &quot;src\$($projectName).Web&quot;
+if (Install-NeededFor &#39;website&#39; $false) {
+  $networkSvc = &#39;NT AUTHORITY\NETWORK SERVICE&#39;
+  Write-Host &quot;Setting folder permissions on `&#39;$srcDir`&#39; to &#39;Read&#39; for user $networkSvc&quot;
+  $acl = Get-Acl $srcDir
+  $acl.SetAccessRuleProtection($True, $True)
+  $rule = New-Object System.Security.AccessControl.FileSystemAccessRule(&quot;$networkSvc&quot;,&quot;Read&quot;, &quot;ContainerInherit, ObjectInherit&quot;, &quot;None&quot;, &quot;Allow&quot;);
+  $acl.AddAccessRule($rule);
+  Set-Acl $srcDir $acl
+
+  Import-Module WebAdministration
+  $appPoolPath = &quot;IIS:\AppPools\$projectName&quot;
+  #$pool = new-object
+  Write-Warning &quot;You can safely ignore the next error if it occurs related to getting an app pool that doesn&#39;t exist&quot;
+  $pool = Get-Item $appPoolPath
+  if ($pool -eq $null) {
+    Write-Host &quot;Creating the app pool `&#39;$appPoolPath`&#39;&quot;
+    $pool = New-Item $appPoolPath
+  }
+
+  $pool.processModel.identityType = &quot;NetworkService&quot;
+  $pool | Set-Item
+  Set-itemproperty $appPoolPath -Name &quot;managedRuntimeVersion&quot; -Value &quot;v4.0&quot;
+  #Set-itemproperty $appPoolPath -Name &quot;managedPipelineMode&quot; -Value &quot;Integrated&quot;
+  Start-WebAppPool &quot;$projectName&quot;
+  Write-Host &quot;Creating the site `&#39;$projectName`&#39; with appPool `&#39;$projectName`&#39;&quot;
+  New-WebApplication &quot;$projectName&quot; -Site &quot;Default Web Site&quot; -PhysicalPath $srcDir -ApplicationPool &quot;$projectName&quot; -Force
+
+  Write-Host &#39;You still need to open Visual Studio and build the application one time prior to going to the site in a browser.&#39;
+}
+
+Write-Host &quot;If you have made it here without errors, you should be setup and ready to hack on the apps.&quot;
+Write-Warning &quot;If you see any failures happen, you may want to reboot and continue to let installers catch up. This script is idempotent and will only apply changes that have not yet been applied.&quot;
+</code></pre>
+
+  </article>
+</div>
+
+  </main>
+
+  <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Chocolatey</h3></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">For Professionals</a></li>
+      <li><a href="#">For Businesses </a></li>
+      <li><a href="#">For Enterprise</a></li>
+      <li><a href="#">Kickstarter</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Resources</h3></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Mailing List</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Site map</a></li>
+      <li><a href="#">Media Kit</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Connect</h3></li>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Report a Bug</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Partner</a></li>
+    </ul>
+    <ul class="small fourth left p line-height-normal">
+      <li class="h2">
+        <div>
+          <a href="#" class="icon-twitter"></a> | <a href="#" class="icon-facebook"></a> | <a href="#" class="icon-github"></a>
+        </div>
+      </li>
+      <li class="m-t small">
+        <p>
+          <strong>&copy; 2011 - 2016</strong> RealDimensions Software, LLC
+        </p>
+        <p>
+          Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
+        </p>
+      </li>
+      <li class="m-t">
+        Site made possible by the following sponsors<br/>
+        <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
+          <img width="70px" src="assets/rd_logo.png"/>
+        </a>
+        <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
+          <img width="40px" src="assets/turbo_logo.png"/>
+        </a>
+        <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
+          <img width="50px" src="assets/appharbor_logo.png"/>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>

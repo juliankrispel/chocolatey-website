@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="bg-one">
+
+  <div class="message hide">
+    <div class="p-l p-r p--s">
+      <span>
+        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
+      </span>
+      <button class="right pointer" data-close-message>
+        <i class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+
+  <header class="bg-yellow p-b--l clearfix">
+    <a class="logo left" href="index.html">
+      <img class="hide-on-small" height="250px" alt="Logo" src="assets/logo_square.svg">
+      <img class="hide-on-large" height="100px" alt="Logo" src="assets/logo_small.svg">
+    </a>
+
+    <nav class="text-right p">
+      <ul class="inline-list main-menu m-r m-b--s m-t--s">
+        <li><a class="bold h4 m-l--s" href="install.html">Install</a></li>
+        <li><a class="bold h4 m-l--s" href="packages.html">Community Packages</a></li>
+        <li><a class="bold h4 m-l--s" href="business.html">Business</a></li>
+        <li><a class="bold h4 m-l--s" href="pricing.html">Pricing</a></li>
+        <li><a class="bold h4 m-l--s" href="faq.html">FAQ</a></li>
+        <li><a class="bold h4 m-l--s" href="docs.html">Docs</a></li>
+        <li>
+          <div class="m-l inline-block">
+            <div class="small button-bar inline-block line-height-small">
+              <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<div class="clearfix p">
+  <h1 class="text-center m-b--l"></h1>
+  <aside class="quarter left p-l p-r article-sidebar">
+    <div>
+      <ol>
+
+  <li><a href="#automatic-packages">Automatic Packages</a></li>
+
+  <li><a href="#chocolatey-package-updater-aka-chocopkgup">Chocolatey Package Updater aka chocopkgup</a></li>
+
+</ol>
+
+    </div>
+
+    <div>
+      
+      <h2></h2>
+      <ul>
+<li><a href="Home">Home</a></li>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="https://github.com/chocolatey/chocolatey/wiki">Choco 0.9.8.x &amp; below</a></li>
+</ul>
+<p><strong>General</strong></p>
+<ul>
+<li><a href="ReleaseNotes">Release Notes</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/README.md#submitting-issues">Submitting Issues</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/CONTRIBUTING.md">Contributing</a></li>
+<li><a href="ChocolateyFAQs">FAQs</a></li>
+<li><a href="Security">Security</a></li>
+<li><a href="Moderation">Chocolatey.org Moderation</a></li>
+<li><a href="PackageTriageProcess#are-you-a-software-vendor">Software Vendor?</a></li>
+</ul>
+<p><strong>Usage</strong></p>
+<p><a href="GettingStarted#how-does-chocolatey-work">How does choco work?</a></p>
+<ul>
+<li><a href="installation">How to install</a></li>
+<li><a href="Uninstallation">How to uninstall</a></li>
+<li><a href="GettingStarted">Getting Started</a></li>
+<li><a href="Proxy-Settings-for-Chocolatey">Proxy Settings</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsReference#how-to-pass-options--switches">Passing args to choco</a></li>
+<li><a href="CommandsReference">Complete Reference</a></li>
+<li><a href="CommandsList">List / Search </a></li>
+<li><a href="CommandsInstall">Install</a></li>
+<li><a href="CommandsPin">Pin</a></li>
+<li><a href="CommandsOutdated">Outdated</a></li>
+<li><a href="CommandsUpgrade">Upgrade</a></li>
+<li><a href="CommandsUninstall">Uninstall</a></li>
+<li><a href="CommandsConfig">Config</a></li>
+<li><a href="CommandsSources">Source / Sources</a></li>
+<li><a href="CommandsFeature">Feature</a></li>
+<li>See other commands related to creating packages below</li>
+</ul>
+</li>
+</ul>
+<p><strong>Creating Packages</strong></p>
+<ul>
+<li><a href="CreatePackages">Create Packages</a></li>
+<li><a href="CreatePackagesQuickStart">Quick Start</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsNew">New</a></li>
+<li><a href="CommandsPack">Pack</a></li>
+<li><a href="CommandsApiKey">Apikey</a></li>
+<li><a href="CommandsPush">Push</a></li>
+</ul>
+</li>
+<li><a href="HelpersReference">Function and Variable Reference</a></li>
+<li><a href="AutomaticPackages">Automatic Packages</a></li>
+</ul>
+<p><strong>How To&#39;s</strong></p>
+<ul>
+<li><a href="Proxy-Settings-for-Chocolatey">Use Chocolatey w/Proxy Server</a></li>
+<li><a href="How-To-Change-Cache">Change Download Cache Location aka Don&#39;t use TEMP for downloads</a></li>
+<li><a href="How-To-Install-Upgrade-Package-Without-Scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+<li><a href="How-To-Create-Custom-Package-Templates">Create Custom Package Templates</a></li>
+<li><a href="PackageTriageProcess">Request Package Fixes/Updates</a></li>
+<li><a href="PackageTriageProcess">Request Package</a></li>
+<li><a href="PackageTriageProcess#i-want-to-take-overhelp-with-package-maintenance-for-my-software">Maintain Packages for My Software</a></li>
+<li><a href="PackageTriageProcess">Become a Maintainer</a></li>
+<li><a href="PackageMantainerHandover">Take Over Package Maintenance Exclusively</a></li>
+<li><a href="How-To-Parse-PackageParameters-Argument">Parse Package Parameters</a></li>
+<li><a href="How-To-Mount-An-Iso-In-Chocolatey-Package">Mount Iso</a></li>
+<li><a href="How-To-Deprecate-A-Chocolatey-Package">Deprecate a Package</a></li>
+<li><a href="How-To-Host-Feed">Host Your Own Server</a></li>
+</ul>
+<p><strong>Use Cases</strong></p>
+<ul>
+<li><a href="DevelopmentEnvironmentSetup">Development Environment</a></li>
+<li><a href="Hosting-Chocolatey-Packages-on-MyGet">Host on MyGet</a></li>
+</ul>
+<p><strong>Learning Resources</strong></p>
+<ul>
+<li><a href="Resources">Resources</a></li>
+<li><a href="Videos">Videos</a></li>
+<li><a href="Presentations">Presentations</a></li>
+</ul>
+<p><strong>Other</strong></p>
+<ul>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="Legal">Legal</a></li>
+<li><a href="History">History</a></li>
+</ul>
+
+    </div>
+  </aside>
+  <article class="three-quarters left p-l p-r">
+    <h2 id="automatic-packages">Automatic Packages</h2>
+<p>Automatic packages are what set chocolatey apart from other package managers.
+<a href="http://chocolatey.org/packages/ChocolateyPackageUpdater">http://chocolatey.org/packages/ChocolateyPackageUpdater</a></p>
+<h2 id="chocolatey-package-updater-aka-chocopkgup">Chocolatey Package Updater aka chocopkgup</h2>
+<p>The tool that accomplishes this process is known as <a href="http://chocolatey.org/packages/ChocolateyPackageUpdater">chocopkgup</a> (Chocolatey Package Updater). It is a free tool (unless you want to use it for uploads to somewhere other than chocolatey.org).</p>
+<h3 id="licensing">Licensing</h3>
+<p>Check the license at <a href="http://realdimensions.net/licenses/chocolateypackageupdater/license.txt">http://realdimensions.net/licenses/chocolateypackageupdater/license.txt</a> to be sure that it applies to you.</p>
+<p>Basically it boils down to this: if you want to use chocopkgup privately, you will need to pay for it. As long as you are publishing to chocolatey.org, the tool is completely free! The license does expire every once in awhile, but if you are keeping up on your chocolatey updates locally, you won&#39;t even notice (<code>cup all</code>, remember?).</p>
+<h3 id="credits">Credits</h3>
+<p>This tool makes use of <a href="http://chocolatey.org/packages/ketarin">Ketarin</a>. Ketarin is an awesome tool that helps chocopkgup accomplish its tasks.</p>
+<h3 id="setup">Setup</h3>
+<p>More of this will become automated over time.</p>
+<ol>
+<li><strong>Optional</strong> (strongly recommended) - Ensure you are using a source control repository and file system for keeping packages. A good example is <a href="https://github.com/chocolatey/chocolatey-coreteampackages">chocolatey-coreteampackages</a> repo.</li>
+<li><strong>Optional</strong> (strongly recommended) - Make sure you have installed the <a href="https://github.com/chocolatey/chocolateytemplates">chocolatey package templates</a>. If you’ve installed the chocolatey templates (ReadMe has instructions), then all you need to do is take a look at the <a href="https://github.com/chocolatey/chocolateytemplates/tree/master/_templates/chocolateyauto">chocolateyauto</a> and <a href="https://github.com/chocolatey/chocolateytemplates/tree/master/_templates/chocolateyauto3">chocolateyauto3</a>. You will note this looks almost exactly like the regular chocolatey template, except this has some specially named token values.<pre><code class="lang-powershell">#Items that could be replaced based on what you call chocopkgup.exe with
+#{{PackageName}} - Package Name (should be same as nuspec file and folder) |/p
+#{{PackageVersion}} - The updated version | /v
+#{{DownloadUrl}} - The url for the native file | /u
+#{{PackageFilePath}} - Downloaded file if including it in package | /pp
+#{{PackageGuid}} - This will be used later | /pg
+#{{DownloadUrlx64}} - The 64bit url for the native file | /u64
+## included with 0.6.4
+#{{Checksum}} - The checksum for the file downloaded from DownloadUrl | /c
+#{{Checksumx64}} - The checksum for the 64bit file downloaded from DownloadUrlx64  | /c64
+</code></pre>
+</li>
+<li>These are the tokens that chocopkgup will replace when it generates an instance of a package.</li>
+<li>Install chocopkgup (which will install ketarin and nuget.commandline). <code>cinst chocolateypackageupdater</code>.</li>
+<li>Check the config in <code>C:\tools\ChocolateyPackageUpdater\chocopkgup.exe.config</code> (or <code>ChocolateyBinRoot/ChocolateyPackageUpdater</code>). The <code>PackagesFolder</code> key should point to where your repository is located.</li>
+<li>Create a scheduled task (in Windows). This is the command (edit the path to <code>cmd.exe</code> accordingly): <code>C:\Windows\System32\cmd.exe /c c:\tools\chocolateypackageupdater\ketarinupdate.cmd</code> </li>
+<li>Alternatively to stop the command window from opening on Windows, you can create a VBS script as well and put the path to the <code>.vbs</code> file instead of <code>ketarinupdate.cmd</code> as the command to run. The file should have the following:<pre><code>Set objShell = WScript.CreateObject(&quot;WScript.Shell&quot;)
+objShell.Run(&quot;C:\tools\ChocolateyPackageUpdater\ketarinupdate.cmd&quot;), 0, True
+</code></pre></li>
+<li>Choose a schedule for the task. I run mine once a day but you can set it to run more often. Choose a time when the computer is not that busy.</li>
+<li>Save the following Ketarin template somewhere: <a href="https://raw.github.com/chocolatey/chocolateytemplates/master/_templates/KetarinChocolateyTemplate.xml">https://raw.github.com/chocolatey/chocolateytemplates/master/_templates/KetarinChocolateyTemplate.xml</a></li>
+<li>Open Ketarin. Choose <code>File</code> –&gt; <code>Settings</code>.</li>
+<li>On the <strong>General Tab</strong> we are going to add the Version Column for all jobs. Click <code>Add…</code>, then put <code>Version</code> in Column name and <code>{version}</code> in Column value.
+<img src="images/chocopkgup/KetarinShowCustomField.png" alt="Ketarin Settings Custom" title="Ketarin Custom Field Setup"></li>
+<li>Click <strong>[OK]</strong>. This should add it to the list of Custom Columns.</li>
+<li>Click on the <strong>Commands Tab</strong> and set <strong>Edit command for event</strong> to “Before updating an application”.
+<img src="images/chocopkgup/KetarinSettings.png" alt="Ketarin Settings" title="Ketarin Settings"></li>
+<li>Add the following text:<pre><code class="lang-cmd">chocopkgup /p {appname} /v {version} /u &quot;{preupdate-url}&quot; /u64 &quot;{url64}&quot; /pp &quot;{file}&quot;
+REM /disablepush
+</code></pre>
+</li>
+<li>Check the bottom of this section to be sure it set to <strong>Command</strong>.
+<img src="images/chocopkgup/KetarinCustomCommand.png" alt="Ketarin Settings Command" title="Ketarin Settings Command"></li>
+<li>Click Okay.</li>
+<li>Note the commented out <code>/disablepush</code>. This is so you can create a few packages and test that everything is working well before actually pushing those packages up to chocolatey. You may want to add that switch to the main command above it. Add it as the first parameter after <code>chocopkgup</code> so that none of the other commands conflict.</li>
+</ol>
+<p>This gets Ketarin all set up with a global command for all packages we create. If you want to use this outside of chocolatey, all you need to do is remove the global setting for Before updating an application and instead apply it to every job that pertains to chocolatey update.</p>
+<h3 id="create-an-automatic-package">Create an Automatic Package</h3>
+<p>Preferably you are taking an existing package that you have tested and converting it to an automatic package.</p>
+<ol>
+<li>Open Ketarin. Choose <code>File</code> –&gt; <code>Import…</code></li>
+<li>Choose the template you just saved earlier (<code>KetarinChocolateyTemplate.xml</code>).</li>
+<li>Answer the questions. This will create a new job for Ketarin to check.</li>
+<li>One important thing to keep in mind is that <strong>the name of the job needs to match the name of the package folder exactly.</strong></li>
+<li>Right click on that new job and select <code>Edit</code>. Take a look at the following:
+<img src="images/chocopkgup/KetarinMain.png" alt="Ketarin Job Main" title="Ketarin Job Main"></li>
+<li>Set the URL appropriately. I would shy away from FileHippo for now, the URL has been known to change and if you upload that as the download url in a chocolatey packages, it won’t work very well.</li>
+<li>Click on <code>Variables</code> on the right of URL
+<img src="images/chocopkgup/KetarinSetVariables.png" alt="Ketarin Job Variables" title="Ketarin Job Variables"></li>
+<li>On the left side you should see a variable for <strong>version</strong> and one for <strong>url64</strong>. Click on <strong>version</strong>.</li>
+<li>Choose the appropriate method for you. Here I’ve chosen <strong>Content from URL (start/end)</strong>.</li>
+<li>Enter the URL for versioning information.
+<img src="images/chocopkgup/KetarinVariables.png" alt="Ketarin Job Variables" title="Ketarin Job Variables"></li>
+<li>In the contents itself, highlight enough good information before a version to be able to select it uniquely during updates (but not so much it doesn’t work every time as the page changes). Click on <strong>Use selection as start</strong>.</li>
+<li>Now observe that it didn’t jump back too far.</li>
+<li>Do the same with the ending part, keeping in mind that this side doesn’t need to be too much because it is found AFTER the start. Once selected click on <strong>Use selection as end</strong>.</li>
+<li>It should look somewhat similar to have is presented in the picture above.</li>
+<li>If you have a 64bit url you want to get, do the same for the url64 variable.</li>
+<li>When all of this is good, click <strong>OK</strong>.</li>
+<li>Click <strong>OK</strong> again.</li>
+</ol>
+<h3 id="notes-about-tri-packages-meta-virtual-aka-install-and-portable-">Notes about tri-packages (meta/virtual aka <em>, </em>.install, and *.portable)</h3>
+<p>When you have the three packages, you should set up only two jobs, one for <em>.install and one for </em>.portable.</p>
+<p>In whichever job the meta package points to, you should add a command to that like you did for the settings for all jobs in ketarin.</p>
+<ol>
+<li>Click on the <strong>Commands Tab</strong> and set <strong>Edit command for event</strong> to “Before updating an application”.
+<img src="images/chocopkgup/KetarinJobSettings.png" alt="Ketarin Settings" title="Ketarin Settings"></li>
+<li>Add the following text (replace <code>name</code> with the actual name of the meta package folder):<pre><code class="lang-cmd">chocopkgup /p name /v {version} /u &quot;{preupdate-url}&quot; /u64 &quot;{url64}&quot; /pp &quot;{file}&quot;
+REM /disablepush
+</code></pre>
+</li>
+<li>Check the bottom of this section to be sure it set to <strong>Command</strong>.
+<img src="images/chocopkgup/KetarinCustomCommand.png" alt="Ketarin Settings Command" title="Ketarin Settings Command"></li>
+</ol>
+<h3 id="testing-ketarin-chocopkgup-">Testing Ketarin/ChocoPkgUp:</h3>
+<ol>
+<li>We need to get a good idea of whether this will work or not.</li>
+<li>Open a command line and type <code>ketarin</code>.</li>
+<li>Once Ketarin opens, open <a href="#setup">global options</a> (steps 10 and 11) and set <code>/disablepush</code> so that it only goes as far as creating packages.<ul>
+<li><strong>NOTE</strong>: Do not append it the end, place it first, right after <code>chocopkgup</code> e.g. <code>chocopkgup /disablepush /p ...</code>. This is done to alleviate issues with messed up parameters coming back from other items.</li>
+</ul>
+</li>
+<li>Find your job, and right click -&gt; Update.  If everything is set good, in moments you will have a Chocolatey package in the folder you set under <code>{PackagesFolder}\_output</code>, where <code>{PackagesFolder}</code> is the path you set in the course of the <a href="#setup"><em>Setup</em></a> section of this article.</li>
+<li>Inspect the resulting Chocolatey package(s) for any issues.</li>
+<li>You should also test the scheduled task works appropriately.</li>
+</ol>
+<h3 id="troubleshooting-notes">Troubleshooting/Notes</h3>
+<ul>
+<li>Ketarin comes with a logging facility so you can see what it is doing. It’s under View –&gt; Show Log.</li>
+<li>In the top level folder for chocopkgup (in program data), we log what we receive from Ketarin as well and the process of putting together a package.</li>
+<li>The name of the application in ketarin matches exactly that of the folder that is in the automatic packages folder.</li>
+<li>Every once in awhile you want to look in Ketarin to see what jobs might be failing. Then figure out why.</li>
+<li>Every once in awhile you will want to inspect the chocopkgupfolder to see if there are any packages that did not make it up for some reason or another and then upload them.</li>
+</ul>
+<h3 id="important-notes-for-files-hosted-on-sourceforge">Important notes for files hosted on SourceForge</h3>
+<p>Try this first:</p>
+<ul>
+<li>In advanced settings, change the user agent to <code>chocolatey command line</code>. This will allow ketarin to behave similarly to how Chocolatey does.
+<img src="https://cloud.githubusercontent.com/assets/63502/7350038/b1928aaa-ecc2-11e4-8abe-af9e7c65c82a.png" alt="Ketarin Job Advanced Settings"></li>
+</ul>
+<p>If you want to make an automatic package that downloads files hosted on SourceForge, it gets a bit tricky. Ketarin does not directly support download links from SourceForge in the format <code>http://sourceforge.net/projects/…/download</code>, because these download links automatically redirect to a mirror (e.&nbsp;g. <code>http://heanet.dl.sourceforge.net/project/…</code>). Ketarin does not support these kind of automatic redirections, but Chocolatey does.</p>
+<p>It isn’t uncommon that certain SorceForge mirrors go offline or are extremely slow because of overload. Thus it is not recommended to use direct mirror links (e.&nbsp;g. <code>http://heanet.dl.sourceforge.net/project/…</code>) in your <code>chocolateyInstall.ps1</code> file, because this will frequently break your package and makes it unreliable.
+To avoid this, use the following convention for files hosted on SourceForge:</p>
+<ul>
+<li>Don’t use <code>{{DownloadUrl}}</code> and <code>{{DownloadUrlx64}}</code> in your <code>chocolateyInstall.ps1</code> file, but use this instead (example of the app nomacs):
+<code>$url = &#39;http://sourceforge.net/projects/nomacs/files/nomacs-{{PackageVersion}}/nomacs-setup-{{PackageVersion}}-x86.exe/download&#39;</code>
+and
+<code>$url64 = &#39;http://sourceforge.net/projects/nomacs/files/nomacs-{{PackageVersion}}/nomacs-setup-{{PackageVersion}}-x64.exe/download&#39;</code>
+For other applications obviously you have to use the actual application/file names. Important is that you use <code>{{PackageVersion}}</code> and don’t use any direct links which include SourceForge mirrors.</li>
+<li>In Ketarin there’s no other possibility than using the direct link to a file with an included mirror (e.&nbsp;g. <code>http://garr.dl.sourceforge.net/project/nomacs/nomacs-{version}/nomacs-setup-{version}-x86.exe</code>). Unfortunately then Ketarin will occasionally fail to download this file and you will have to manually replace the mirror with a working one to get your automatic package updated. Any clue to fix this issue will be appreciated.</li>
+</ul>
+
+  </article>
+</div>
+
+  </main>
+
+  <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Chocolatey</h3></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">For Professionals</a></li>
+      <li><a href="#">For Businesses </a></li>
+      <li><a href="#">For Enterprise</a></li>
+      <li><a href="#">Kickstarter</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Resources</h3></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Mailing List</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Site map</a></li>
+      <li><a href="#">Media Kit</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Connect</h3></li>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Report a Bug</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Partner</a></li>
+    </ul>
+    <ul class="small fourth left p line-height-normal">
+      <li class="h2">
+        <div>
+          <a href="#" class="icon-twitter"></a> | <a href="#" class="icon-facebook"></a> | <a href="#" class="icon-github"></a>
+        </div>
+      </li>
+      <li class="m-t small">
+        <p>
+          <strong>&copy; 2011 - 2016</strong> RealDimensions Software, LLC
+        </p>
+        <p>
+          Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
+        </p>
+      </li>
+      <li class="m-t">
+        Site made possible by the following sponsors<br/>
+        <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
+          <img width="70px" src="assets/rd_logo.png"/>
+        </a>
+        <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
+          <img width="40px" src="assets/turbo_logo.png"/>
+        </a>
+        <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
+          <img width="50px" src="assets/appharbor_logo.png"/>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>

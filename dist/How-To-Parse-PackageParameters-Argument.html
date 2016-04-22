@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="bg-one">
+
+  <div class="message hide">
+    <div class="p-l p-r p--s">
+      <span>
+        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
+      </span>
+      <button class="right pointer" data-close-message>
+        <i class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+
+  <header class="bg-yellow p-b--l clearfix">
+    <a class="logo left" href="index.html">
+      <img class="hide-on-small" height="250px" alt="Logo" src="assets/logo_square.svg">
+      <img class="hide-on-large" height="100px" alt="Logo" src="assets/logo_small.svg">
+    </a>
+
+    <nav class="text-right p">
+      <ul class="inline-list main-menu m-r m-b--s m-t--s">
+        <li><a class="bold h4 m-l--s" href="install.html">Install</a></li>
+        <li><a class="bold h4 m-l--s" href="packages.html">Community Packages</a></li>
+        <li><a class="bold h4 m-l--s" href="business.html">Business</a></li>
+        <li><a class="bold h4 m-l--s" href="pricing.html">Pricing</a></li>
+        <li><a class="bold h4 m-l--s" href="faq.html">FAQ</a></li>
+        <li><a class="bold h4 m-l--s" href="docs.html">Docs</a></li>
+        <li>
+          <div class="m-l inline-block">
+            <div class="small button-bar inline-block line-height-small">
+              <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<div class="clearfix p">
+  <h1 class="text-center m-b--l"></h1>
+  <aside class="quarter left p-l p-r article-sidebar">
+    <div>
+      <ol>
+
+  <li><a href="#code-sample">Code Sample</a></li>
+
+  <li><a href="#what-does-this-mean-">What does this mean?</a></li>
+
+  <li><a href="#add-package-parameter-information-to-the-description">Add Package Parameter Information to the Description</a></li>
+
+  <li><a href="#installing-the-package">Installing the Package</a></li>
+
+</ol>
+
+    </div>
+
+    <div>
+      
+      <h2></h2>
+      <ul>
+<li><a href="Home">Home</a></li>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="https://github.com/chocolatey/chocolatey/wiki">Choco 0.9.8.x &amp; below</a></li>
+</ul>
+<p><strong>General</strong></p>
+<ul>
+<li><a href="ReleaseNotes">Release Notes</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/README.md#submitting-issues">Submitting Issues</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/CONTRIBUTING.md">Contributing</a></li>
+<li><a href="ChocolateyFAQs">FAQs</a></li>
+<li><a href="Security">Security</a></li>
+<li><a href="Moderation">Chocolatey.org Moderation</a></li>
+<li><a href="PackageTriageProcess#are-you-a-software-vendor">Software Vendor?</a></li>
+</ul>
+<p><strong>Usage</strong></p>
+<p><a href="GettingStarted#how-does-chocolatey-work">How does choco work?</a></p>
+<ul>
+<li><a href="installation">How to install</a></li>
+<li><a href="Uninstallation">How to uninstall</a></li>
+<li><a href="GettingStarted">Getting Started</a></li>
+<li><a href="Proxy-Settings-for-Chocolatey">Proxy Settings</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsReference#how-to-pass-options--switches">Passing args to choco</a></li>
+<li><a href="CommandsReference">Complete Reference</a></li>
+<li><a href="CommandsList">List / Search </a></li>
+<li><a href="CommandsInstall">Install</a></li>
+<li><a href="CommandsPin">Pin</a></li>
+<li><a href="CommandsOutdated">Outdated</a></li>
+<li><a href="CommandsUpgrade">Upgrade</a></li>
+<li><a href="CommandsUninstall">Uninstall</a></li>
+<li><a href="CommandsConfig">Config</a></li>
+<li><a href="CommandsSources">Source / Sources</a></li>
+<li><a href="CommandsFeature">Feature</a></li>
+<li>See other commands related to creating packages below</li>
+</ul>
+</li>
+</ul>
+<p><strong>Creating Packages</strong></p>
+<ul>
+<li><a href="CreatePackages">Create Packages</a></li>
+<li><a href="CreatePackagesQuickStart">Quick Start</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsNew">New</a></li>
+<li><a href="CommandsPack">Pack</a></li>
+<li><a href="CommandsApiKey">Apikey</a></li>
+<li><a href="CommandsPush">Push</a></li>
+</ul>
+</li>
+<li><a href="HelpersReference">Function and Variable Reference</a></li>
+<li><a href="AutomaticPackages">Automatic Packages</a></li>
+</ul>
+<p><strong>How To&#39;s</strong></p>
+<ul>
+<li><a href="Proxy-Settings-for-Chocolatey">Use Chocolatey w/Proxy Server</a></li>
+<li><a href="How-To-Change-Cache">Change Download Cache Location aka Don&#39;t use TEMP for downloads</a></li>
+<li><a href="How-To-Install-Upgrade-Package-Without-Scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+<li><a href="How-To-Create-Custom-Package-Templates">Create Custom Package Templates</a></li>
+<li><a href="PackageTriageProcess">Request Package Fixes/Updates</a></li>
+<li><a href="PackageTriageProcess">Request Package</a></li>
+<li><a href="PackageTriageProcess#i-want-to-take-overhelp-with-package-maintenance-for-my-software">Maintain Packages for My Software</a></li>
+<li><a href="PackageTriageProcess">Become a Maintainer</a></li>
+<li><a href="PackageMantainerHandover">Take Over Package Maintenance Exclusively</a></li>
+<li><a href="How-To-Parse-PackageParameters-Argument">Parse Package Parameters</a></li>
+<li><a href="How-To-Mount-An-Iso-In-Chocolatey-Package">Mount Iso</a></li>
+<li><a href="How-To-Deprecate-A-Chocolatey-Package">Deprecate a Package</a></li>
+<li><a href="How-To-Host-Feed">Host Your Own Server</a></li>
+</ul>
+<p><strong>Use Cases</strong></p>
+<ul>
+<li><a href="DevelopmentEnvironmentSetup">Development Environment</a></li>
+<li><a href="Hosting-Chocolatey-Packages-on-MyGet">Host on MyGet</a></li>
+</ul>
+<p><strong>Learning Resources</strong></p>
+<ul>
+<li><a href="Resources">Resources</a></li>
+<li><a href="Videos">Videos</a></li>
+<li><a href="Presentations">Presentations</a></li>
+</ul>
+<p><strong>Other</strong></p>
+<ul>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="Legal">Legal</a></li>
+<li><a href="History">History</a></li>
+</ul>
+
+    </div>
+  </aside>
+  <article class="three-quarters left p-l p-r">
+    <p>When installing a Chocolatey Package, it is possible to use a number of arguments to control how the package is installed.  Each one of these arguments is detailed <a href="https://github.com/chocolatey/choco/wiki/CommandsInstall">here</a>.</p>
+<p>This <em>How-To</em> focuses on how a package creator can make use of the PackageParameters argument within their package, and how they can parse the string which is passed through into their package from the installation command.</p>
+<h2 id="code-sample">Code Sample</h2>
+<pre><code class="lang-powershell">
+  $arguments = @{}
+
+  # Let&#39;s assume that the input string is something like this, and we will use a Regular Expression to parse the values
+  # /Port:81 /Edition:LicenseKey /AdditionalTools
+
+  # Now we can use the $env:chocolateyPackageParameters inside the Chocolatey package
+  $packageParameters = $env:chocolateyPackageParameters
+
+  # Default the values
+  $port = &quot;81&quot;
+  $edition = &quot;LicenseKey&quot;
+  $additionalTools = $false
+  $installationPath = &quot;c:\temp&quot;
+
+  # Now parse the packageParameters using good old regular expression
+  if ($packageParameters) {
+      $match_pattern = &quot;\/(?&lt;option&gt;([a-zA-Z]+)):(?&lt;value&gt;([`&quot;&#39;])?([a-zA-Z0-9- _\\:\.]+)([`&quot;&#39;])?)|\/(?&lt;option&gt;([a-zA-Z]+))&quot;
+      $option_name = &#39;option&#39;
+      $value_name = &#39;value&#39;
+
+      if ($packageParameters -match $match_pattern ){
+          $results = $packageParameters | Select-String $match_pattern -AllMatches
+          $results.matches | % {
+            $arguments.Add(
+                $_.Groups[$option_name].Value.Trim(),
+                $_.Groups[$value_name].Value.Trim())
+        }
+      }
+      else
+      {
+          Throw &quot;Package Parameters were found but were invalid (REGEX Failure)&quot;
+      }
+
+      if ($arguments.ContainsKey(&quot;Port&quot;)) {
+          Write-Host &quot;Port Argument Found&quot;
+          $port = $arguments[&quot;Port&quot;]
+      }
+
+      if ($arguments.ContainsKey(&quot;Edition&quot;)) {
+          Write-Host &quot;Edition Argument Found&quot;
+          $edition = $arguments[&quot;Edition&quot;]
+      }
+
+      if ($arguments.ContainsKey(&quot;AdditionalTools&quot;)) {
+          Write-Host &quot;You want Additional Tools installed&quot;
+          $additionalTools = $true
+      }
+
+      if ($arguments.ContainsKey(&quot;InstallationPath&quot;)) {
+          Write-Host &quot;You want to use a custom Installation Path&quot;
+          $installationPath = $arguments[&quot;InstallationPath&quot;]
+      }
+  } else {
+      Write-Debug &quot;No Package Parameters Passed in&quot;
+  }
+
+  $silentArgs = &quot;/S /Port:&quot; + $port + &quot; /Edition:&quot; + $edition + &quot; /InstallationPath:&quot; + $installationPath
+  if ($additionalTools) { $silentArgs += &quot; /Additionaltools&quot; }
+
+  Write-Debug &quot;This would be the Chocolatey Silent Arguments: $silentArgs&quot;
+</code></pre>
+<h2 id="what-does-this-mean-">What does this mean?</h2>
+<p>The Code Sample assumes that there will be no PackageParameters passed into it, as a result, we need to define a number of default values for each of the variables contained within the script.  In this case, the <code>port</code>, the <code>edition</code>, the <code>additionalTools</code> and the <code>installationPath</code>.</p>
+<p>Once that is done, assuming that the PackageParameters contains &quot;something&quot;, use a Regular Expression to parse each of the values into a dictionary.  Here, we are assuming that the package parameters will come through in a pre-defined format, such as <code>/Port:82 /Edition:LicenseKey1 /AdditionalTools /InstallationPath:&#39;C:\temp\folder with spaces&#39;</code>.  Now, this format can be anything you want it to be.  What is shown here is just <strong>one</strong> way of doing it.  If you need to deviate from this sample structure, it is likely that you will need to update the regular expression to account for this.</p>
+<p>Having collected all the arguments into the dictionary, we can then inspect the values of each parameter that we are interested in.  If it exists in the dictionary, replace the corresponding default value, otherwise, continue to use the default value.</p>
+<h2 id="add-package-parameter-information-to-the-description">Add Package Parameter Information to the Description</h2>
+<p>Be sure to let folks know about the package parameters (<strong>Note:</strong> this will be a holding review item by moderators).</p>
+<p>Here&#39;s an example:</p>
+<pre><code class="lang-xml">    &lt;description&gt;
+Git (for Windows) - Git is a powerful distributed Source Code Management tool. If you just want to use Git to do your version control in Windows, you will need to download Git for Windows, run the installer, and you are ready to start.
+
+Note: Git for Windows is a project run by volunteers, so if you want it to improve, volunteer!
+
+### Package Specifics
+The package uses default install options minus cheetah integration and desktop icons. Cheetah prevents a good upgrade scenario, so it has been removed.
+
+#### Package Parameters
+The following package parameters can be set:
+
+ * `/GitOnlyOnPath` - this puts gitinstall\cmd on path. This is also done by default if no package parameters are set.
+ * `/GitAndUnixToolsOnPath` - this puts gitinstall\bin on path. This setting will override `/GitOnlyOnPath`.
+ * `/NoAutoCrlf` - this setting only affects new installs, it will not override an existing `.gitconfig`. This will ensure &#39;Checkout as is, commit as is&#39;
+
+These parameters can be passed to the installer with the use of `-params`.
+For example: `-params &#39;&quot;/GitAndUnixToolsOnPath /NoAutoCrlf&quot;&#39;`.
+    &lt;/description&gt;
+</code></pre>
+<h2 id="installing-the-package">Installing the Package</h2>
+<p>Now, in this example, if we were to call:</p>
+<p><code>choco install &lt;packageName&gt;</code></p>
+<p>The output would be:</p>
+<pre><code>This would be the Chocolatey Silent Arguments: /S /Port:81 /Edition:LicenseKey /InstallationPath:c:\temp
+</code></pre><p>i.e. it is using the default values which we made at the top of the file</p>
+<p>However, if we instead used:</p>
+<pre><code>choco install &lt;packageName&gt; -packageParameters &#39;&quot;/Port:82 /Edition:LicenseKey1 /InstallationPath:&quot;&quot;C:\temp\folder with space&quot;&quot; /AdditionalTools&quot;&#39;
+</code></pre><p>Keep in mind how to pass pkg args: <a href="https://github.com/chocolatey/choco/wiki/CommandsReference#how-to-pass-options--switches">https://github.com/chocolatey/choco/wiki/CommandsReference#how-to-pass-options--switches</a></p>
+<p>The output would be:</p>
+<pre><code>This would be the Chocolatey Silent Arguments: /S /Port:82 /Edition:LicenseKey1 /InstallationPath:&quot;C:\temp\folder with space&quot; /Additionaltools
+</code></pre>
+  </article>
+</div>
+
+  </main>
+
+  <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Chocolatey</h3></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">For Professionals</a></li>
+      <li><a href="#">For Businesses </a></li>
+      <li><a href="#">For Enterprise</a></li>
+      <li><a href="#">Kickstarter</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Resources</h3></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Mailing List</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Site map</a></li>
+      <li><a href="#">Media Kit</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Connect</h3></li>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Report a Bug</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Partner</a></li>
+    </ul>
+    <ul class="small fourth left p line-height-normal">
+      <li class="h2">
+        <div>
+          <a href="#" class="icon-twitter"></a> | <a href="#" class="icon-facebook"></a> | <a href="#" class="icon-github"></a>
+        </div>
+      </li>
+      <li class="m-t small">
+        <p>
+          <strong>&copy; 2011 - 2016</strong> RealDimensions Software, LLC
+        </p>
+        <p>
+          Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
+        </p>
+      </li>
+      <li class="m-t">
+        Site made possible by the following sponsors<br/>
+        <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
+          <img width="70px" src="assets/rd_logo.png"/>
+        </a>
+        <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
+          <img width="40px" src="assets/turbo_logo.png"/>
+        </a>
+        <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
+          <img width="50px" src="assets/appharbor_logo.png"/>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>

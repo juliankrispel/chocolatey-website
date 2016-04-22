@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="bg-one">
+
+  <div class="message hide">
+    <div class="p-l p-r p--s">
+      <span>
+        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
+      </span>
+      <button class="right pointer" data-close-message>
+        <i class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+
+  <header class="bg-yellow p-b--l clearfix">
+    <a class="logo left" href="index.html">
+      <img class="hide-on-small" height="250px" alt="Logo" src="assets/logo_square.svg">
+      <img class="hide-on-large" height="100px" alt="Logo" src="assets/logo_small.svg">
+    </a>
+
+    <nav class="text-right p">
+      <ul class="inline-list main-menu m-r m-b--s m-t--s">
+        <li><a class="bold h4 m-l--s" href="install.html">Install</a></li>
+        <li><a class="bold h4 m-l--s" href="packages.html">Community Packages</a></li>
+        <li><a class="bold h4 m-l--s" href="business.html">Business</a></li>
+        <li><a class="bold h4 m-l--s" href="pricing.html">Pricing</a></li>
+        <li><a class="bold h4 m-l--s" href="faq.html">FAQ</a></li>
+        <li><a class="bold h4 m-l--s" href="docs.html">Docs</a></li>
+        <li>
+          <div class="m-l inline-block">
+            <div class="small button-bar inline-block line-height-small">
+              <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<div class="clearfix p">
+  <h1 class="text-center m-b--l">Get-ChocolateyWebFile</h1>
+  <aside class="quarter left p-l p-r article-sidebar">
+    <div>
+      <ol>
+
+  <li><a href="#syntax">Syntax</a></li>
+
+  <li><a href="#description">Description</a></li>
+
+  <li><a href="#notes">Notes</a></li>
+
+  <li><a href="#aliases">Aliases</a></li>
+
+  <li><a href="#inputs">Inputs</a></li>
+
+  <li><a href="#outputs">Outputs</a></li>
+
+  <li><a href="#parameters">Parameters</a></li>
+
+  <li><a href="#examples">Examples</a></li>
+
+  <li><a href="#links">Links</a></li>
+
+</ol>
+
+    </div>
+
+    <div>
+      
+      <h2></h2>
+      <ul>
+<li><a href="Home">Home</a></li>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="https://github.com/chocolatey/chocolatey/wiki">Choco 0.9.8.x &amp; below</a></li>
+</ul>
+<p><strong>General</strong></p>
+<ul>
+<li><a href="ReleaseNotes">Release Notes</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/README.md#submitting-issues">Submitting Issues</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/CONTRIBUTING.md">Contributing</a></li>
+<li><a href="ChocolateyFAQs">FAQs</a></li>
+<li><a href="Security">Security</a></li>
+<li><a href="Moderation">Chocolatey.org Moderation</a></li>
+<li><a href="PackageTriageProcess#are-you-a-software-vendor">Software Vendor?</a></li>
+</ul>
+<p><strong>Usage</strong></p>
+<p><a href="GettingStarted#how-does-chocolatey-work">How does choco work?</a></p>
+<ul>
+<li><a href="installation">How to install</a></li>
+<li><a href="Uninstallation">How to uninstall</a></li>
+<li><a href="GettingStarted">Getting Started</a></li>
+<li><a href="Proxy-Settings-for-Chocolatey">Proxy Settings</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsReference#how-to-pass-options--switches">Passing args to choco</a></li>
+<li><a href="CommandsReference">Complete Reference</a></li>
+<li><a href="CommandsList">List / Search </a></li>
+<li><a href="CommandsInstall">Install</a></li>
+<li><a href="CommandsPin">Pin</a></li>
+<li><a href="CommandsOutdated">Outdated</a></li>
+<li><a href="CommandsUpgrade">Upgrade</a></li>
+<li><a href="CommandsUninstall">Uninstall</a></li>
+<li><a href="CommandsConfig">Config</a></li>
+<li><a href="CommandsSources">Source / Sources</a></li>
+<li><a href="CommandsFeature">Feature</a></li>
+<li>See other commands related to creating packages below</li>
+</ul>
+</li>
+</ul>
+<p><strong>Creating Packages</strong></p>
+<ul>
+<li><a href="CreatePackages">Create Packages</a></li>
+<li><a href="CreatePackagesQuickStart">Quick Start</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsNew">New</a></li>
+<li><a href="CommandsPack">Pack</a></li>
+<li><a href="CommandsApiKey">Apikey</a></li>
+<li><a href="CommandsPush">Push</a></li>
+</ul>
+</li>
+<li><a href="HelpersReference">Function and Variable Reference</a></li>
+<li><a href="AutomaticPackages">Automatic Packages</a></li>
+</ul>
+<p><strong>How To&#39;s</strong></p>
+<ul>
+<li><a href="Proxy-Settings-for-Chocolatey">Use Chocolatey w/Proxy Server</a></li>
+<li><a href="How-To-Change-Cache">Change Download Cache Location aka Don&#39;t use TEMP for downloads</a></li>
+<li><a href="How-To-Install-Upgrade-Package-Without-Scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+<li><a href="How-To-Create-Custom-Package-Templates">Create Custom Package Templates</a></li>
+<li><a href="PackageTriageProcess">Request Package Fixes/Updates</a></li>
+<li><a href="PackageTriageProcess">Request Package</a></li>
+<li><a href="PackageTriageProcess#i-want-to-take-overhelp-with-package-maintenance-for-my-software">Maintain Packages for My Software</a></li>
+<li><a href="PackageTriageProcess">Become a Maintainer</a></li>
+<li><a href="PackageMantainerHandover">Take Over Package Maintenance Exclusively</a></li>
+<li><a href="How-To-Parse-PackageParameters-Argument">Parse Package Parameters</a></li>
+<li><a href="How-To-Mount-An-Iso-In-Chocolatey-Package">Mount Iso</a></li>
+<li><a href="How-To-Deprecate-A-Chocolatey-Package">Deprecate a Package</a></li>
+<li><a href="How-To-Host-Feed">Host Your Own Server</a></li>
+</ul>
+<p><strong>Use Cases</strong></p>
+<ul>
+<li><a href="DevelopmentEnvironmentSetup">Development Environment</a></li>
+<li><a href="Hosting-Chocolatey-Packages-on-MyGet">Host on MyGet</a></li>
+</ul>
+<p><strong>Learning Resources</strong></p>
+<ul>
+<li><a href="Resources">Resources</a></li>
+<li><a href="Videos">Videos</a></li>
+<li><a href="Presentations">Presentations</a></li>
+</ul>
+<p><strong>Other</strong></p>
+<ul>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="Legal">Legal</a></li>
+<li><a href="History">History</a></li>
+</ul>
+
+    </div>
+  </aside>
+  <article class="three-quarters left p-l p-r">
+    <p>Downloads a file from the internets.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-powershell">Get-ChocolateyWebFile -packageName &lt;String&gt; -fileFullPath &lt;String&gt; -url &lt;String&gt; [-url64bit &lt;String&gt;] [-checksum &lt;String&gt;] [-checksumType &lt;String&gt;] [-checksum64 &lt;String&gt;] [-checksumType64 &lt;String&gt;] [-options &lt;Hashtable&gt;] [-getOriginalFileName] [&lt;CommonParameters&gt;]
+</code></pre>
+<h2 id="description">Description</h2>
+<p>This will download a file from a url, tracking with a progress bar.
+It returns the filepath to the downloaded file when it is complete.</p>
+<h2 id="notes">Notes</h2>
+<p>This helper reduces the number of lines one would have to write to download a file to 1 line.
+There is no error handling built into this method.</p>
+<h2 id="aliases">Aliases</h2>
+<p>None</p>
+<h2 id="inputs">Inputs</h2>
+<p>None</p>
+<h2 id="outputs">Outputs</h2>
+<p>None</p>
+<h2 id="parameters">Parameters</h2>
+<h3 id="-packagename-string-">-PackageName \<String\></h3>
+<p>The name of the package we want to download - this is arbitrary, call it whatever you want.
+It&#39;s recommended you call it the same as your nuget package id.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-filefullpath-string-">-FileFullPath \<String\></h3>
+<p>This is the full path of the resulting file name.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-url-string-">-Url \<String\></h3>
+<p>This is the url to download the file from.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-url64bit-string-">-Url64bit [\<String\>]</h3>
+<p>OPTIONAL - If there is a 64 bit installer available, put the link next to the other url. Chocolatey will automatically determine if the user is running a 64bit machine or not and adjust accordingly. Please note that the 32 bit url will be used in the absence of this. This link should only be used for 64 bit native software. If the original Url contains both (which is quite rare), set this to &#39;$url&#39; Otherwise remove this parameter.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-checksum-string-">-Checksum [\<String\>]</h3>
+<p>OPTIONAL (Right now) - This allows a checksum to be validated for files that are not local</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>named</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-checksumtype-string-">-ChecksumType [\<String\>]</h3>
+<p>OPTIONAL (Right now) - &#39;md5&#39;, &#39;sha1&#39;, &#39;sha256&#39; or &#39;sha512&#39; - defaults to &#39;md5&#39;</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>named</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-checksum64-string-">-Checksum64 [\<String\>]</h3>
+<p>OPTIONAL (Right now) - This allows a checksum to be validated for files that are not local</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>named</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-checksumtype64-string-">-ChecksumType64 [\<String\>]</h3>
+<p>OPTIONAL (Right now) - &#39;md5&#39;, &#39;sha1&#39;, &#39;sha256&#39; or &#39;sha512&#39; - defaults to ChecksumType</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>named</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>$checksumType</td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-options-hashtable-">-Options [\<Hashtable\>]</h3>
+<p>OPTIONAL - Specify custom headers. Available in 0.9.10+.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>named</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>@{Headers=@{}}</td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-getoriginalfilename">-GetOriginalFileName</h3>
+<p>OPTIONAL switch to allow Chocolatey to determine the original file name from the url</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>named</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>False</td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-commonparameters-">\<CommonParameters\></h3>
+<p>This cmdlet supports the common parameters: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, and -OutVariable. For more information, see <code>about_CommonParameters</code> <a href="http://go.microsoft.com/fwlink/p/?LinkID=113216">http://go.microsoft.com/fwlink/p/?LinkID=113216</a> .</p>
+<h2 id="examples">Examples</h2>
+<p> <strong>EXAMPLE 1</strong></p>
+<pre><code class="lang-powershell">Get-ChocolateyWebFile &#39;__NAME__&#39; &#39;C:\somepath\somename.exe&#39; &#39;URL&#39; &#39;64BIT_URL_DELETE_IF_NO_64BIT&#39;
+</code></pre>
+<p><strong>EXAMPLE 2</strong></p>
+<pre><code class="lang-powershell">
+$toolsDir = &quot;$(Split-Path -parent $MyInvocation.MyCommand.Definition)&quot;
+Get-ChocolateyWebFile -PackageName &#39;bob&#39; -FileFullPath &quot;$toolsDir\bob.exe&quot; -Url &#39;https://somewhere/bob.exe&#39;
+</code></pre>
+<p><strong>EXAMPLE 3</strong></p>
+<pre><code class="lang-powershell">
+$options =
+@{
+  Headers = @{
+    Accept = &#39;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#39;;
+    &#39;Accept-Charset&#39; = &#39;ISO-8859-1,utf-8;q=0.7,*;q=0.3&#39;;
+    &#39;Accept-Language&#39; = &#39;en-GB,en-US;q=0.8,en;q=0.6&#39;;
+    Cookie = &#39;requiredinfo=info&#39;;
+    Referer = &#39;https://somelocation.com/&#39;;
+  }
+}
+
+Get-ChocolateyWebFile &#39;package&#39; &quot;$(Split-Path -parent $MyInvocation.MyCommand.Definition)\thefile.exe&quot; &#39;https://somelocation.com/thefile.exe&#39; -options $options
+</code></pre>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="HelpersInstallChocolateyPackage">Install-ChocolateyPackage</a></li>
+<li><a href="HelpersGetWebFile">Get-WebFile</a></li>
+<li><a href="HelpersGetFtpFile">Get-FtpFile</a></li>
+</ul>
+<p><a href="HelpersReference">Function Reference</a></p>
+<p><strong><em>NOTE:</em></strong> This documentation has been automatically generated from <code>Import-Module &quot;$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1&quot; -Force; Get-Help Get-ChocolateyWebFile -Full</code>.</p>
+
+  </article>
+</div>
+
+  </main>
+
+  <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Chocolatey</h3></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">For Professionals</a></li>
+      <li><a href="#">For Businesses </a></li>
+      <li><a href="#">For Enterprise</a></li>
+      <li><a href="#">Kickstarter</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Resources</h3></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Mailing List</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Site map</a></li>
+      <li><a href="#">Media Kit</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Connect</h3></li>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Report a Bug</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Partner</a></li>
+    </ul>
+    <ul class="small fourth left p line-height-normal">
+      <li class="h2">
+        <div>
+          <a href="#" class="icon-twitter"></a> | <a href="#" class="icon-facebook"></a> | <a href="#" class="icon-github"></a>
+        </div>
+      </li>
+      <li class="m-t small">
+        <p>
+          <strong>&copy; 2011 - 2016</strong> RealDimensions Software, LLC
+        </p>
+        <p>
+          Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
+        </p>
+      </li>
+      <li class="m-t">
+        Site made possible by the following sponsors<br/>
+        <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
+          <img width="70px" src="assets/rd_logo.png"/>
+        </a>
+        <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
+          <img width="40px" src="assets/turbo_logo.png"/>
+        </a>
+        <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
+          <img width="50px" src="assets/appharbor_logo.png"/>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>
