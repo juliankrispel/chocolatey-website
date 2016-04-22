@@ -125,9 +125,7 @@ function markdownStream(stream) {
 
 gulp.task(
   'buildMarkdown',
-  () => (
-    markdownStream(gulp.src(['./content/*.md', '!./content/_*']))
-  )
+  () => (markdownStream(gulp.src(['./content/*.md', '!./content/_*'])))
 );
 
 gulp.task(
@@ -148,7 +146,7 @@ gulp.task(
 
 gulp.task(
   'watchMarkdown',
-  () => gulp.watch('./content/**/*', ['buildMarkdown'])
+  () => (gulp.watch('./content/**/*', ['buildMarkdown']))
 );
 
 const connectOpts = {
@@ -157,5 +155,5 @@ const connectOpts = {
 };
 
 gulp.task('serve', () => connect.server(connectOpts));
-
+gulp.task('build', ['buildMarkdown', 'buildHtml']);
 gulp.task('default', ['serve', 'watchHtml', 'watchMarkdown']);
