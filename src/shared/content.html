@@ -1,0 +1,17 @@
+<div class="clearfix p">
+  <h1 class="text-center m-b--l"><%= md.title %></h1>
+  <aside class="quarter left p-l p-r article-sidebar">
+    <div>
+      <%= include('content-sidebar', {headings: md.headings}) %>
+    </div>
+
+    <div>
+      <% side = markdown('_Sidebar') %>
+      <h2><%= side.heading %></h2>
+      <%= side.html %>
+    </div>
+  </aside>
+  <article class="three-quarters left p-l p-r">
+    <%= md.html %>
+  </article>
+</div>

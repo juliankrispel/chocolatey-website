@@ -1,7 +1,14 @@
 <div class="clearfix p">
   <h1 class="text-center m-b--l"><%= md.title %></h1>
   <aside class="quarter left p-l p-r article-sidebar">
-    <%= include('content-sidebar', {headings: md.headings}) %>
+    <div>
+      <% side = markdown('_Sidebar') %>
+      <h2><%= site.heading %></h2>
+      <%= site.html %>
+    </div>
+    <div>
+      <%= include('content-sidebar', {headings: md.headings}) %>
+    </div>
   </aside>
   <article class="three-quarters left p-l p-r">
     <%= md.html %>

@@ -3,14 +3,15 @@ const watch = require('gulp-watch');
 const fs = require('fs');
 const transform = require('vinyl-transform');
 const map = require('map-stream');
+const rename = require('gulp-rename');
 const connect = require('gulp-connect');
 const marked = require('marked');
 const path = require('path');
 const _ = require('lodash');
 const template = require('gulp-template');
 
-
 const layout = () => fs.readFileSync('./src/shared/layout.html').toString();
+const content = () => fs.readFileSync('./src/shared/content.html').toString();
 
 const config = {
   assetPath: 'assets',
@@ -27,14 +28,30 @@ const include = (fileName, options) => {
 
 const assetPath = (filePath) => path.join(config.assetPath, filePath);
 
-const markdown = (fileName) => {
-  var content = fs.readFileSync(
-    path.join(config.markdown, fileName + '.md')
-  ).toString();
 
+const transformLinks = (string) => {
+  var content = string;
+  const reg = /\[\[([^\]]+)\]\]/gi;
+  var matches = [];
+  var match;
+  while ((match = reg.exec(content)) !== null) {
+    matches.push(match[1]);
+  }
+  var c = content.replace(reg, (_, match) => {
+    const ar = match.split('|');
+    const title = ar[0];
+    const link = ar[1] || ar[0];
+    return `[${title}](${link})`;
+  });
+  return c;
+};
+
+const parseMarkdown = (content) => {
   var title;
+  content = transformLinks(content);
   var ast = marked.lexer(content);
   var links = ast.links;
+  var headings = [];
 
   ast = ast.filter((item, index) => {
     if (index === 0 && item.type === 'heading' && item.depth === 1) {
@@ -46,26 +63,39 @@ const markdown = (fileName) => {
 
   ast.links = links;
 
-  const headings = ast.filter((node) => (
+  headings = ast.filter((node) => (
     node.type === 'heading' &&
     node.depth === 2
   ))
   .map((heading) => {
+    const reg = /\[([^\]]+)\](?:\([^)]+\))?/gi;
+    const text = heading.text.replace(reg, (_, match) => {
+      return match;
+    });
     return _.merge(
       heading,
+      {text},
       {
-        id: heading.text.toLowerCase()
-        .replace(/\s+/gi, '-')
-        .replace(/\?/gi, '-'),
+        id: text.toLowerCase()
+        .replace(/(?:\s|,|\.|\?|\(|\))+/gi, '-')
       }
     );
   });
+
+  console.log(title, headings.map(h => h.text));
 
   return {
     title,
     headings,
     html: marked.parser(ast),
   };
+};
+
+const markdown = (fileName) => {
+  var content = fs.readFileSync(
+    path.join(config.markdown, fileName + '.md')
+  ).toString();
+  return parseMarkdown(content);
 };
 
 const templateOptions = {
@@ -84,6 +114,23 @@ const streamCompile = (stream) => (
     .pipe(gulp.dest('./dist')));
 
 gulp.task(
+  'buildMarkdown',
+  () => (
+    //gulp.src(['./content/How-To-Install-Upgrade-Package-Without-Scripts.*'])
+    gulp.src(['./content/*.md', '!./content/_*'])
+    .pipe(transform((filename) => (
+      map((chunk, next) => {
+        const md = parseMarkdown(chunk.toString());
+        const cont = _.template(content())(_.merge(templateOptions, { md }));
+        next(null, _.template(layout())(_.merge(templateOptions, {content: cont})));
+      })
+    )))
+    .pipe(rename({extname: '.html'}))
+    .pipe(gulp.dest('./dist'))
+  )
+);
+
+gulp.task(
   'build',
   () => (gulp.src('./src/*.html').pipe(template(templateOptions))
   .pipe(transform((filename) => (
@@ -91,11 +138,13 @@ gulp.task(
       next(null, _.template(layout())(_.merge(templateOptions, {content: chunk.toString()})))
     ))
   )))
-  .pipe(gulp.dest('./dist'))));
+  .pipe(gulp.dest('./dist')))
+);
 
 gulp.task(
   'watch',
-  () => gulp.watch(['./src/**/*', './content/**/*'], ['build']));
+  () => gulp.watch(['./src/**/*', './content/**/*'], ['build'])
+);
 
 gulp.task('serve', () => connect.server({ root: 'dist', port: '8080' }));
 
