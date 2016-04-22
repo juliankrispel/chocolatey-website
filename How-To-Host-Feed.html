@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="bg-one">
+
+  <div class="message hide">
+    <div class="p-l p-r p--s">
+      <span>
+        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
+      </span>
+      <button class="right pointer" data-close-message>
+        <i class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+
+  <header class="bg-yellow p-b--l clearfix">
+    <a class="logo left" href="index.html">
+      <img class="hide-on-small" height="250px" alt="Logo" src="assets/logo_square.svg">
+      <img class="hide-on-large" height="100px" alt="Logo" src="assets/logo_small.svg">
+    </a>
+
+    <nav class="text-right p">
+      <ul class="inline-list main-menu m-r m-b--s m-t--s">
+        <li><a class="bold h4 m-l--s" href="install.html">Install</a></li>
+        <li><a class="bold h4 m-l--s" href="packages.html">Community Packages</a></li>
+        <li><a class="bold h4 m-l--s" href="business.html">Business</a></li>
+        <li><a class="bold h4 m-l--s" href="pricing.html">Pricing</a></li>
+        <li><a class="bold h4 m-l--s" href="faq.html">FAQ</a></li>
+        <li><a class="bold h4 m-l--s" href="docs.html">Docs</a></li>
+        <li>
+          <div class="m-l inline-block">
+            <div class="small button-bar inline-block line-height-small">
+              <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<div class="clearfix p">
+  <h1 class="text-center m-b--l">How To Host Your Own [Private/Internal/Public] Package Repository Server (aka Package Feed)</h1>
+  <aside class="quarter left p-l p-r article-sidebar">
+    <div>
+      <ol>
+
+  <li><a href="#why-">Why?</a></li>
+
+  <li><a href="#host-your-own-server">Host your own server</a></li>
+
+  <li><a href="#local-folder-/-unc-share-cifs-">Local Folder / UNC Share (CIFS)</a></li>
+
+  <li><a href="#simple-server">Simple Server</a></li>
+
+  <li><a href="#package-gallery">Package Gallery</a></li>
+
+  <li><a href="#non-windows-hosting">Non-Windows Hosting</a></li>
+
+</ol>
+
+    </div>
+
+    <div>
+      
+      <h2></h2>
+      <ul>
+<li><a href="Home">Home</a></li>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="https://github.com/chocolatey/chocolatey/wiki">Choco 0.9.8.x &amp; below</a></li>
+</ul>
+<p><strong>General</strong></p>
+<ul>
+<li><a href="ReleaseNotes">Release Notes</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/README.md#submitting-issues">Submitting Issues</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/CONTRIBUTING.md">Contributing</a></li>
+<li><a href="ChocolateyFAQs">FAQs</a></li>
+<li><a href="Security">Security</a></li>
+<li><a href="Moderation">Chocolatey.org Moderation</a></li>
+<li><a href="PackageTriageProcess#are-you-a-software-vendor">Software Vendor?</a></li>
+</ul>
+<p><strong>Usage</strong></p>
+<p><a href="GettingStarted#how-does-chocolatey-work">How does choco work?</a></p>
+<ul>
+<li><a href="installation">How to install</a></li>
+<li><a href="Uninstallation">How to uninstall</a></li>
+<li><a href="GettingStarted">Getting Started</a></li>
+<li><a href="Proxy-Settings-for-Chocolatey">Proxy Settings</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsReference#how-to-pass-options--switches">Passing args to choco</a></li>
+<li><a href="CommandsReference">Complete Reference</a></li>
+<li><a href="CommandsList">List / Search </a></li>
+<li><a href="CommandsInstall">Install</a></li>
+<li><a href="CommandsPin">Pin</a></li>
+<li><a href="CommandsOutdated">Outdated</a></li>
+<li><a href="CommandsUpgrade">Upgrade</a></li>
+<li><a href="CommandsUninstall">Uninstall</a></li>
+<li><a href="CommandsConfig">Config</a></li>
+<li><a href="CommandsSources">Source / Sources</a></li>
+<li><a href="CommandsFeature">Feature</a></li>
+<li>See other commands related to creating packages below</li>
+</ul>
+</li>
+</ul>
+<p><strong>Creating Packages</strong></p>
+<ul>
+<li><a href="CreatePackages">Create Packages</a></li>
+<li><a href="CreatePackagesQuickStart">Quick Start</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsNew">New</a></li>
+<li><a href="CommandsPack">Pack</a></li>
+<li><a href="CommandsApiKey">Apikey</a></li>
+<li><a href="CommandsPush">Push</a></li>
+</ul>
+</li>
+<li><a href="HelpersReference">Function and Variable Reference</a></li>
+<li><a href="AutomaticPackages">Automatic Packages</a></li>
+</ul>
+<p><strong>How To&#39;s</strong></p>
+<ul>
+<li><a href="Proxy-Settings-for-Chocolatey">Use Chocolatey w/Proxy Server</a></li>
+<li><a href="How-To-Change-Cache">Change Download Cache Location aka Don&#39;t use TEMP for downloads</a></li>
+<li><a href="How-To-Install-Upgrade-Package-Without-Scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+<li><a href="How-To-Create-Custom-Package-Templates">Create Custom Package Templates</a></li>
+<li><a href="PackageTriageProcess">Request Package Fixes/Updates</a></li>
+<li><a href="PackageTriageProcess">Request Package</a></li>
+<li><a href="PackageTriageProcess#i-want-to-take-overhelp-with-package-maintenance-for-my-software">Maintain Packages for My Software</a></li>
+<li><a href="PackageTriageProcess">Become a Maintainer</a></li>
+<li><a href="PackageMantainerHandover">Take Over Package Maintenance Exclusively</a></li>
+<li><a href="How-To-Parse-PackageParameters-Argument">Parse Package Parameters</a></li>
+<li><a href="How-To-Mount-An-Iso-In-Chocolatey-Package">Mount Iso</a></li>
+<li><a href="How-To-Deprecate-A-Chocolatey-Package">Deprecate a Package</a></li>
+<li><a href="How-To-Host-Feed">Host Your Own Server</a></li>
+</ul>
+<p><strong>Use Cases</strong></p>
+<ul>
+<li><a href="DevelopmentEnvironmentSetup">Development Environment</a></li>
+<li><a href="Hosting-Chocolatey-Packages-on-MyGet">Host on MyGet</a></li>
+</ul>
+<p><strong>Learning Resources</strong></p>
+<ul>
+<li><a href="Resources">Resources</a></li>
+<li><a href="Videos">Videos</a></li>
+<li><a href="Presentations">Presentations</a></li>
+</ul>
+<p><strong>Other</strong></p>
+<ul>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="Legal">Legal</a></li>
+<li><a href="History">History</a></li>
+</ul>
+
+    </div>
+  </aside>
+  <article class="three-quarters left p-l p-r">
+    <h2 id="why-">Why?</h2>
+<p>Please read <a href="ChocolateyFAQs#should-my-organization-depend-on-use-the-community-feed-httpschocolateyorgpackages">Depending on the chocolatey.org as an organization</a></p>
+<h2 id="host-your-own-server">Host your own server</h2>
+<p>There are three types of package repositories, <a href="#local-folder--unc-share">folder/unc share</a>, <a href="#simple-server">simple server</a>, and the sophisticated <a href="#package-gallery">package gallery</a>. </p>
+<p><strong>Alternative Hosting Options (that require less work/maintenance):</strong></p>
+<ul>
+<li><a href="https://www.myget.org/">MyGet</a> - MyGet has free public and paid for public/private cloud-hosting options if you don&#39;t want to handle all of the pain of setup and administration. MyGet offers some stellar options like multi-feed aggregation, mirroring, and source package build services!</li>
+<li><a href="http://inedo.com/proget/overview">ProGet</a> - ProGet gives you a ready to go On-Premise option (<a href="https://chocolatey.org/packages/proget">installable with Chocolatey!</a>).</li>
+<li><a href="http://www.jfrog.com/open-source/">Artifactory</a> - see <a href="http://www.jfrog.com/confluence/display/RTF/NuGet+Repositories">Artifactory NuGet Repositories</a> - not in the free version</li>
+<li><a href="https://www.jetbrains.com/teamcity/">TeamCity</a> has built-in Simple Server</li>
+<li><a href="https://books.sonatype.com/nexus-book/reference/nuget-nuget_proxy_repositories.html">Nexus</a> - Sonatype Nexus has a built-in simple server</li>
+</ul>
+<h2 id="local-folder-unc-share-cifs-">Local Folder / UNC Share (CIFS)</h2>
+<p>Perhaps the easiest to set up and recommended for testing quick and dirty scenarios, local folder is easily a strong point when you need a quick source for packages.</p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Speed of setup (can be setup almost immediately).</li>
+<li>Package store is filesystem.</li>
+<li>Can be easily upgrade to Simple Server.</li>
+<li>Permissions are based on file system/share permissions.</li>
+<li>There is no limitation on package sizes (or rather, it can likely handle 100MB+ file sizes, maybe even GB sized packages). Don&#39;t create multiple GB sized packages, what is wrong with you?! ;)</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Anyone with permission can push and overwrite packages.</li>
+<li>No HTTP/HTTPS pushing. Must be able to access the folder/share to push to it. </li>
+<li>Starts to affect choco performance once the source has over 500 packages (maybe?).</li>
+<li><strong>Big disadvantage</strong>: Does not do anything to keep from package versions being overwritten. This provides no immutability of a package version and no guarantee that a version of a package installed is the same as the version in the source.</li>
+</ul>
+<h3 id="local-folder-share-setup">Local Folder Share Setup</h3>
+<p>No really, it&#39;s that easy. Just set your permissions appropriately and put packages in the folder. You are already done.</p>
+<h2 id="simple-server">Simple Server</h2>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Setup can be really simple - just a website and IIS for some simple servers.</li>
+<li>Windows is not required - there are at least two pure Java versions (see <a href="#non-windows-hosting">Non-Windows Hosting</a>).</li>
+<li>Push over HTTP/HTTPS.</li>
+<li>API key for pushing packages.</li>
+<li>No direct access to packages so security can be locked down to just modify through push.</li>
+<li>Package store is file system.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Only one API key, so no multi user scenarios.</li>
+<li>Starts to affect choco performance once the source has over 500 packages (maybe?).</li>
+<li>No moderation.</li>
+<li>No website to view packages.</li>
+<li>No package statistics.</li>
+<li>A package should not be bigger than 50MB. You can host the installer internally somewhere and access it through packaging though.</li>
+</ul>
+<h4 id="simple-server-setup">Simple Server Setup</h4>
+<p>Many google searches will throw out good ways to set up your own feed (hint: search for host your own nuget server feed)</p>
+<p>Some notable references:</p>
+<ul>
+<li>Nuget Docs <a href="https://docs.nuget.org/Create/Hosting-Your-Own-NuGet-Feeds#creating-remote-feeds">Host Your Own Remote Feed</a></li>
+<li>itToby - <a href="http://blog.ittoby.com/2014/07/setup-your-own-chocoloateynuget.html">Setup Your Own Chocolatey/NuGet Repository</a></li>
+<li>Rich Hopkins - <a href="https://souladin.wordpress.com/2014/12/05/bake-your-own-chocolatey-nuget-repository/">Bake your own Chocolatey NuGet repository</a></li>
+<li>Brandon - <a href="http://netitude.bc3tech.net/2015/01/07/create-your-own-hosted-nuget-server-in-azure/">Host NuGet Server in Azure</a></li>
+</ul>
+<h5 id="chocolatey-server-setup">Chocolatey Server Setup</h5>
+<p><a href="https://chocolatey.org/packages/chocolatey.server">Chocolatey Server</a> is a simple Nuget.Server that is ready to rock and roll. It has already completed Steps 1-3 of NuGet&#39;s <a href="https://docs.nuget.org/Create/Hosting-Your-Own-NuGet-Feeds#creating-remote-feeds">host your own remote feed</a>.</p>
+<ol>
+<li>Install the <a href="https://chocolatey.org/packages/chocolatey.server">Chocolatey Server</a> package - <code>choco install chocolatey.server -y</code></li>
+<li>Configure IIS appropriately for the package.</li>
+<li>Be sure to give the app pool modify permissions to the <code>App_Data</code> folder.</li>
+</ol>
+<p>Alternative means of installation? If you have <a href="https://docs.puppetlabs.com/puppet/">Puppet</a>, you can take a look at the <a href="https://forge.puppetlabs.com/chocolatey/chocolatey_server">chocolatey server module</a>. </p>
+<h2 id="package-gallery">Package Gallery</h2>
+<p>This is like what <a href="https://chocolatey.org">https://chocolatey.org</a> (the community feed runs on). It is the most advanced, having both a file store for packages and a database for tracking all sorts of information.</p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Can deal with thousands of packages with no performance issues.</li>
+<li>Package versions are immutable - in other words you can guarantee the version installed is the same as the version in the source.</li>
+<li>Package store can be File system, Azure blobs, or AWS S3 (<strong>Chocolatey Package Gallery only</strong>).</li>
+<li>Multiple users each having their own API keys.</li>
+<li>User registration with email confirmation.</li>
+<li>Interaction and collaboration based. </li>
+<li>Can have administrators.</li>
+<li>Can take advantage of moderation (<strong>Chocolatey Package Gallery only</strong>).</li>
+<li>Package statistics (download counts, etc).</li>
+<li>A website to view package information.</li>
+<li>Can be configured to send email.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Speed of setup (can take longer than the rest). There are many moving parts to configure.</li>
+<li>Requires Windows/IIS/SQL Server/SMTP (hopefully with the proper licenses on each of those).</li>
+<li>Not well-documented, could require some diligence to get working.</li>
+<li>A package should not be bigger than 50MB. You can host the installer internally somewhere and access it through packaging though.</li>
+</ul>
+<h4 id="package-gallery-setup">Package Gallery Setup</h4>
+<p>Only approach this if you are a Windows Admin with significant experience in setting up SQL Server databases and IIS for ASP.NET MVC sites. We don&#39;t have resources to help support the setup, but we can point you to <a href="https://github.com/NuGet/NuGetGallery/wiki/Hosting-the-NuGet-Gallery-Locally-in-IIS">NuGet Gallery Setup</a>.</p>
+<h5 id="chocolatey-package-gallery-setup">Chocolatey Package Gallery Setup</h5>
+<p>At this time we don&#39;t have setup instructions and won&#39;t answer questions specifically surrounding the setup of a Chocolatey specific gallery. Watch for this to change as Chocolatey for Business becomes a thing.</p>
+<h2 id="non-windows-hosting">Non-Windows Hosting</h2>
+<p>If you don&#39;t want to host on Windows you have only the following options (from least advanced to most advanced):</p>
+<ul>
+<li>CIFS share</li>
+<li><a href="https://bitbucket.org/aristar/jnuget/wiki/Home">JNuGet</a> - a simple server</li>
+<li><a href="http://blog.jonnyzzz.name/2012/03/nuget-server-in-pure-java.html">NuGet.Java.Server</a> (<a href="https://www.nuget.org/packages/NuGet.Java.Server">NuGet Package</a>) - simple server (same tool used in TeamCity)</li>
+<li><a href="https://www.jetbrains.com/teamcity/">TeamCity</a> - contains built-in simple server</li>
+<li><a href="https://books.sonatype.com/nexus-book/reference/nuget-nuget_proxy_repositories.html">Nexus</a></li>
+<li><a href="http://www.jfrog.com/open-source/">Artifactory</a> - see <a href="http://www.jfrog.com/confluence/display/RTF/NuGet+Repositories">Artifactory NuGet Repositories</a> - not in the free version</li>
+</ul>
+<p><strong>Note:</strong> NuGet.Java.Server, TeamCity and JNuGet are about the same in terms of sophistication (they are ordered alphabetically).</p>
+
+  </article>
+</div>
+
+  </main>
+
+  <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Chocolatey</h3></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">For Professionals</a></li>
+      <li><a href="#">For Businesses </a></li>
+      <li><a href="#">For Enterprise</a></li>
+      <li><a href="#">Kickstarter</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Resources</h3></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Mailing List</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Site map</a></li>
+      <li><a href="#">Media Kit</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Connect</h3></li>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Report a Bug</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Partner</a></li>
+    </ul>
+    <ul class="small fourth left p line-height-normal">
+      <li class="h2">
+        <div>
+          <a href="#" class="icon-twitter"></a> | <a href="#" class="icon-facebook"></a> | <a href="#" class="icon-github"></a>
+        </div>
+      </li>
+      <li class="m-t small">
+        <p>
+          <strong>&copy; 2011 - 2016</strong> RealDimensions Software, LLC
+        </p>
+        <p>
+          Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
+        </p>
+      </li>
+      <li class="m-t">
+        Site made possible by the following sponsors<br/>
+        <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
+          <img width="70px" src="assets/rd_logo.png"/>
+        </a>
+        <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
+          <img width="40px" src="assets/turbo_logo.png"/>
+        </a>
+        <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
+          <img width="50px" src="assets/appharbor_logo.png"/>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>

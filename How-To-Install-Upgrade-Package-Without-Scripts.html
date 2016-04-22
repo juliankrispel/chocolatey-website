@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="bg-one">
+
+  <div class="message hide">
+    <div class="p-l p-r p--s">
+      <span>
+        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
+      </span>
+      <button class="right pointer" data-close-message>
+        <i class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+
+  <header class="bg-yellow p-b--l clearfix">
+    <a class="logo left" href="index.html">
+      <img class="hide-on-small" height="250px" alt="Logo" src="assets/logo_square.svg">
+      <img class="hide-on-large" height="100px" alt="Logo" src="assets/logo_small.svg">
+    </a>
+
+    <nav class="text-right p">
+      <ul class="inline-list main-menu m-r m-b--s m-t--s">
+        <li><a class="bold h4 m-l--s" href="install.html">Install</a></li>
+        <li><a class="bold h4 m-l--s" href="packages.html">Community Packages</a></li>
+        <li><a class="bold h4 m-l--s" href="business.html">Business</a></li>
+        <li><a class="bold h4 m-l--s" href="pricing.html">Pricing</a></li>
+        <li><a class="bold h4 m-l--s" href="faq.html">FAQ</a></li>
+        <li><a class="bold h4 m-l--s" href="docs.html">Docs</a></li>
+        <li>
+          <div class="m-l inline-block">
+            <div class="small button-bar inline-block line-height-small">
+              <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<div class="clearfix p">
+  <h1 class="text-center m-b--l">How To Install or Upgrade a Package Without Running Scripts</h1>
+  <aside class="quarter left p-l p-r article-sidebar">
+    <div>
+      <ol>
+
+  <li><a href="#installing-a-package-without-running-install-script">Installing a Package Without Running Install Script</a></li>
+
+  <li><a href="#upgrade-a-package-without-running-scripts">Upgrade a Package Without Running Scripts</a></li>
+
+</ol>
+
+    </div>
+
+    <div>
+      
+      <h2></h2>
+      <ul>
+<li><a href="Home">Home</a></li>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="https://github.com/chocolatey/chocolatey/wiki">Choco 0.9.8.x &amp; below</a></li>
+</ul>
+<p><strong>General</strong></p>
+<ul>
+<li><a href="ReleaseNotes">Release Notes</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/README.md#submitting-issues">Submitting Issues</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/CONTRIBUTING.md">Contributing</a></li>
+<li><a href="ChocolateyFAQs">FAQs</a></li>
+<li><a href="Security">Security</a></li>
+<li><a href="Moderation">Chocolatey.org Moderation</a></li>
+<li><a href="PackageTriageProcess#are-you-a-software-vendor">Software Vendor?</a></li>
+</ul>
+<p><strong>Usage</strong></p>
+<p><a href="GettingStarted#how-does-chocolatey-work">How does choco work?</a></p>
+<ul>
+<li><a href="installation">How to install</a></li>
+<li><a href="Uninstallation">How to uninstall</a></li>
+<li><a href="GettingStarted">Getting Started</a></li>
+<li><a href="Proxy-Settings-for-Chocolatey">Proxy Settings</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsReference#how-to-pass-options--switches">Passing args to choco</a></li>
+<li><a href="CommandsReference">Complete Reference</a></li>
+<li><a href="CommandsList">List / Search </a></li>
+<li><a href="CommandsInstall">Install</a></li>
+<li><a href="CommandsPin">Pin</a></li>
+<li><a href="CommandsOutdated">Outdated</a></li>
+<li><a href="CommandsUpgrade">Upgrade</a></li>
+<li><a href="CommandsUninstall">Uninstall</a></li>
+<li><a href="CommandsConfig">Config</a></li>
+<li><a href="CommandsSources">Source / Sources</a></li>
+<li><a href="CommandsFeature">Feature</a></li>
+<li>See other commands related to creating packages below</li>
+</ul>
+</li>
+</ul>
+<p><strong>Creating Packages</strong></p>
+<ul>
+<li><a href="CreatePackages">Create Packages</a></li>
+<li><a href="CreatePackagesQuickStart">Quick Start</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsNew">New</a></li>
+<li><a href="CommandsPack">Pack</a></li>
+<li><a href="CommandsApiKey">Apikey</a></li>
+<li><a href="CommandsPush">Push</a></li>
+</ul>
+</li>
+<li><a href="HelpersReference">Function and Variable Reference</a></li>
+<li><a href="AutomaticPackages">Automatic Packages</a></li>
+</ul>
+<p><strong>How To&#39;s</strong></p>
+<ul>
+<li><a href="Proxy-Settings-for-Chocolatey">Use Chocolatey w/Proxy Server</a></li>
+<li><a href="How-To-Change-Cache">Change Download Cache Location aka Don&#39;t use TEMP for downloads</a></li>
+<li><a href="How-To-Install-Upgrade-Package-Without-Scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+<li><a href="How-To-Create-Custom-Package-Templates">Create Custom Package Templates</a></li>
+<li><a href="PackageTriageProcess">Request Package Fixes/Updates</a></li>
+<li><a href="PackageTriageProcess">Request Package</a></li>
+<li><a href="PackageTriageProcess#i-want-to-take-overhelp-with-package-maintenance-for-my-software">Maintain Packages for My Software</a></li>
+<li><a href="PackageTriageProcess">Become a Maintainer</a></li>
+<li><a href="PackageMantainerHandover">Take Over Package Maintenance Exclusively</a></li>
+<li><a href="How-To-Parse-PackageParameters-Argument">Parse Package Parameters</a></li>
+<li><a href="How-To-Mount-An-Iso-In-Chocolatey-Package">Mount Iso</a></li>
+<li><a href="How-To-Deprecate-A-Chocolatey-Package">Deprecate a Package</a></li>
+<li><a href="How-To-Host-Feed">Host Your Own Server</a></li>
+</ul>
+<p><strong>Use Cases</strong></p>
+<ul>
+<li><a href="DevelopmentEnvironmentSetup">Development Environment</a></li>
+<li><a href="Hosting-Chocolatey-Packages-on-MyGet">Host on MyGet</a></li>
+</ul>
+<p><strong>Learning Resources</strong></p>
+<ul>
+<li><a href="Resources">Resources</a></li>
+<li><a href="Videos">Videos</a></li>
+<li><a href="Presentations">Presentations</a></li>
+</ul>
+<p><strong>Other</strong></p>
+<ul>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="Legal">Legal</a></li>
+<li><a href="History">History</a></li>
+</ul>
+
+    </div>
+  </aside>
+  <article class="three-quarters left p-l p-r">
+    <p>So you&#39;ve updated your applications manually or through some other means or you want to make Chocolatey aware of some previously installed applications without actually running the installation scripts.  </p>
+<p><strong>NOTE</strong>: This is considered an advanced scenario - make sure you read and understand everything here before trying it. You may mess something up if you don&#39;t understand the full implication of what you are doing.</p>
+<h2 id="installing-a-package-without-running-install-script">Installing a Package Without Running Install Script</h2>
+<p>The first thing to understand is that in most instances when you want to bring Chocolatey knowledgeable about an already installed application, if there is a version match out there (wherever your sources point), then this process is so much better. </p>
+<p>We normally recommend just calling the install as usual with no special switches and letting it handle the install - normally this turns into a no state change scenario for the computer (that is, the end state is that your application is still installed and Chocolatey now knows about it).</p>
+<p>However if you are sold on skipping the automation scripts and tricking Chocolatey into believing that a script is installed.</p>
+<p>If you wonder over to <a href="CommandsInstall#options-and-switches">install switches</a> you will see </p>
+<pre><code>-n, --skippowershell, --skip-powershell
+  Skip Powershell - Do not run chocolateyInstall.ps1. Defaults to false.
+</code></pre><p>This switch is going to be very important for you. Now we will go through some scenarios to help you make the best decision.</p>
+<h3 id="community-feed-has-a-package-with-your-version">Community Feed has a package with your version</h3>
+<p>Consider the following scenario:</p>
+<ul>
+<li>You have Firefox version 1.0.0 installed</li>
+<li>You do not have a package installed for Firefox.</li>
+<li>You see Chocolatey.org (the community feed) has a version of Firefox 1.0.0 (package id is firefox). It may or may not be the latest version.</li>
+</ul>
+<p>Your command could be</p>
+<p><code>choco install firefox -n -y --version 1.0.0</code></p>
+<p><strong>Recommendation</strong>: You should try to just install the package first and see what happens. In some cases the package may do additional things like update the path or do some helpful configuration for you (although this is not usually the case). If it fails or doesn&#39;t work, you can always fall back to skipping the install script as in the command above.</p>
+<h3 id="community-feed-has-newer-version-than-you">Community feed has newer version than you</h3>
+<p>Consider the following scenario:</p>
+<ul>
+<li>You have Firefox version 1.0.0 installed.</li>
+<li>You do not have a package installed for Firefox.</li>
+<li>You see Chocolatey.org (the community feed) has a newer version of Firefox 2.0.0 (package id is firefox) as the latest version.</li>
+</ul>
+<p><strong>Recommendation</strong>: You should run the regular choco install (without the skip powershell argument) for Firefox and allow Chocolatey to upgrade the installed version. Check the package files first to be sure it is the same type of install (native installer versus zip archives). You can download the package and review the install script. You can also use <code>--noop</code> as part of your install arguments to see the script.</p>
+<h3 id="community-feed-has-a-package-older-than-your-version">Community Feed has a package older than your version</h3>
+<p>Consider the following scenario:</p>
+<ul>
+<li>You have Firefox version 2.0.0 installed.</li>
+<li>You do not have a package installed for Firefox.</li>
+<li>You see Chocolatey.org (the community feed) has a latest version of Firefox 1.8.0 (package id is firefox). </li>
+<li>There is no newer version than this available.</li>
+</ul>
+<p>Your command could be:</p>
+<p><code>choco install firefox -n -y --version 1.8.0</code></p>
+<p><strong>Recommendation</strong>: Ask the maintainer to update the package. Don&#39;t allow choco to know about an older version of a package. If the maintainer provides an update of 1.9.0 without also providing an update at or above your currently installed version, running upgrade later may put your installed software down to the version that is installed by the package. This is definitely not a situation you want to be in.</p>
+<p>Additional thoughts: You could install the older version of the package (with the <code>-n</code> argument) and promptly <a href="CommandsPin">pin</a> that version until the newer version is available. If you don&#39;t already have the package installed though, it&#39;s better to wait for the newer version to become available.</p>
+<h2 id="upgrade-a-package-without-running-scripts">Upgrade a Package Without Running Scripts</h2>
+<h3 id="application-is-self-updating-like-google-chrome-">Application is self-updating (like Google Chrome)</h3>
+<p>Consider the following scenario:</p>
+<ul>
+<li>You have installed Google Chrome from Chocolatey.org (package id is googlechrome)</li>
+<li>Google Chrome self-updates</li>
+<li>Choco version is out of sync with installed version</li>
+</ul>
+<p><strong>Recommendation</strong>: You should <a href="CommandsPin">pin</a> the package to suppress upgrades. The self-updating scenario is keeping you on the latest version and you want to stay up to date with the latest version that may have security fixes in addition to other things.</p>
+<p>You should run</p>
+<p><code>choco pin googlechrome</code></p>
+<p>For more information see <a href="CommandsPin">Pin Command</a>.</p>
+<h3 id="the-software-was-upgraded-but-not-the-package">The software was upgraded but not the package</h3>
+<p>Similar to the above scenario, but perhaps you upgraded the software manually outside of Chocolatey.</p>
+<p>Consider the following scenario:</p>
+<ul>
+<li>You have Firefox version 1.0.0 installed.</li>
+<li>The install came from installing the firefox 1.0.0 package.</li>
+<li>You upgraded Firefox manually to 2.0.0 (ignore for a second that real-world Firefox auto-upgrades, this is an example for pete&#39;s sake ;) )</li>
+<li>Chocolatey.org also has 2.0.0.</li>
+</ul>
+<p>See <a href="#community-feed-has-a-package-with-your-version">Install when community feed has a package with your version</a> - substitute <code>upgrade</code> for <code>install</code> if you must. Follow the recommendation.</p>
+<h3 id="the-software-was-upgraded-but-not-the-package-and-community-feed-is-outdated">The software was upgraded but not the package and Community Feed is outdated</h3>
+<p>Similar to the above scenario, but perhaps you upgraded the software manually outside of Chocolatey.</p>
+<p>Consider the following scenario:</p>
+<ul>
+<li>You have Firefox version 1.0.0 installed.</li>
+<li>The install came from installing the firefox 1.0.0 package.</li>
+<li>You upgraded Firefox manually to 2.0.0 (ignore for a second that real-world Firefox auto-upgrades, this is an example for pete&#39;s sake ;) )</li>
+<li>Chocolatey.org only has up to 1.8.0.</li>
+</ul>
+<p>See <a href="#community-feed-has-a-package-older-than-your-version">Community Feed has a version older than your version</a> - substitute <code>upgrade</code> for <code>install</code> if you must. Follow the recommendation.</p>
+<p><strong>Additional Recommendation</strong>: You may also want to bump it to 1.8.0 using the skip argument (<code>-n</code>) and then promptly <a href="CommandsPin">pin</a> the package until a newer version is available.</p>
+<pre><code>choco upgrade firefox -n -y --version 1.8.0
+choco pin firefox
+</code></pre>
+  </article>
+</div>
+
+  </main>
+
+  <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Chocolatey</h3></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">For Professionals</a></li>
+      <li><a href="#">For Businesses </a></li>
+      <li><a href="#">For Enterprise</a></li>
+      <li><a href="#">Kickstarter</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Resources</h3></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Mailing List</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Site map</a></li>
+      <li><a href="#">Media Kit</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Connect</h3></li>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Report a Bug</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Partner</a></li>
+    </ul>
+    <ul class="small fourth left p line-height-normal">
+      <li class="h2">
+        <div>
+          <a href="#" class="icon-twitter"></a> | <a href="#" class="icon-facebook"></a> | <a href="#" class="icon-github"></a>
+        </div>
+      </li>
+      <li class="m-t small">
+        <p>
+          <strong>&copy; 2011 - 2016</strong> RealDimensions Software, LLC
+        </p>
+        <p>
+          Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
+        </p>
+      </li>
+      <li class="m-t">
+        Site made possible by the following sponsors<br/>
+        <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
+          <img width="70px" src="assets/rd_logo.png"/>
+        </a>
+        <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
+          <img width="40px" src="assets/turbo_logo.png"/>
+        </a>
+        <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
+          <img width="50px" src="assets/appharbor_logo.png"/>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>

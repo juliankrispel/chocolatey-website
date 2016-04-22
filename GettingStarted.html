@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="bg-one">
+
+  <div class="message hide">
+    <div class="p-l p-r p--s">
+      <span>
+        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
+      </span>
+      <button class="right pointer" data-close-message>
+        <i class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+
+  <header class="bg-yellow p-b--l clearfix">
+    <a class="logo left" href="index.html">
+      <img class="hide-on-small" height="250px" alt="Logo" src="assets/logo_square.svg">
+      <img class="hide-on-large" height="100px" alt="Logo" src="assets/logo_small.svg">
+    </a>
+
+    <nav class="text-right p">
+      <ul class="inline-list main-menu m-r m-b--s m-t--s">
+        <li><a class="bold h4 m-l--s" href="install.html">Install</a></li>
+        <li><a class="bold h4 m-l--s" href="packages.html">Community Packages</a></li>
+        <li><a class="bold h4 m-l--s" href="business.html">Business</a></li>
+        <li><a class="bold h4 m-l--s" href="pricing.html">Pricing</a></li>
+        <li><a class="bold h4 m-l--s" href="faq.html">FAQ</a></li>
+        <li><a class="bold h4 m-l--s" href="docs.html">Docs</a></li>
+        <li>
+          <div class="m-l inline-block">
+            <div class="small button-bar inline-block line-height-small">
+              <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<div class="clearfix p">
+  <h1 class="text-center m-b--l">Getting Started</h1>
+  <aside class="quarter left p-l p-r article-sidebar">
+    <div>
+      <ol>
+
+  <li><a href="#using-chocolatey">Using chocolatey</a></li>
+
+  <li><a href="#what-are-chocolatey-packages-">What Are Chocolatey Packages?</a></li>
+
+  <li><a href="#how-does-chocolatey-work-">How does Chocolatey work?</a></li>
+
+  <li><a href="#where-are-chocolatey-packages-installed-to-">Where are Chocolatey packages installed to?</a></li>
+
+  <li><a href="#how-does-chocolatey-work-with-programs-and-features-existing-installs-">How does Chocolatey work with Programs and Features? Existing installs?</a></li>
+
+  <li><a href="#where-does-chocolatey-install-packages-from-">Where does Chocolatey install packages from?</a></li>
+
+</ol>
+
+    </div>
+
+    <div>
+      
+      <h2></h2>
+      <ul>
+<li><a href="Home">Home</a></li>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="https://github.com/chocolatey/chocolatey/wiki">Choco 0.9.8.x &amp; below</a></li>
+</ul>
+<p><strong>General</strong></p>
+<ul>
+<li><a href="ReleaseNotes">Release Notes</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/README.md#submitting-issues">Submitting Issues</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/CONTRIBUTING.md">Contributing</a></li>
+<li><a href="ChocolateyFAQs">FAQs</a></li>
+<li><a href="Security">Security</a></li>
+<li><a href="Moderation">Chocolatey.org Moderation</a></li>
+<li><a href="PackageTriageProcess#are-you-a-software-vendor">Software Vendor?</a></li>
+</ul>
+<p><strong>Usage</strong></p>
+<p><a href="GettingStarted#how-does-chocolatey-work">How does choco work?</a></p>
+<ul>
+<li><a href="installation">How to install</a></li>
+<li><a href="Uninstallation">How to uninstall</a></li>
+<li><a href="GettingStarted">Getting Started</a></li>
+<li><a href="Proxy-Settings-for-Chocolatey">Proxy Settings</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsReference#how-to-pass-options--switches">Passing args to choco</a></li>
+<li><a href="CommandsReference">Complete Reference</a></li>
+<li><a href="CommandsList">List / Search </a></li>
+<li><a href="CommandsInstall">Install</a></li>
+<li><a href="CommandsPin">Pin</a></li>
+<li><a href="CommandsOutdated">Outdated</a></li>
+<li><a href="CommandsUpgrade">Upgrade</a></li>
+<li><a href="CommandsUninstall">Uninstall</a></li>
+<li><a href="CommandsConfig">Config</a></li>
+<li><a href="CommandsSources">Source / Sources</a></li>
+<li><a href="CommandsFeature">Feature</a></li>
+<li>See other commands related to creating packages below</li>
+</ul>
+</li>
+</ul>
+<p><strong>Creating Packages</strong></p>
+<ul>
+<li><a href="CreatePackages">Create Packages</a></li>
+<li><a href="CreatePackagesQuickStart">Quick Start</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsNew">New</a></li>
+<li><a href="CommandsPack">Pack</a></li>
+<li><a href="CommandsApiKey">Apikey</a></li>
+<li><a href="CommandsPush">Push</a></li>
+</ul>
+</li>
+<li><a href="HelpersReference">Function and Variable Reference</a></li>
+<li><a href="AutomaticPackages">Automatic Packages</a></li>
+</ul>
+<p><strong>How To&#39;s</strong></p>
+<ul>
+<li><a href="Proxy-Settings-for-Chocolatey">Use Chocolatey w/Proxy Server</a></li>
+<li><a href="How-To-Change-Cache">Change Download Cache Location aka Don&#39;t use TEMP for downloads</a></li>
+<li><a href="How-To-Install-Upgrade-Package-Without-Scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+<li><a href="How-To-Create-Custom-Package-Templates">Create Custom Package Templates</a></li>
+<li><a href="PackageTriageProcess">Request Package Fixes/Updates</a></li>
+<li><a href="PackageTriageProcess">Request Package</a></li>
+<li><a href="PackageTriageProcess#i-want-to-take-overhelp-with-package-maintenance-for-my-software">Maintain Packages for My Software</a></li>
+<li><a href="PackageTriageProcess">Become a Maintainer</a></li>
+<li><a href="PackageMantainerHandover">Take Over Package Maintenance Exclusively</a></li>
+<li><a href="How-To-Parse-PackageParameters-Argument">Parse Package Parameters</a></li>
+<li><a href="How-To-Mount-An-Iso-In-Chocolatey-Package">Mount Iso</a></li>
+<li><a href="How-To-Deprecate-A-Chocolatey-Package">Deprecate a Package</a></li>
+<li><a href="How-To-Host-Feed">Host Your Own Server</a></li>
+</ul>
+<p><strong>Use Cases</strong></p>
+<ul>
+<li><a href="DevelopmentEnvironmentSetup">Development Environment</a></li>
+<li><a href="Hosting-Chocolatey-Packages-on-MyGet">Host on MyGet</a></li>
+</ul>
+<p><strong>Learning Resources</strong></p>
+<ul>
+<li><a href="Resources">Resources</a></li>
+<li><a href="Videos">Videos</a></li>
+<li><a href="Presentations">Presentations</a></li>
+</ul>
+<p><strong>Other</strong></p>
+<ul>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="Legal">Legal</a></li>
+<li><a href="History">History</a></li>
+</ul>
+
+    </div>
+  </aside>
+  <article class="three-quarters left p-l p-r">
+    <h2 id="using-chocolatey">Using chocolatey</h2>
+<p>Now that you have chocolatey on your machine (<a href="Installation">need to install?</a>), you can run several commands.</p>
+<p>Take a look at the <a href="CommandsReference">command reference</a>. We are going to be using the <a href="CommandsInstall">install command</a>.</p>
+<p>Let&#39;s install <a href="http://notepad-plus-plus.org/">Notepad++</a>.</p>
+<ol>
+<li>Open a command line.</li>
+<li>Type <code>choco install notepadplusplus</code> and press Enter.</li>
+<li>If you have UAC turned on or are not an administrator, chocolatey is going to request administrative permission at some point (at least once during the process). Otherwise it will not be able to finish what it is doing successfully. If you don&#39;t have UAC turned on, it will just continue on without stopping to bother you.</li>
+<li>That&#39;s it. Pretty simple but powerful little concept!</li>
+</ol>
+<h3 id="overriding-default-install-directory-or-other-advanced-install-concepts">Overriding default install directory or other advanced install concepts</h3>
+<ol>
+<li>Yes we support that through the use of installargs - see <a href="CommandsInstall#installarguments">CommandsInstall#installarguments</a></li>
+<li>If you wanted to pass native argument to the installer, like the install directory, you would need to know the silent argument passed to that particular installer and then you would specify it on the command line or in the packages.config (upcoming for packages.config).</li>
+<li>If it was an MSI, then usually you could pass <code>-ia &quot;INSTALLDIR=&quot;&quot;D:\Program Files&quot;&quot;&quot;</code> (for cmd.exe, it&#39;s different for powershell). See <a href="CommandsReference#how-to-pass-options--switches">CommandsReference#how-to-pass-options--switches</a> for specifics on passing quoted values through.</li>
+<li>For example, Notepad++ uses the <a href="http://nsis.sourceforge.net/Main_Page">NSIS</a> (NullSoft Scriptable Install System) installer. If we look at the silent options, we see that <a href="http://nsis.sourceforge.net/Docs/Chapter3.html#installerusagecommon">/D</a> is how we influence the install directory. So we would pass <code>cinst notepadplusplus.install -ia &quot;&#39;/D=E:\SomeDirectory\somebody\npp&#39;&quot;</code> -note that we are looking at the specific package over the virtual (this will be corrected in future releases).</li>
+</ol>
+<h2 id="what-are-chocolatey-packages-">What Are Chocolatey Packages?</h2>
+<p>Chocolatey packages are known as nupkg files, which is a compiled NuSpec or a fancy zip file that knows about package metadata (including dependencies and versioning). These packages are an enhanced NuGet package, they have additional metadata that is specific to Chocolatey. Chocolatey is also compatible with vanilla NuGet packages. A Chocolatey package can contain embedded software and/or automation scripts.</p>
+<p>Chocolatey packages are not just something fancy on top of MSI/Exe installers. Chocolatey definitely supports that avenue and, with the addition of unzipping archives, it is the most widely used aspect of Chocolatey, especially when you see the packages on the community feed (<a href="https://chocolatey.org/packages">https://chocolatey.org/packages</a> aka dot org).  Chocolatey is about managing packages, and it works best when those packages contain all of the software instead of reaching out to external/internet resources for the software those packages represent. When you look at the community feed, you are seeing one representation of the way you can build packages, mostly driven by <a href="Legal#distributions">distribution rights</a> that govern when packages can redistribute software or not. Those distribution rules do not govern private/internal packages, so the rules are a bit different. Packages internal to organizations are wide open to do quite a bit more. You can do software embedded packages where executables are automatically added to the path (shimmed) and/or PowerShell automation scripts to do pretty much anything, including running native installers that may be embedded or downloaded as part of the automation script (again, one of the most widely seen aspects on dot org).</p>
+<p>Packages with everything embedded are much more deterministic and repeatable, things most businesses require. You just won&#39;t see that as often on the community feed due to the aforementioned <a href="Legal#distributions">distribution rights</a>.</p>
+<p>The closer the underlying software a package represents is to the package (as in executables and files included in the package), the more Chocolatey behaves like a package manager.</p>
+<h2 id="how-does-chocolatey-work-">How does Chocolatey work?</h2>
+<p>How the heck does this all work?</p>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>Chocolatey uses Nuget.Core to retrieve the package from the source.</li>
+<li>Choco determines if it self-contained or has automation scripts - PowerShell scripts (*.ps1 files), and soon to be open to Scriptcs files in the <code>0.9.10.x</code> timeframe (I know, right?!).</li>
+<li>Choco takes a registry snapshot for later comparison.</li>
+<li>If there are automation scripts, choco will run those. They can contain whatever you need to do, if they are PowerShell you have the full power of Posh (PowerShell), but you should try to ensure they are compatible with Posh v2+.</li>
+<li>Choco compares the snapshot and determines uninstaller information and saves that to a .registry file.</li>
+<li>Choco snapshots the folder based on all files that are currently in the package directory.</li>
+<li>Choco looks for executable files in the package folder and generates shims into the <code>$env:ChocolateyInstall\bin</code> folder so those items are available on the path. Those could have been embedded into the package or brought down from somewhere (internet, ftp, file folder share, etc) and placed there.</li>
+</ol>
+<h3 id="upgrade">Upgrade</h3>
+<ol>
+<li>Similar to install, except choco will make a backup of the package folder (and only the package folder) prior to attempting upgrade.</li>
+<li>The files snapshot is used to determine what files can be removed from the package folder. If those files have not changed, they will be removed.</li>
+<li>If the upgrade fails, choco will ask if you want to rollback the package folder to the previous version. If you choose to move roll back, it will put the backed up package directory back in place. This does not fix any folders you may have been using outside of the package directory, such as where the native installer may have installed a program to nor the location of <code>Get-ToolsLocation</code>/<code>Get-BinRoot</code> (e.g. <code>c:\tools</code>). You will need to handle those fixes on your own. Chocolatey also doesn&#39;t rerun any install scripts on rollback.</li>
+</ol>
+<h3 id="uninstall">Uninstall</h3>
+<ol>
+<li>Choco makes the determination that the package is actually installed.</li>
+<li>Choco will make a backup of the package folder.</li>
+<li>The automation script is run if found. This should be used to clean up anything that is put there with the install script.</li>
+<li>If auto uninstaller is turned on, choco will attempt to run the auto uninstaller if a silent uninstall can be determined. Otherwise it will prompt the user (unless -y) to ask if they want the uninstaller to continue. The auto uninstaller can automatically detect about 80% of the different native uninstallers and determine or use the silent uninstall arguments.</li>
+<li>If everything is successful so far, the files snapshot is used to determine what files can be removed from the package folder. If those files have not changed, they will be removed. </li>
+<li>If everything is deleted from the package folder, the folder is also removed.</li>
+</ol>
+<p>When a package has an exe file, Chocolatey will create a link &quot;shortcut&quot; to the file (called a shim) so that you can run that tool anywhere on the machine.
+When a package has a chocolateyInstall.ps1, it will run the script. The instructions in the file can be anything. This is limited only by the .NET framework and PowerShell.
+Most of the Chocolatey packages that take advantage of the PowerShell download an application installer and execute it silently.</p>
+<h2 id="where-are-chocolatey-packages-installed-to-">Where are Chocolatey packages installed to?</h2>
+<p>Chocolatey packages are installed to <code>ChocolateyInstall\lib</code>, but the software could go to various locations, depending on how the package maintainer created the package.</p>
+<p>Some packages are installed under <code>ChocolateyInstall\lib</code>, others - especially packages that are based on Windows installers (.msi files) - install to the default path of the original installer (which is most likely within <code>Program Files</code>).</p>
+<p>There are also packages for which you can set a custom installation path. These packages (like ruby) use the <code>$env:ChocolateyBinRoot</code> environment variable. If this variable does not exist, it will be created as <code>c:\tools</code> e.g. <code>C:\tools\ruby193</code>. To change this behaviour, you can set <code>$env:ChocolateyBinRoot</code> to an existing folder, e. g. <code>C:\somestuff</code>. Packages that use the environment variable, will then be installed in the given subfolder, f. ex. <code>C:\somestuff\ruby193</code>.</p>
+<h2 id="how-does-chocolatey-work-with-programs-and-features-existing-installs-">How does Chocolatey work with Programs and Features? Existing installs?</h2>
+<p>Many packages use native software installers, so Chocolatey allows the installer itself to handle install/upgrade/uninstall scenarios. This means it can work directly with already installed software just by using <code>choco install</code> to make Chocolatey aware of existing software. You can also use a specially crafted install command (skip powershell) to allow choco to install a package without installing the already installed native software.</p>
+<h2 id="where-does-chocolatey-install-packages-from-">Where does Chocolatey install packages from?</h2>
+<p>By default it installs packages from chocolatey.org (the community feed). But you can change this by adding default sources and/or using the  <code>--source</code> switch when running a command.</p>
+<p>When you host internal packages, those packages can embed software and/or point to internal shares. You are not subject to software distribution rights like the packages on the community feed, so you can create packages that are more reliable and secure.  See <a href="GettingStarted#what-are-chocolatey-packages">What are Chocolatey Packages</a> for more details.</p>
+
+  </article>
+</div>
+
+  </main>
+
+  <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Chocolatey</h3></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">For Professionals</a></li>
+      <li><a href="#">For Businesses </a></li>
+      <li><a href="#">For Enterprise</a></li>
+      <li><a href="#">Kickstarter</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Resources</h3></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Mailing List</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Site map</a></li>
+      <li><a href="#">Media Kit</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Connect</h3></li>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Report a Bug</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Partner</a></li>
+    </ul>
+    <ul class="small fourth left p line-height-normal">
+      <li class="h2">
+        <div>
+          <a href="#" class="icon-twitter"></a> | <a href="#" class="icon-facebook"></a> | <a href="#" class="icon-github"></a>
+        </div>
+      </li>
+      <li class="m-t small">
+        <p>
+          <strong>&copy; 2011 - 2016</strong> RealDimensions Software, LLC
+        </p>
+        <p>
+          Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
+        </p>
+      </li>
+      <li class="m-t">
+        Site made possible by the following sponsors<br/>
+        <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
+          <img width="70px" src="assets/rd_logo.png"/>
+        </a>
+        <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
+          <img width="40px" src="assets/turbo_logo.png"/>
+        </a>
+        <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
+          <img width="50px" src="assets/appharbor_logo.png"/>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>

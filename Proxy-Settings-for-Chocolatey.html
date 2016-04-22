@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="bg-one">
+
+  <div class="message hide">
+    <div class="p-l p-r p--s">
+      <span>
+        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
+      </span>
+      <button class="right pointer" data-close-message>
+        <i class="icon-close"></i>
+      </button>
+    </div>
+  </div>
+
+  <header class="bg-yellow p-b--l clearfix">
+    <a class="logo left" href="index.html">
+      <img class="hide-on-small" height="250px" alt="Logo" src="assets/logo_square.svg">
+      <img class="hide-on-large" height="100px" alt="Logo" src="assets/logo_small.svg">
+    </a>
+
+    <nav class="text-right p">
+      <ul class="inline-list main-menu m-r m-b--s m-t--s">
+        <li><a class="bold h4 m-l--s" href="install.html">Install</a></li>
+        <li><a class="bold h4 m-l--s" href="packages.html">Community Packages</a></li>
+        <li><a class="bold h4 m-l--s" href="business.html">Business</a></li>
+        <li><a class="bold h4 m-l--s" href="pricing.html">Pricing</a></li>
+        <li><a class="bold h4 m-l--s" href="faq.html">FAQ</a></li>
+        <li><a class="bold h4 m-l--s" href="docs.html">Docs</a></li>
+        <li>
+          <div class="m-l inline-block">
+            <div class="small button-bar inline-block line-height-small">
+              <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<div class="clearfix p">
+  <h1 class="text-center m-b--l">Proxy Support For Chocolatey</h1>
+  <aside class="quarter left p-l p-r article-sidebar">
+    <div>
+      <ol>
+
+  <li><a href="#system-proxy-settings">System Proxy Settings</a></li>
+
+  <li><a href="#explicit-proxy-settings">Explicit Proxy Settings</a></li>
+
+  <li><a href="#installing-chocolatey-behind-a-proxy-server">Installing Chocolatey behind a proxy server</a></li>
+
+</ol>
+
+    </div>
+
+    <div>
+      
+      <h2></h2>
+      <ul>
+<li><a href="Home">Home</a></li>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="https://github.com/chocolatey/chocolatey/wiki">Choco 0.9.8.x &amp; below</a></li>
+</ul>
+<p><strong>General</strong></p>
+<ul>
+<li><a href="ReleaseNotes">Release Notes</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/README.md#submitting-issues">Submitting Issues</a></li>
+<li><a href="https://github.com/chocolatey/choco/blob/master/CONTRIBUTING.md">Contributing</a></li>
+<li><a href="ChocolateyFAQs">FAQs</a></li>
+<li><a href="Security">Security</a></li>
+<li><a href="Moderation">Chocolatey.org Moderation</a></li>
+<li><a href="PackageTriageProcess#are-you-a-software-vendor">Software Vendor?</a></li>
+</ul>
+<p><strong>Usage</strong></p>
+<p><a href="GettingStarted#how-does-chocolatey-work">How does choco work?</a></p>
+<ul>
+<li><a href="installation">How to install</a></li>
+<li><a href="Uninstallation">How to uninstall</a></li>
+<li><a href="GettingStarted">Getting Started</a></li>
+<li><a href="Proxy-Settings-for-Chocolatey">Proxy Settings</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsReference#how-to-pass-options--switches">Passing args to choco</a></li>
+<li><a href="CommandsReference">Complete Reference</a></li>
+<li><a href="CommandsList">List / Search </a></li>
+<li><a href="CommandsInstall">Install</a></li>
+<li><a href="CommandsPin">Pin</a></li>
+<li><a href="CommandsOutdated">Outdated</a></li>
+<li><a href="CommandsUpgrade">Upgrade</a></li>
+<li><a href="CommandsUninstall">Uninstall</a></li>
+<li><a href="CommandsConfig">Config</a></li>
+<li><a href="CommandsSources">Source / Sources</a></li>
+<li><a href="CommandsFeature">Feature</a></li>
+<li>See other commands related to creating packages below</li>
+</ul>
+</li>
+</ul>
+<p><strong>Creating Packages</strong></p>
+<ul>
+<li><a href="CreatePackages">Create Packages</a></li>
+<li><a href="CreatePackagesQuickStart">Quick Start</a></li>
+<li><strong>Commands:</strong><ul>
+<li><a href="CommandsNew">New</a></li>
+<li><a href="CommandsPack">Pack</a></li>
+<li><a href="CommandsApiKey">Apikey</a></li>
+<li><a href="CommandsPush">Push</a></li>
+</ul>
+</li>
+<li><a href="HelpersReference">Function and Variable Reference</a></li>
+<li><a href="AutomaticPackages">Automatic Packages</a></li>
+</ul>
+<p><strong>How To&#39;s</strong></p>
+<ul>
+<li><a href="Proxy-Settings-for-Chocolatey">Use Chocolatey w/Proxy Server</a></li>
+<li><a href="How-To-Change-Cache">Change Download Cache Location aka Don&#39;t use TEMP for downloads</a></li>
+<li><a href="How-To-Install-Upgrade-Package-Without-Scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+<li><a href="How-To-Create-Custom-Package-Templates">Create Custom Package Templates</a></li>
+<li><a href="PackageTriageProcess">Request Package Fixes/Updates</a></li>
+<li><a href="PackageTriageProcess">Request Package</a></li>
+<li><a href="PackageTriageProcess#i-want-to-take-overhelp-with-package-maintenance-for-my-software">Maintain Packages for My Software</a></li>
+<li><a href="PackageTriageProcess">Become a Maintainer</a></li>
+<li><a href="PackageMantainerHandover">Take Over Package Maintenance Exclusively</a></li>
+<li><a href="How-To-Parse-PackageParameters-Argument">Parse Package Parameters</a></li>
+<li><a href="How-To-Mount-An-Iso-In-Chocolatey-Package">Mount Iso</a></li>
+<li><a href="How-To-Deprecate-A-Chocolatey-Package">Deprecate a Package</a></li>
+<li><a href="How-To-Host-Feed">Host Your Own Server</a></li>
+</ul>
+<p><strong>Use Cases</strong></p>
+<ul>
+<li><a href="DevelopmentEnvironmentSetup">Development Environment</a></li>
+<li><a href="Hosting-Chocolatey-Packages-on-MyGet">Host on MyGet</a></li>
+</ul>
+<p><strong>Learning Resources</strong></p>
+<ul>
+<li><a href="Resources">Resources</a></li>
+<li><a href="Videos">Videos</a></li>
+<li><a href="Presentations">Presentations</a></li>
+</ul>
+<p><strong>Other</strong></p>
+<ul>
+<li><a href="Why">Why Chocolatey?</a></li>
+<li><a href="Legal">Legal</a></li>
+<li><a href="History">History</a></li>
+</ul>
+
+    </div>
+  </aside>
+  <article class="three-quarters left p-l p-r">
+    <h2 id="system-proxy-settings">System Proxy Settings</h2>
+<p>Chocolatey by default already supports system set proxy servers </p>
+<p><img src="https://cloud.githubusercontent.com/assets/63502/10038284/454be026-6189-11e5-8f83-e29d1705995c.png" alt="image"></p>
+<h2 id="explicit-proxy-settings">Explicit Proxy Settings</h2>
+<p>Chocolatey has explicit proxy support starting with 0.9.9.9.</p>
+<p>You can simply configure 1 or 3 settings and Chocolatey will use a proxy server. <code>proxy</code> is required and is the location and port of the proxy server. <code>proxyUser</code> and <code>proxyPassword</code> are optional. The values for user/password are only used for credentials when both are present.</p>
+<pre><code class="lang-sh">choco config set proxy &lt;locationandport&gt;
+choco config set proxyUser &lt;username&gt;
+choco config set proxyPassword &lt;passwordThatGetsEncryptedInFile&gt;
+~
+</code></pre>
+<h3 id="example">Example</h3>
+<p>Running the following commands in 0.9.9.9:</p>
+<pre><code class="lang-sh">choco config set proxy http://localhost:8888
+choco config set proxyUser bob
+choco config set proxyPassword 123Sup#rSecur3
+</code></pre>
+<p>Results in the following items being added to the config file:
+<img src="https://cloud.githubusercontent.com/assets/63502/10038348/4205507c-618a-11e5-911b-122eb960bc53.png" alt="image"></p>
+<h3 id="what-to-do-if-my-proxy-is-socks-">What to do if My proxy is socks?</h3>
+<p>It may just work. It hasn&#39;t been validated yet.</p>
+<h2 id="installing-chocolatey-behind-a-proxy-server">Installing Chocolatey behind a proxy server</h2>
+<p>When trying to install Chocolatey behind a proxy server, you may be faced with errors like</p>
+<blockquote>
+<p>Get Response returned: (407) Proxy Authentication Required</p>
+</blockquote>
+<p>or </p>
+<blockquote>
+<p>The underlying connection was closed: Could not establish trust relationship for the SSL / TLS secure channel.</p>
+</blockquote>
+<p>Steps to help address this.</p>
+<ol>
+<li>Copy the <a href="https://chocolatey.org/install.ps1">install.ps1</a> file locally.</li>
+<li>Edit the file and add proxy details (see code change). Replace the following entries with your specific proxy servers details: <strong>PROXYSERVER:PROXYPORT; USERPASSWORD; USERNAME</strong></li>
+<li>Ensure you have the appropriate domain prefix for the user name. Try: &#39;AD\UserName&#39; or just &#39;UserName&#39;.</li>
+<li>Run the script to install Chocolatey.</li>
+</ol>
+<pre><code class="lang-PowerShell">function Download-File {
+param (
+  [string]$url,
+  [string]$file
+ )
+  Write-Host &quot;Downloading $url to $file&quot;
+    #$proxy = [System.Net.WebRequest]::GetSystemWebProxy()
+    $proxy = New-Object System.Net.WebProxy(&quot;PROXYSERVER:PROXYPORT&quot;, $true)
+    $passwd = ConvertTo-SecureString &quot;USERPASSWORD&quot; -AsPlainText -Force; ## Website credentials
+    $proxy.Credentials = New-Object System.Management.Automation.PSCredential (&quot;USERNAME&quot;, $passwd);
+    $downloader = New-Object System.Net.WebCLient
+    $downloader.UseDefaultCredentials = $true
+    $downloader.Proxy = $proxy
+    $downloader.DownloadFile($url, $file)
+}
+</code></pre>
+<h3 id="still-having-trust-issues-">Still having trust issues?</h3>
+<p>You&#39;ve tried everything and Chocolatey still won&#39;t install - </p>
+<blockquote>
+<p>The underlying connection was closed: Could not establish trust relationship for the SSL / TLS secure channel.</p>
+</blockquote>
+<p>It could also be that your root trusted certificates are not up to date. You will need the following certificates in your chain:</p>
+<ul>
+<li>Go Daddy Secure Certificate Authority - G2</li>
+</ul>
+<p><img src="https://cloud.githubusercontent.com/assets/63502/13706493/ea4d0aac-e76a-11e5-913e-590dfe775fc1.png" alt="Go Daddy Secure Certificate Authority - G2"></p>
+<ul>
+<li>COMODO ECC Domain Validation Secure Server CA 2</li>
+</ul>
+<p><img src="https://cloud.githubusercontent.com/assets/63502/13706546/1a1d237a-e76b-11e5-9263-e586cef5f744.png" alt="image"></p>
+
+  </article>
+</div>
+
+  </main>
+
+  <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Chocolatey</h3></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">For Professionals</a></li>
+      <li><a href="#">For Businesses </a></li>
+      <li><a href="#">For Enterprise</a></li>
+      <li><a href="#">Kickstarter</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Resources</h3></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Mailing List</a></li>
+      <li><a href="#">Security</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Site map</a></li>
+      <li><a href="#">Media Kit</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+    <ul class="small fourth left p">
+      <li><h3 class="bold m-b--s">Connect</h3></li>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Report a Bug</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Partner</a></li>
+    </ul>
+    <ul class="small fourth left p line-height-normal">
+      <li class="h2">
+        <div>
+          <a href="#" class="icon-twitter"></a> | <a href="#" class="icon-facebook"></a> | <a href="#" class="icon-github"></a>
+        </div>
+      </li>
+      <li class="m-t small">
+        <p>
+          <strong>&copy; 2011 - 2016</strong> RealDimensions Software, LLC
+        </p>
+        <p>
+          Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
+        </p>
+      </li>
+      <li class="m-t">
+        Site made possible by the following sponsors<br/>
+        <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
+          <img width="70px" src="assets/rd_logo.png"/>
+        </a>
+        <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
+          <img width="40px" src="assets/turbo_logo.png"/>
+        </a>
+        <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
+          <img width="50px" src="assets/appharbor_logo.png"/>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>
