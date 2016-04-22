@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish:pages": "npm run build && git subtree push --prefix dist origin gh-pages"
+    "publish:pages": "gulp build && git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
