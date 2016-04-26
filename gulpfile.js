@@ -11,6 +11,7 @@ const _ = require('lodash');
 const template = require('gulp-template');
 
 const layout = () => fs.readFileSync('./src/shared/layout.html').toString();
+const contentLayout = () => fs.readFileSync('./src/shared/content-layout.html').toString();
 const content = () => fs.readFileSync('./src/shared/content.html').toString();
 
 const config = {
@@ -47,19 +48,21 @@ const transformLinks = (string) => {
 };
 
 const parseMarkdown = (content) => {
-  var title;
+  // var title;
   content = transformLinks(content);
   var ast = marked.lexer(content);
   var links = ast.links;
   var headings = [];
 
+  /*
   ast = ast.filter((item, index) => {
     if (index === 0 && item.type === 'heading' && item.depth === 1) {
       title = item.text;
       return false;
     }
     return true;
-  });
+    });
+  */
 
   ast.links = links;
 
@@ -83,7 +86,6 @@ const parseMarkdown = (content) => {
   });
 
   return {
-    title,
     headings,
     html: marked.parser(ast),
   };
@@ -111,17 +113,16 @@ const streamCompile = (stream) => (
     )))
     .pipe(gulp.dest('./dist')));
 
-function markdownStream(stream) {
-  return stream.pipe(transform((filename) => (
+const markdownStream = (stream) => (
+  stream.pipe(transform((filename) => (
     map((chunk, next) => {
       const md = parseMarkdown(chunk.toString());
       const cont = _.template(content())(_.merge(templateOptions(), {md }));
-      next(null, _.template(layout())(_.merge(templateOptions(), {content: cont})));
+      next(null, _.template(contentLayout())(_.merge(templateOptions(), {content: cont})));
     })
   )))
   .pipe(rename({extname: '.html'}))
-  .pipe(gulp.dest('./dist'))
-}
+  .pipe(gulp.dest('./dist')));
 
 gulp.task(
   'buildMarkdown',
