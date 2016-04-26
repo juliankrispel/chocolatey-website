@@ -6,114 +6,75 @@
   <link href="assets/style.css" rel="stylesheet">
 </head>
 <body class="bg-one">
+  <main class="docs">
+    <aside>
+  <a class="logo" href="index.html">
+  <img class="hide-on-small" alt="Logo" src="assets/logo_square.svg">
+</a>
 
-  <div class="message hide">
-    <div class="p-l p-r p--s">
-      <span>
-        <i class="icon-exclamation-triangle m-r"></i>Hi, the site is currently under maintenance. We'll be back online in a few minutes. Apologies for any inconvenience caused.
-      </span>
-      <button class="right pointer" data-close-message>
-        <i class="icon-close"></i>
-      </button>
-    </div>
-  </div>
+<ol>
 
-  <header class="bg-yellow p-b--l clearfix">
-    <a class="logo left" href="index.html">
-      <img class="hide-on-small" height="250px" alt="Logo" src="assets/logo_square.svg">
-      <img class="hide-on-large" height="100px" alt="Logo" src="assets/logo_small.svg">
-    </a>
+<li id="summary"><a href="#summary">Summary</a></li>
 
-    <nav class="text-right p">
-      <ul class="inline-list main-menu m-r m-b--s m-t--s">
-        <li><a class="bold h4 m-l--s" href="install.html">Install</a></li>
-        <li><a class="bold h4 m-l--s" href="packages.html">Community Packages</a></li>
-        <li><a class="bold h4 m-l--s" href="business.html">Business</a></li>
-        <li><a class="bold h4 m-l--s" href="pricing.html">Pricing</a></li>
-        <li><a class="bold h4 m-l--s" href="faq.html">FAQ</a></li>
-        <li><a class="bold h4 m-l--s" href="docs.html">Docs</a></li>
-        <li>
-          <div class="m-l inline-block">
-            <div class="small button-bar inline-block line-height-small">
-              <a class="button" href="#">Login</a><a class="button" href="#">Signup</a>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </nav>
-  </header>
+<li id="table-of-contents"><a href="#table-of-contents">Table of Contents</a></li>
 
-  <main>
-<div class="clearfix p">
-  <h1 class="text-center m-b--l">Creating Chocolatey Packages</h1>
-  <aside class="quarter left p-l p-r article-sidebar">
-    <div>
-      <ol>
+<li id="quick-start-guide"><a href="#quick-start-guide">Quick Start guide</a></li>
 
-  <li><a href="#summary">Summary</a></li>
+<li id="rules-to-be-observed-before-publishing-packages"><a href="#rules-to-be-observed-before-publishing-packages">Rules to be observed before publishing packages</a></li>
 
-  <li><a href="#table-of-contents">Table of Contents</a></li>
+<li id="character-encoding"><a href="#character-encoding">Character encoding</a></li>
 
-  <li><a href="#quick-start-guide">Quick Start guide</a></li>
+<li id="what-version-of-the-software-should-i-package-"><a href="#what-version-of-the-software-should-i-package-">What version of the software should I package?</a></li>
 
-  <li><a href="#rules-to-be-observed-before-publishing-packages">Rules to be observed before publishing packages</a></li>
+<li id="okay-how-do-i-create-packages-"><a href="#okay-how-do-i-create-packages-">Okay, how do I create packages?</a></li>
 
-  <li><a href="#character-encoding">Character encoding</a></li>
+<li id="during-which-scenarios-will-my-custom-scripts-be-triggered-"><a href="#during-which-scenarios-will-my-custom-scripts-be-triggered-">During which scenarios will my custom scripts be triggered?</a></li>
 
-  <li><a href="#what-version-of-the-software-should-i-package-">What version of the software should I package?</a></li>
+<li id="nuspec-"><a href="#nuspec-">Nuspec?</a></li>
 
-  <li><a href="#okay-how-do-i-create-packages-">Okay, how do I create packages?</a></li>
+<li id="but-for-real-how-do-i-create-a-package-"><a href="#but-for-real-how-do-i-create-a-package-">But for real, how do I create a package?</a></li>
 
-  <li><a href="#during-which-scenarios-will-my-custom-scripts-be-triggered-">During which scenarios will my custom scripts be triggered?</a></li>
+<li id="install-only-on-some-versions-of-windows"><a href="#install-only-on-some-versions-of-windows">Install Only On Some Versions of Windows</a></li>
 
-  <li><a href="#nuspec-">Nuspec?</a></li>
+<li id="installation-paths"><a href="#installation-paths">Installation Paths</a></li>
 
-  <li><a href="#but-for-real-how-do-i-create-a-package-">But for real, how do I create a package?</a></li>
+<li id="upgrading"><a href="#upgrading">Upgrading</a></li>
 
-  <li><a href="#install-only-on-some-versions-of-windows">Install Only On Some Versions of Windows</a></li>
+<li id="uninstalling"><a href="#uninstalling">Uninstalling</a></li>
 
-  <li><a href="#installation-paths">Installation Paths</a></li>
+<li id="dependency-chaining"><a href="#dependency-chaining">Dependency Chaining</a></li>
 
-  <li><a href="#upgrading">Upgrading</a></li>
+<li id="avoid-folders-named-“content”"><a href="#avoid-folders-named-“content”">Avoid folders named “content”</a></li>
 
-  <li><a href="#uninstalling">Uninstalling</a></li>
+<li id="naming-your-package"><a href="#naming-your-package">Naming your package</a></li>
 
-  <li><a href="#dependency-chaining">Dependency Chaining</a></li>
+<li id="package-description-and-release-notes"><a href="#package-description-and-release-notes">Package description and release notes</a></li>
 
-  <li><a href="#avoid-folders-named-“content”">Avoid folders named “content”</a></li>
+<li id="versioning-recommendations"><a href="#versioning-recommendations">Versioning Recommendations</a></li>
 
-  <li><a href="#naming-your-package">Naming your package</a></li>
+<li id="internationalization-and-localization-of-packages"><a href="#internationalization-and-localization-of-packages">Internationalization and localization of packages</a></li>
 
-  <li><a href="#package-description-and-release-notes">Package description and release notes</a></li>
+<li id="package-icon-guidelines"><a href="#package-icon-guidelines">Package icon guidelines</a></li>
 
-  <li><a href="#versioning-recommendations">Versioning Recommendations</a></li>
+<li id="how-do-i-exclude-executables-from-getting-shims-"><a href="#how-do-i-exclude-executables-from-getting-shims-">How do I exclude executables from getting shims?</a></li>
 
-  <li><a href="#internationalization-and-localization-of-packages">Internationalization and localization of packages</a></li>
+<li id="how-do-i-set-up-shims-for-applications-that-have-a-gui-"><a href="#how-do-i-set-up-shims-for-applications-that-have-a-gui-">How do I set up shims for applications that have a GUI?</a></li>
 
-  <li><a href="#package-icon-guidelines">Package icon guidelines</a></li>
+<li id="build-your-package"><a href="#build-your-package">Build Your Package</a></li>
 
-  <li><a href="#how-do-i-exclude-executables-from-getting-shims-">How do I exclude executables from getting shims?</a></li>
+<li id="testing-your-package"><a href="#testing-your-package">Testing Your Package</a></li>
 
-  <li><a href="#how-do-i-set-up-shims-for-applications-that-have-a-gui-">How do I set up shims for applications that have a GUI?</a></li>
+<li id="push-your-package"><a href="#push-your-package">Push Your Package</a></li>
 
-  <li><a href="#build-your-package">Build Your Package</a></li>
+<li id="automatic-package-repositories-"><a href="#automatic-package-repositories-">Automatic package repositories?</a></li>
 
-  <li><a href="#testing-your-package">Testing Your Package</a></li>
-
-  <li><a href="#push-your-package">Push Your Package</a></li>
-
-  <li><a href="#automatic-package-repositories-">Automatic package repositories?</a></li>
-
-  <li><a href="#becoming-a-primary-maintainer-of-an-existing-package">Becoming a primary maintainer of an existing package</a></li>
+<li id="becoming-a-primary-maintainer-of-an-existing-package"><a href="#becoming-a-primary-maintainer-of-an-existing-package">Becoming a primary maintainer of an existing package</a></li>
 
 </ol>
 
-    </div>
 
-    <div>
-      
-      <h2></h2>
-      <ul>
+
+<ul>
 <li><a href="Home">Home</a></li>
 <li><a href="Why">Why Chocolatey?</a></li>
 <li><a href="https://github.com/chocolatey/chocolatey/wiki">Choco 0.9.8.x &amp; below</a></li>
@@ -199,10 +160,12 @@
 <li><a href="History">History</a></li>
 </ul>
 
-    </div>
-  </aside>
-  <article class="three-quarters left p-l p-r">
-    <h2 id="summary">Summary</h2>
+
+
+</aside>
+<article>
+  <h1 id="creating-chocolatey-packages">Creating Chocolatey Packages</h1>
+<h2 id="summary">Summary</h2>
 <p>See <a href="GettingStarted#what-are-chocolatey-packages">What are Chocolatey Packages?</a> first.</p>
 <p><strong>Note:</strong> When you host internal packages, those packages can embed software and/or point to internal shares. You are not subject to software distribution rights like the packages on the community feed, so you can create packages that are more reliable and secure.</p>
 <p>First you should determine if you are making a self-contained package or (also) using automation scripts. You should also consider creating <a href="AutomaticPackages">automatic packages</a> for the best maintainability over time.</p>
@@ -478,71 +441,9 @@ foreach ($file in $files) {
 <h2 id="becoming-a-primary-maintainer-of-an-existing-package">Becoming a primary maintainer of an existing package</h2>
 <p>See <a href="PackageMantainerHandover">PackageMantainerHandover</a></p>
 
-  </article>
-</div>
+</article>
 
   </main>
-
-  <footer class="p-l--l p-r--l p-t--l p-b clearfix full-width">
-    <ul class="small fourth left p">
-      <li><h3 class="bold m-b--s">Chocolatey</h3></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">FAQ</a></li>
-      <li><a href="#">For Professionals</a></li>
-      <li><a href="#">For Businesses </a></li>
-      <li><a href="#">For Enterprise</a></li>
-      <li><a href="#">Kickstarter</a></li>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">Privacy Policy</a></li>
-    </ul>
-    <ul class="small fourth left p">
-      <li><h3 class="bold m-b--s">Resources</h3></li>
-      <li><a href="#">Newsletter</a></li>
-      <li><a href="#">Documentation</a></li>
-      <li><a href="#">Mailing List</a></li>
-      <li><a href="#">Security</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Site map</a></li>
-      <li><a href="#">Media Kit</a></li>
-      <li><a href="#">Shop</a></li>
-    </ul>
-    <ul class="small fourth left p">
-      <li><h3 class="bold m-b--s">Connect</h3></li>
-      <li><a href="#">Company</a></li>
-      <li><a href="#">Contact Us</a></li>
-      <li><a href="#">Support</a></li>
-      <li><a href="#">Report a Bug</a></li>
-      <li><a href="#">Press</a></li>
-      <li><a href="#">Partner</a></li>
-    </ul>
-    <ul class="small fourth left p line-height-normal">
-      <li class="h2">
-        <div>
-          <a href="#" class="icon-twitter"></a> | <a href="#" class="icon-facebook"></a> | <a href="#" class="icon-github"></a>
-        </div>
-      </li>
-      <li class="m-t small">
-        <p>
-          <strong>&copy; 2011 - 2016</strong> RealDimensions Software, LLC
-        </p>
-        <p>
-          Deployed from {}. You are on {}. UTC time is currently 12 Apr 2016 13:57:33 +00:00
-        </p>
-      </li>
-      <li class="m-t">
-        Site made possible by the following sponsors<br/>
-        <a class="vertical-middle m-r m-t--s inline-block" href="http://www.realdimensions.net/">
-          <img width="70px" src="assets/rd_logo.png"/>
-        </a>
-        <a class="vertical-middle m-r m-t--s inline-block" href="https://turbo.net/">
-          <img width="40px" src="assets/turbo_logo.png"/>
-        </a>
-        <a class="vertical-middle m-t--s inline-block" href="https://appharbor.com/">
-          <img width="50px" src="assets/appharbor_logo.png"/>
-        </a>
-      </li>
-    </ul>
-  </footer>
   <script src="assets/main.js"></script>
 </body>
 </html>

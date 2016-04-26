@@ -2155,17 +2155,6 @@ ol{
   padding-left: 1em;
 }
 
-article > *{
-  max-width: 40em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-article > h1{
-  max-width: 100%;
-  text-align: center;
-}
-
 .three-quarters > *{
   max-width: 100%;
 }
@@ -2933,4 +2922,56 @@ pre code{
   background: #1A375A;
   color: #fff;
   border-top: 4px solid #21446D;
+}
+
+.docs:after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.docs > aside{
+  width: 30%;
+  background: #202F3C;
+  color: #fff;
+  left: 0;
+}
+
+.docs > aside a{
+  color: #fff;
+}
+
+.docs > article{
+  width: 70%;
+  left: 30%;
+  padding-top: 3em !important;
+  padding-left: 2em !important;
+}
+
+.docs > aside,
+.docs > article{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  padding: 0 1.5em;
+}
+
+.docs aside .logo{
+  max-width: 230px;
+  max-height: 180px !important;
+  margin-top: -2em !important;
+  margin-left: 0 !important;
+}
+
+.docs aside .logo img{
+  transform: translateY(-.3em) rotate(-3deg) scale(1) translateX(0);
+}
+
+.docs aside .logo:hover img{
+  transform: translateY(-.5em) rotate(2deg) scale(1.05) translateX(.5em);
+}
+
+.docs article > *{
+  max-width: 40em;
 }
