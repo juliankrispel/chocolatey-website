@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'FontAwesome';
-  src: url('fonts/fontawesome-webfont.eot?v=4.5.0');
-  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.5.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.5.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
+  src: url('../fonts/fontawesome-webfont.eot?v=4.5.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.5.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.5.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -3085,4 +3085,46 @@ pre code{
 
 .price-list .price-list__main-price div{
   background: #202F3C;
+}
+
+.gui-mock{
+  border: 2px solid #fff;
+  box-shadow: 5px 7px 50px rgba(0,0,0,.2);
+  border-radius: 2px;
+}
+
+.gui-mock__top{
+  border-bottom: 2px solid #fff;
+  display: block;
+  min-height: 2em;
+}
+
+.gui-mock li{
+  padding: .7em;
+  border-bottom: 2px solid #fff;
+  display: flex;
+  vertical-align: middle;
+  justify-content: space-between;
+}
+
+.gui-mock li:last-child{
+  border-bottom: none;
+}
+
+.gui-mock__icon{
+  width: 2.2em;
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 100px;
+}
+
+.gui-mock__install{
+  padding: .3em .6em;
+  text-transform: uppercase;
+  justify-content: space-between;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  font-weight: bold;
+  display: flex;
+  color: #fff;
 }
