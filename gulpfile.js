@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const watch = require('gulp-watch');
+const exec = require('child_process').exec;
 const fs = require('fs');
 const transform = require('vinyl-transform');
 const map = require('map-stream');
@@ -150,11 +151,15 @@ gulp.task(
   () => (gulp.watch('./content/**/*', ['buildMarkdown']))
 );
 
-const connectOpts = {
+const connectopts = {
   root: 'dist',
   port: '8080',
+  middleware: (connect, opts) => {
+    console.log(connect);
+    return [];
+  }
 };
 
-gulp.task('serve', () => connect.server(connectOpts));
+gulp.task('serve', () => exec('http-server ./dist -p 8080'));
 gulp.task('build', ['buildMarkdown', 'buildHtml']);
 gulp.task('default', ['serve', 'watchHtml', 'watchMarkdown']);

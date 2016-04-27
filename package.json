@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish:pages": "gulp build && git subtree push --prefix dist origin gh-pages"
   },
@@ -26,6 +27,7 @@
     "gulp-rename": "1.2.2",
     "gulp-template": "4.0.0",
     "gulp-watch": "4.3.5",
+    "http-server": "0.9.0",
     "lodash": "4.11.1",
     "map-stream": "0.0.6",
     "marked": "0.3.5",

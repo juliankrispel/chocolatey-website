@@ -2,12 +2,13 @@
   <img class="hide-on-small" alt="Logo" src="<%= assetPath('logo_square.svg') %>">
 </a>
 
+<!--
 <ol>
 <% headings.forEach((heading) => { %>
-<li id="<%= heading.id %>"><a href="#<%= heading.id %>"><%= heading.text %></a></li>
+<li>"><a href="#<%= heading.id %>"><%= heading.text %></a></li>
 <% }) %>
 </ol>
-
+-->
 
 <% side = markdown('_Sidebar') %>
 <%= side.html %>
