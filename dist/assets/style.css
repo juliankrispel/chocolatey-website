@@ -2568,10 +2568,6 @@ img{ max-width: 100%; }
   position: relative;
 }
 
-.terminal-container > *{
-  margin-bottom: -5em;
-}
-
 .image-placeholder{
   background: #5C9FD8;
   width: 100%;
@@ -2787,6 +2783,10 @@ img{ max-width: 100%; }
     width: 100%;
   }
 
+  .terminal-content--min-height{
+    min-height: 4em;
+  }
+
   footer{
     font-size: 1.2em;
   }
@@ -2809,6 +2809,12 @@ img{ max-width: 100%; }
 
   .logo img{
     height: 100px;
+  }
+
+  .feature-sections__column .button{
+    text-align: center;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -3128,4 +3134,51 @@ pre code{
   font-size: 0.9em;
   display: flex;
   color: #fff;
+}
+
+table{
+  font-size: .9em;
+  width: 100%;
+  border-spacing: 0px;
+}
+
+table th{
+  white-space: nowrap;
+}
+
+table td, th{
+  padding: .6em .6em;
+  margin: 0;
+  border-radius: 0;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+table tr:last-child td,
+table th:last-child td{
+  border-bottom: none;
+}
+
+table td{
+  width: 5%;
+}
+
+table td:first-child{
+ width: 20%;
+}
+
+.no-border{
+  border: none !important;
+}
+
+.choco-404{
+  max-width: 500px;
+  display: block;
+  margin: auto;
+  max-height: 90%;
+  margin-bottom: 4em;
+}
+
+a.choco-404:hover{
+  opacity: 1 !important;
 }

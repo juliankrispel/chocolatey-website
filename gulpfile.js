@@ -12,12 +12,14 @@ const _ = require('lodash');
 const template = require('gulp-template');
 
 const layout = () => fs.readFileSync('./src/shared/layout.html').toString();
+const layout404 = () => fs.readFileSync('./src/shared/404-layout.html').toString();
 const contentLayout = () => fs.readFileSync('./src/shared/content-layout.html').toString();
 const content = () => fs.readFileSync('./src/shared/content.html').toString();
 
 const config = {
   assetPath: 'assets',
-  markdown: 'content',
+  docs: 'content/docs',
+  csv: 'content/csv',
 };
 
 const include = (fileName, options) => {
@@ -26,6 +28,53 @@ const include = (fileName, options) => {
   ).toString();
 
   return _.template(temp)(_.merge(templateOptions(), options));
+};
+
+const csv = (fileName) => {
+  const lines = fs.readFileSync(
+    path.join(config.csv, fileName + '.csv')
+    ).toString()
+    .replace('""', '\\"')
+    .split('\n').map(line => {
+      var result = [];
+      var regex = /"|,/;
+      var matches = [];
+      var isQuoted = false;
+      var index = 0;
+      var match;
+      while (line.length > 0) {
+        match = regex.exec(line);
+        if (!match) {
+          result.push(line);
+          line = '';
+        } else if (line[match.index] === '"' && line[match.index - 1] !== '\\') {
+          isQuoted = !isQuoted;
+          line = line.substr(0, match.index) + line.substr(match.index + 1);
+          if (match.index === 0 && isQuoted) {
+            result.push('');
+          } else if (match.index > 0 && !isQuoted){
+            result[result.length - 1] += line.substr(0, match.index);
+            line = line.substr(match.index + 1);
+          }
+        } else if (!isQuoted && line[match.index] === ',') {
+          result.push(line.substr(0, match.index));
+          line = line.substr(match.index + 1);
+        } else if (result.length === 0) {
+          result.push(line.substr(0, match.index));
+          line = line.substr(match.index + 1);
+        } else {
+          result[result.length - 1] += line.substr(0, match.index + 1);
+          line = line.substr(match.index + 1);
+        }
+      }
+
+      return result;
+    });
+
+  return {
+    header: lines[0],
+    body: lines.splice(1),
+  };
 };
 
 const assetPath = (filePath) => path.join(config.assetPath, filePath);
@@ -94,7 +143,7 @@ const parseMarkdown = (content) => {
 
 const markdown = (fileName) => {
   var content = fs.readFileSync(
-    path.join(config.markdown, fileName + '.md')
+    path.join(config.docs, fileName + '.md')
   ).toString();
   return parseMarkdown(content);
 };
@@ -103,6 +152,7 @@ const templateOptions = () => ({
   assetPath,
   markdown,
   include,
+  csv,
 });
 
 const streamCompile = (stream) => (
@@ -126,18 +176,25 @@ const markdownStream = (stream) => (
   .pipe(gulp.dest('./dist')));
 
 gulp.task(
-  'buildMarkdown',
-  () => (markdownStream(gulp.src(['./content/*.md', '!./content/_*'])))
+  'buildDocs',
+  () => (markdownStream(gulp.src(['./content/docs/*.md', '!./content/docs/_*'])))
 );
 
 gulp.task(
   'buildHtml',
-  () => (gulp.src('./src/*.html').pipe(template(templateOptions()))
-  .pipe(transform((filename) => (
-    map((chunk, next) => (
+  () => (gulp.src('./src/*.html')
+  .pipe(template(templateOptions()))
+  .pipe(transform((filename) => {
+    if (filename.indexOf('not_found') > 1) {
+      return map((chunk, next) => (
+        next(null, _.template(layout404())(_.merge(templateOptions(), {content: chunk.toString()})))
+      ));
+    }
+
+    return map((chunk, next) => (
       next(null, _.template(layout())(_.merge(templateOptions(), {content: chunk.toString()})))
-    ))
-  )))
+    ));
+  }))
   .pipe(gulp.dest('./dist')))
 );
 
@@ -147,8 +204,8 @@ gulp.task(
 );
 
 gulp.task(
-  'watchMarkdown',
-  () => (gulp.watch('./content/**/*', ['buildMarkdown']))
+  'watchDocs',
+  () => (gulp.watch('./content/docs/**/*', ['buildDocs']))
 );
 
 const connectopts = {
@@ -160,6 +217,6 @@ const connectopts = {
   }
 };
 
-gulp.task('serve', () => exec('http-server ./dist -p 8080'));
-gulp.task('build', ['buildMarkdown', 'buildHtml']);
-gulp.task('default', ['serve', 'watchHtml', 'watchMarkdown']);
+gulp.task('serve', () => exec('http-server ./dist -p 8888'));
+gulp.task('build', ['buildDocs', 'buildHtml']);
+gulp.task('default', ['serve', 'watchHtml', 'watchDocs']);

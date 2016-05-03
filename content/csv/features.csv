@@ -1,0 +1,29 @@
+,Free,Professional,Business,Enterprise
+Command line interface / Graphical interface,x,x,x,x
+Multiple package sources including private / authenticated feeds,x,x,x,x
+Silent download install/ upgrade from anywhere,x,x,x,x
+Automatically makes executables in package available everywhere,x,x,x,x
+Upgrade all packages with one command!,x,x,x,x
+Create and update your own packages easily! Create your own templates!,x,x,x,x
+Install multiple packages with one command,x,x,x,x
+"Install packages from alternative locations like Windows Features, Ruby Gems, NodeJS, Python, etc",x,x,x,x
+Support non-administrative scenarios,x,x,x,x
+Checksum downloaded files,x,x,x,x
+Override installer arguments,x,x,x,x
+Script entire development environment!,x,x,x,x
+Schedule package upgrades,,x,x,x
+Extensions - extend Chocolatey (allows for an extension store - secondary revenue stream),,x,x,x
+Multiple installs/same machine,,x,x,x
+Professional only packages,,x,,
+Synchronize with existing add remove programs,,x,x,x
+Alternate permanent download location for all packages,,x,x,x
+Virus Check downloads prior to running,,x,x,x
+Download & Recompile packages with local resources (non-internet),,,x,x
+"Regular Support - 1 support call per quarter, unlimited email support",,,,
+"Business Support - 2 support calls per quarter, unlimited private email support",,,x,
+"Enterprise Support - 5 support calls per quarter, unlimited private email support",,,,x
+"Private Package Feed (maybe MyGet, if we can get pricing right)",,,x,
+Private On-Premise Chocolatey Gallery,,,,x
+Unlimited Phone Support,,,,x
+Unlimited Email Support,,x,x,x
+Add On: Private Chocolatey Gallery ($2000),,x,x,
