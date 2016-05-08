@@ -2142,6 +2142,27 @@ h4, .h4{ font-size: 1.2em;}
   font-weight: bold;
 }
 
+.huge-number{
+  font-size: 3.3em;
+  line-height: 1.2em;
+  color: #666;
+  font-family: monospace;
+  font-weight: normal;
+}
+
+.stat-number{
+  padding: 1em 2em;
+  border-radius: 5px;
+}
+
+.bg-statistics{
+  position: relative;
+}
+
+.bg-statistics > *{
+  position: relative;
+}
+
 article h1, .h1{
   font-size: 2.3em;
   margin-bottom: .5em;
@@ -2638,6 +2659,19 @@ img{ max-width: 100%; }
   transition: 200ms;
 }
 
+.install-button{
+  background: #2f6492;
+  color: #fff;
+  border: none;
+  border-bottom: 5px solid #255279;
+}
+
+.install-button:hover{
+  background: #3A78AF !important;
+  opacity: 1 !important;
+  color: #fff !important;
+}
+
 .button:hover{
   background: #f0f0f0;
   color: #333;
@@ -2770,6 +2804,17 @@ img{ max-width: 100%; }
 
   .hide-on-large{
     display: none;
+  }
+
+  .bg-statistics:before{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 5px);
+    background: #202F3C;
   }
 }
 
@@ -3181,4 +3226,13 @@ table td:first-child{
 
 a.choco-404:hover{
   opacity: 1 !important;
+}
+
+.gene-bg{
+  background: url(gene.svg) 100% no-repeat;
+  background-position-x: 0;
+}
+
+.gene-bg .feature-sections__column{
+  background: rgba(32, 47, 60, 0.5);
 }

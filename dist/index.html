@@ -26,7 +26,7 @@
 
   <nav class="text-right p">
     <ul class="inline-list main-menu m-r m-b--s m-t--s">
-      <li><a class="bold m-l--s" href="installation">Install</a></li>
+      <li><a class="bold m-l--s" href="Installation">Install</a></li>
       <li><a class="bold m-l--s" href="packages">Community Packages</a></li>
       <li><a class="bold m-l--s" href="About">About</a></li>
       <li><a class="bold m-l--s" href="#">Business</a></li>
@@ -74,8 +74,8 @@
           </div>
         </div>
       </div>
-      <a class="h3 m-t--l button button--primary" href="Installation">
-        <span class="icon-rocket"></span>
+      <a class="h3 m-t--l button install-button" href="Installation">
+        <span class="m-r--s icon-download"></span>
         <strong>Install Chocolatey Now</strong>
       </a>
     </div>
@@ -140,8 +140,8 @@
   </div>
 
   <div class="bg-two">
-    <section class="clearfix p-l p-r p-t--l p-b--l container-wide">
-      <div class="feature-sections__column right">
+    <section class="clearfix p-l p-r container-wide gene-bg">
+      <div class="feature-sections__column right p-t--l p-b--l">
         <h2>Packages are independent deployment artifacts</h2>
         <ul class="check-list m-t">
           <li>Chocolatey packages are not just fancy zip files, they understand versioning and dependencies, allowing you to encapsulate everything related to managing installation and configuration for a piece of software.</li>
@@ -149,15 +149,14 @@
           <li>Chocolatey packages allow you to separate software installation concerns from automation tools / configuration managers and use the best tool for software management, which is the Chocolatey framework.</li>
         </ul>
       </div>
-      <div class="feature-sections__column">
-        <img src="assets/integration_points.png"/>
+      <div class="feature-sections__column no-padding">
       </div>
     </section>
   </div>
 
   <div class="bg-three">
-    <section class="clearfix p-l p-r p-t--l p-b--l container-wide">
-      <div class="feature-sections__column">
+    <section class="clearfix p-l p-r container-wide">
+      <div class="feature-sections__column m-t p-t--l p-b--l">
         <h2>Choose from thousands of community packages</h2>
         <ul class="check-list m-t">
           <li>Chocolatey.org has the largest online registry of Windows packages.</li>
@@ -166,8 +165,28 @@
           <li>The community repository has a strict policy on malicious and pirated software.</li>
         </ul>
       </div>
-      <div class="feature-sections__column">
-        <div class="border-radius image-placeholder"></div>
+
+      <div class="feature-sections__column text-center bg-statistics p-t--l p-b">
+        <div>
+          <div class="inline-block m-b stat-number bg-two">
+            <div class="huge-number">3,974</div>
+            <small>Unique packages</small>
+          </div>
+        </div>
+
+        <div>
+          <div class="inline-block m-b stat-number bg-two">
+            <div class="huge-number">40,528,346</div>
+            <small>Total downloads</small>
+          </div>
+        </div>
+
+        <div>
+          <div class="inline-block m-b stat-number bg-two">
+            <div class="huge-number">3,086</div>
+            <small>Known good packages</small>
+          </div>
+        </div>
       </div>
     </section>
   </div>
